@@ -1,9 +1,14 @@
+/*SECCION DETALLE*/
 .contenedor-detalle{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-top: 40px;
+    background-color: #ffffff;
     display: flex;
-    gap: 40px;
+    gap: 60px;
     flex-direction: row;
-    margin: 20px auto; /* Centra el contenedor horizontalmente */
-    max-width: 900px; /* Limita el ancho máximo del contenedor para evitar que se extienda demasiado en pantallas grandes */
+    margin: 20px auto;
+    max-width: 700px; /* Limita el ancho máximo del contenedor para evitar que se extienda demasiado en pantallas grandes */
     width: 100%
 }
 .columna-izq-detalle{
@@ -12,44 +17,78 @@
 .columna-der-detalle{
     flex: 2;  /* ocupa 2 partes del espacio */
 }
-img{
-    width: 300px;
+/*IMAGEN PRINCIPAL*/
+.columna-izq-detalle img{
+    width: 100%; /*Ocupa todo el ancho del contenedor*/
     height: 300px;
-    max-width: 100%; /*Ocupa el 100% del ancho del contenedor, pero no lo excede*/
-    object-fit: cover;
-    border-radius: 10px;
+    object-fit: contain; /*Ajusta la imagen para que se mantenga su proporción sin recortarla*/
+
 }
-.galeria-detalle{
+/*GALERIA DE IMAGENES*/
+.galeria{
     display: flex;
     gap: 20px;
     flex-direction: row;
-    justify-content: left;
+    justify-content: center;
     margin-top: 20px;
 }
-.galeria-detalle img{
+.galeria img{
     width: 50px;
     height: 50px;
     border-radius: 5px;
     cursor: pointer;
 }
+
+/*SECCION PRODUCTOS RELACIONADOS*/
 .contenedor-relacionados{
     padding-top: 20px;
+    padding-bottom: 40px;
     margin-top: 40px;
-    background-color: aliceblue;
-    flex-wrap: wrap; /*Permite que los elementos se envuelvan a la siguiente línea si no caben en una sola fila*/
+    background-color: #f0f8ff;
     display: grid;
-    justify-content: center;
-    gap: 20px; /*Espacio entre los elementos del grid*/
+    grid-template-columns: repeat(3, 200px); /* crea 3 columnas de 220px */
+    justify-content: center; /* centra las columnas del grid horizontalmente */
+    gap: 50px; /*Espacio entre los elementos del grid*/
 }
-.productos-relacionados{
-    display: flex;
-    gap: 20px;
-    flex-direction: row;
+.contenedor-relacionados a{
+    text-decoration: none;
 }
-article.card{
-    justify-items: center; /*centra los elementos horizontalmente dentro del contenedor*/
-    max-width: 200px;
-    background-color: #f8f8f8;
-    margin: 1rem;
+.contenedor-relacionados h3 {
+    grid-column: 1 / -1; /* ocupa toda la fila */
+    text-align: center;
+}
 
+article.card{
+    width: 220px;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 10px;
 }
+article.card img{
+    width: 100%;
+    height: 150px;
+    object-fit: contain;
+}
+.card-info{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    flex: 1; /* para que ocupe el espacio restante del card */
+}
+.card-info h5{
+    font-size: 0.9rem;
+    color: #333333;
+    margin: 0;
+}
+.card-info p{
+    font-size: 0.8rem;
+    color: #666666;
+}
+.estrellas{
+    color: #ffcc00;
+    font-size: 1rem;
+}   

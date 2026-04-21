@@ -39,6 +39,31 @@
     cursor: pointer;
 }
 
+/*DETALLE DE INFORMACION*/
+.columna-der-detalle h2{
+    font-size: 1.5rem;
+    color: #0772ba;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+.columna-der-detalle h3{
+    font-size: 1rem;
+    color: #0e3353;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+.columna-der-detalle p{
+    font-size: 1rem;
+    color: #0f0f0f;
+    margin-bottom: 20px;
+}
+.columna-der-detalle span{
+    font-size: 0.8rem;
+    color: #666666;
+    font-weight: 200;
+    margin-bottom: 20px;
+}
+
 /*SECCION PRODUCTOS RELACIONADOS*/
 .contenedor-relacionados{
     padding-top: 20px;
@@ -56,6 +81,7 @@
 .contenedor-relacionados h3 {
     grid-column: 1 / -1; /* ocupa toda la fila */
     text-align: center;
+    color: #0e3353;
 }
 
 article.card{
@@ -81,7 +107,7 @@ article.card img{
 }
 .card-info h5{
     font-size: 0.9rem;
-    color: #333333;
+    color: #0e3353;
     margin: 0;
 }
 .card-info p{
@@ -89,6 +115,6 @@ article.card img{
     color: #666666;
 }
 .estrellas{
-    color: #ffcc00;
+    color: #0772ba;
     font-size: 1rem;
 }   

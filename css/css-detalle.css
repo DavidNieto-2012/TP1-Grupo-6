@@ -8,7 +8,7 @@
     gap: 60px;
     flex-direction: row;
     margin: 20px auto;
-    max-width: 700px; /* Limita el ancho máximo del contenedor para evitar que se extienda demasiado en pantallas grandes */
+    max-width: 1000px; /* Limita el ancho máximo del contenedor para evitar que se extienda demasiado en pantallas grandes */
     width: 100%
 }
 .columna-izq-detalle{
@@ -20,7 +20,7 @@
 /*IMAGEN PRINCIPAL*/
 .columna-izq-detalle img{
     width: 100%; /*Ocupa todo el ancho del contenedor*/
-    height: 300px;
+    height: 500px;
     object-fit: contain; /*Ajusta la imagen para que se mantenga su proporción sin recortarla*/
 
 }
@@ -63,6 +63,39 @@
     font-weight: 200;
     margin-bottom: 20px;
 }
+
+/*SECCION TABLA DE ESPECIFICACIONES*/
+.tabla-detalle{
+    width: 100%;
+    margin-top: 30px;
+    font-size: 0.7rem;
+}
+.tabla-detalle table{
+    width: 100%;
+    border-collapse: collapse; /* Elimina los espacios entre las celdas */
+    text-align: left;
+}
+.tabla-detalle tr{
+    padding: 10px;
+}
+.tabla-detalle td{
+    border-top: 1px solid #ddd; /* Agrega una línea debajo de cada fila */
+    vertical-align: top;
+    color: #666666;
+    padding: 10px 10px;
+}
+/* primer th dentro de un tr */
+.tabla-detalle td:first-child {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #0e3353;
+}
+.tabla-detalle ul{
+    margin: 0;
+    padding-left: 0;
+    margin-bottom: 5px;
+}
+
 
 /*SECCION PRODUCTOS RELACIONADOS*/
 .contenedor-relacionados{

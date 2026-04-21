@@ -1,0 +1,55 @@
+.contenedor-detalle{
+    display: flex;
+    gap: 40px;
+    flex-direction: row;
+    margin: 20px auto; /* Centra el contenedor horizontalmente */
+    max-width: 900px; /* Limita el ancho máximo del contenedor para evitar que se extienda demasiado en pantallas grandes */
+    width: 100%
+}
+.columna-izq-detalle{
+    flex: 1;  /* ocupa 1 parte del espacio */
+}
+.columna-der-detalle{
+    flex: 2;  /* ocupa 2 partes del espacio */
+}
+img{
+    width: 300px;
+    height: 300px;
+    max-width: 100%; /*Ocupa el 100% del ancho del contenedor, pero no lo excede*/
+    object-fit: cover;
+    border-radius: 10px;
+}
+.galeria-detalle{
+    display: flex;
+    gap: 20px;
+    flex-direction: row;
+    justify-content: left;
+    margin-top: 20px;
+}
+.galeria-detalle img{
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.contenedor-relacionados{
+    padding-top: 20px;
+    margin-top: 40px;
+    background-color: aliceblue;
+    flex-wrap: wrap; /*Permite que los elementos se envuelvan a la siguiente línea si no caben en una sola fila*/
+    display: grid;
+    justify-content: center;
+    gap: 20px; /*Espacio entre los elementos del grid*/
+}
+.productos-relacionados{
+    display: flex;
+    gap: 20px;
+    flex-direction: row;
+}
+article.card{
+    justify-items: center; /*centra los elementos horizontalmente dentro del contenedor*/
+    max-width: 200px;
+    background-color: #f8f8f8;
+    margin: 1rem;
+
+}

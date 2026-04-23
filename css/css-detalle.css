@@ -1,25 +1,31 @@
+
 /*SECCION DETALLE*/
 .contenedor-detalle{
-    padding-top: 20px;
-    padding-bottom: 20px;
-    margin-top: 40px;
-    background-color: #ffffff;
-    display: flex;
-    gap: 60px;
-    flex-direction: row;
-    margin: 20px auto;
-    max-width: 1000px; /* Limita el ancho máximo del contenedor para evitar que se extienda demasiado en pantallas grandes */
-    width: 100%
+    display: grid;
+    grid-template-columns: 1fr 2fr; /* crea 2 columnas, la primera ocupa 1 parte y la segunda 2 partes del espacio */
+    grid-template-areas:
+        "imagen titulo"
+        "imagen categoria"
+        "imagen descripcion"
+        "imagen boton"
+        "tabla tabla"; /* la imagen ocupa toda la primera columna, y el título, categoría, botón y tabla ocupan la segunda columna */
+    grid-template-rows: auto auto auto 1fr;
+    gap: 10px 60px; /* espacio entre filas y columnas */
+    max-width: 100%;
+    padding: 1rem 1.5rem 1rem 1.5rem; /* espacio superior, derecho, inferior e izquierdo respectivamente */
+    margin: 40px auto;
+    align-items: start;
 }
-.columna-izq-detalle{
-    flex: 1;  /* ocupa 1 parte del espacio */
-}
-.columna-der-detalle{
-    flex: 2;  /* ocupa 2 partes del espacio */
-}
+/* Indicamos a cada bloque div en qué área del grid va */
+.bloque-img         { grid-area: imagen; }
+.bloque-titulo      { grid-area: titulo; }
+.bloque-descripcion { grid-area: descripcion; }
+.bloque-boton       { grid-area: boton; }
+.bloque-tabla       { grid-area: tabla; }
+
 /*IMAGEN PRINCIPAL*/
-.columna-izq-detalle img{
-    width: 100%; /*Ocupa todo el ancho del contenedor*/
+.bloque-img img{
+    width: 100%;
     height: 500px;
     object-fit: contain; /*Ajusta la imagen para que se mantenga su proporción sin recortarla*/
 
@@ -39,25 +45,7 @@
     cursor: pointer;
 }
 
-/*DETALLE DE INFORMACION*/
-.columna-der-detalle h2{
-    font-size: 1.5rem;
-    color: #0772ba;
-    font-weight: 800;
-    margin-bottom: 10px;
-}
-.columna-der-detalle h3{
-    font-size: 1rem;
-    color: #0e3353;
-    font-weight: 600;
-    margin-bottom: 20px;
-}
-.columna-der-detalle p{
-    font-size: 1rem;
-    color: #0f0f0f;
-    margin-bottom: 20px;
-}
-.columna-der-detalle span{
+.bloque-titulo span{
     font-size: 0.8rem;
     color: #666666;
     font-weight: 200;
@@ -65,61 +53,86 @@
 }
 
 /*SECCION TABLA DE ESPECIFICACIONES*/
-.tabla-detalle{
+.bloque-tabla{
     width: 100%;
     margin-top: 30px;
     font-size: 0.7rem;
 }
-.tabla-detalle table{
+.bloque-tabla table{
     width: 100%;
     border-collapse: collapse; /* Elimina los espacios entre las celdas */
     text-align: left;
 }
-.tabla-detalle tr{
+.bloque-tabla tr{
     padding: 10px;
 }
-.tabla-detalle td{
+.bloque-tabla td{
     border-top: 1px solid #ddd; /* Agrega una línea debajo de cada fila */
     vertical-align: top;
     color: #666666;
     padding: 10px 10px;
 }
 /* primer th dentro de un tr */
-.tabla-detalle td:first-child {
+.bloque-tabla td:first-child {
     font-size: 0.9rem;
     font-weight: 600;
     color: #0e3353;
 }
-.tabla-detalle ul{
+.bloque-tabla ul, ol{
     margin: 0;
     padding-left: 0;
     margin-bottom: 5px;
 }
 
+/* En pantallas de 768px o menos (tablet/mobile) */
+@media (max-width: 768px) {
+    .contenedor-detalle {
+        grid-template-columns: 1fr; /* ← una sola columna */
+        grid-template-areas:
+            "titulo"
+            "imagen"
+            "categoria"
+            "descripcion"
+            "boton"
+            "tabla";
+        padding: 10px;
+        gap: 10px;
+    }
+    .bloque-img img {
+        height: 300px;
+    }
+}
 
 /*SECCION PRODUCTOS RELACIONADOS*/
 .contenedor-relacionados{
-    padding-top: 20px;
-    padding-bottom: 40px;
-    margin-top: 40px;
-    background-color: #f0f8ff;
     display: grid;
-    grid-template-columns: repeat(3, 200px); /* crea 3 columnas de 220px */
-    justify-content: center; /* centra las columnas del grid horizontalmente */
-    gap: 50px; /*Espacio entre los elementos del grid*/
+    grid-template-rows: auto auto auto 1fr;
+    grid-template-areas:
+        "titulo-relacionados"
+        "productos-relacionados";
+    max-width: 100%;
+    gap: 20px;
+    padding: 2rem 1rem 2rem 1rem;
+    margin: 40px auto;
+    background-color: #f0f8ff;
+}
+/* Indicamos a cada bloque div en qué área del grid va */
+.bloque-titulo-relacionados  { grid-area: titulo-relacionados; }
+.bloque-productos            { grid-area: productos-relacionados; }
+
+.bloque-productos-relacionados{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;        /* si no entran, bajan a la siguiente línea */
+    gap: 20px;
+    justify-content: center;
 }
 .contenedor-relacionados a{
     text-decoration: none;
 }
-.contenedor-relacionados h3 {
-    grid-column: 1 / -1; /* ocupa toda la fila */
+.contenedor-relacionados h2 {
     text-align: center;
 }
-
-.tarjeta{
-    height: 330px;
-}
-
 .tarjeta-info{
     display: flex;
     flex-direction: column;

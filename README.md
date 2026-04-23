@@ -6,7 +6,7 @@ CATEGORIAS por tipo de piel:
 
 PRODUCTOS: 
 -Piel Seca
-    -Limpiador en aceite espumoso hidratante $67.122
+    -Limpiador en aceite espumoso hidratante $67.122 ok
     -Agua micelar hidratante $35.222
     -Limpiador facial hidratante $53.338
 -Piel mixta a grasa 

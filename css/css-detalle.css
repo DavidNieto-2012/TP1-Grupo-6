@@ -79,13 +79,13 @@
     color: #0e3353;
 }
 .bloque-tabla ul, ol{
-    margin: 0;
+    margin: 10px;
     padding-left: 0;
     margin-bottom: 5px;
 }
 
 /* En pantallas de 768px o menos (tablet/mobile) */
-@media (max-width: 768px) {
+@media (max-width: 375px) {
     .contenedor-detalle {
         grid-template-columns: 1fr; /* ← una sola columna */
         grid-template-areas:

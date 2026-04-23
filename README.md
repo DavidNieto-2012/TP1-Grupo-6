@@ -1,2 +1,19 @@
-# TP1-Grupo-6  hola
-hola soy rodrigo!
+CATEGORIAS por tipo de piel:
+-Piel Seca
+-Piel mixta a grasa 
+-Piel sensible
+
+
+PRODUCTOS: 
+-Piel Seca
+    -Limpiador en aceite espumoso hidratante $67.122
+    -Agua micelar hidratante $35.222
+    -Limpiador facial hidratante $53.338
+-Piel mixta a grasa 
+    -Gel limpiador espumoso para rostro $43.200
+    -Locion hidratante no comodogenica con FPS $32.114
+    -Crema reparadora para contorno de ojos $17.000
+-Piel sensible
+    -Crema hidratante $50.000
+    -Locion hidratante para uso diario $35.000
+    -locion hidratante facial de noche $36.550

@@ -1,3 +1,14 @@
+h1{
+
+    margin: 15px;
+
+}
+
+h2{
+    margin: 20px;
+
+}
+
 a{  
 
 
@@ -9,11 +20,11 @@ a:visited{
     color: black;
     
 }
-section{
-
-
-display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
-    padding: 20px
+section {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 220px); 
+    gap: 5px;
+    padding: 10px;
+    justify-content: left; 
 }
+

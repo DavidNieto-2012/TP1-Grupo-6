@@ -1,13 +1,18 @@
 h1{
 
     margin: 15px;
+    
 
 }
 
 h2{
-    margin: 20px;
-
+   
+    text-align: center;
+    margin: 30px auto 10 px auto;
+    width: 100%;
 }
+
+
 
 a{  
 
@@ -22,9 +27,26 @@ a:visited{
 }
 section {
     display: grid;
-    grid-template-columns: repeat(auto-fill, 220px); 
-    gap: 5px;
-    padding: 10px;
-    justify-content: left; 
+    
+    grid-template-columns: repeat(auto-fit, 220px); 
+    gap: 20px; 
+    padding: 20px;
+    justify-content: center; 
+    max-width: 1000px;
+    margin: 0 auto;
+    margin-bottom: 60px; 
 }
 
+.tarjeta {
+  height: 100%;
+
+}
+
+
+.tarjeta h4:last-child {
+    margin-top: auto; 
+    
+    padding-top: 10px;
+    font-weight: bold;
+    color: #005691; /* Azul CeraVe */
+}

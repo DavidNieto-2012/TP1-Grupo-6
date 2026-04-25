@@ -64,3 +64,39 @@ p{
 
 }
 
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+}
+
+.logo img {
+    height: 100px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #0e3353; /* azul oscuro */
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.nav-links a.active {
+    color: #0772ba; /*  azul principal */
+}
+/* Footer */
+footer {
+    background-color: #f0f0f0;
+    padding: 40px;
+    text-align: center;
+    margin-top: 40px;
+}

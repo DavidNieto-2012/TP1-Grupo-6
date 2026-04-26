@@ -1,15 +1,7 @@
-h1{
 
-    margin: 15px;
-    
-
-}
-
-h2{
+h1, h2, p{
    
     text-align: center;
-    margin: 30px auto 10 px auto;
-    width: 100%;
 }
 
 

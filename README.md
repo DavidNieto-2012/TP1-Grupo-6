@@ -1,3 +1,5 @@
+WEB DE INSPIRACIÓN: https://www.cerave.com.ar/
+
 CATEGORIAS por tipo de piel:
 -Piel Seca
 -Piel mixta a grasa 
@@ -6,7 +8,7 @@ CATEGORIAS por tipo de piel:
 
 PRODUCTOS: 
 -Piel Seca
-    -Limpiador en aceite espumoso hidratante $67.122 ok
+    -Limpiador en aceite espumoso hidratante $67.122 
     -Agua micelar hidratante $35.222
     -Limpiador facial hidratante $53.338
 -Piel mixta a grasa 

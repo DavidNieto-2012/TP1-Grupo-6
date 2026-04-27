@@ -4,6 +4,17 @@ h1, h2, p{
     text-align: center;
 }
 
+h2 {
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+
+main > p {
+    margin-bottom: 30px;
+    padding: 0 20px;
+    line-height: 1.6;
+}
+
 
 
 a{  
@@ -40,11 +51,32 @@ section {
     
     padding-top: 10px;
     font-weight: bold;
-    color: #005691; /* Azul CeraVe */
+    color: #005691; 
 }
 
 .tarjeta:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transform: translateY(-5px);
     transition: all 0.3s ease;
+}
+
+
+.nav-links li:hover ul{
+display:block;
+
+}
+
+.nav-links ul{ 
+    list-style: none;
+    display: none;
+    position: absolute;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    background-color: rgb(255, 255, 255)
+    margin
+
+}
+
+.nav-links ul li{
+    margin-top: 10px;
+    padding: 5px;
 }

@@ -2,8 +2,6 @@
 
 /* --- ESTILOS ESPECÍFICOS DEL INDEX --- */
 
-
-
 /* Hero */
 .hero {
     background-color: #f6f6f6;
@@ -70,10 +68,3 @@
     border-radius: 4px;
 }
 
-/* Footer */
-footer {
-    background-color: #f0f0f0;
-    padding: 40px;
-    text-align: center;
-    margin-top: 40px;
-}

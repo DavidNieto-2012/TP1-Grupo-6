@@ -13,12 +13,13 @@
 <body>
     <header>
         <nav class="navbar">
-            <div class="logo">
+            <a href="index.html" class="logo">
                 <img src="images/cerave-logo-png_seeklogo-352149.png" alt="CeraVe Logo">
-            </div>
+            </a>
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
             <ul class="nav-links">
-                <li><a href="index.html" class="active">Inicio</a></li>
-                <li><a href="Lista.html">Productos</a></li>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="Lista.html" class="active">Productos</a></li>
                 <li><a href="#">Categorías</a>
                     <ul>
                         <li><a href="categoria_seca.html">Piel seca</a></li>
@@ -29,6 +30,7 @@
                 <li><a href="newsletter.html">Newsletter</a></li>
                 <li><a href="nosotros.html">Nosotros</a></li>
             </ul>
+            <label for="menu-toggle" class="hamburger">☰</label>
         </nav>
     </header>
     

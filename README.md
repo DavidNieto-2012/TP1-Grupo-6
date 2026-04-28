@@ -18,4 +18,4 @@ PRODUCTOS:
 -Piel sensible
     -Crema hidratante $50.000
     -Locion hidratante para uso diario $35.000
-    -locion hidratante facial de noche $36.550
+    -locion hidratante facial de noche $36.550 ...

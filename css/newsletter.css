@@ -2,12 +2,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 85vh; /* Ocupa casi toda la pantalla */
+    min-height: 85vh; 
     padding: 60px 20px;
-    background-color: #f4f7f9; /* Color suave para que no canse la vista */
+    background-color: #f4f7f9; 
 }
 
-/* 2. El contenedor blanco (el cuadro del formulario) */
+
 .contenedor-formulario {
     width: 100%;
     max-width: 900px; 
@@ -20,7 +20,7 @@
     text-align: center;
 }
 
-/* 3. Textos adaptados para visión reducida */
+
 .newsletter h1 {
     color: #005691; 
     font-size: 2.8rem; /* Tamaño grande y claro */
@@ -28,43 +28,43 @@
 }
 
 .newsletter p {
-    font-size: 1.3rem; /* Más legible */
-    color: #222; /* Negro más intenso para mayor contraste */
+    font-size: 1.3rem; 
+    color: #222; 
     margin-bottom: 45px;
     line-height: 1.6;
 }
 
-/* 4. Formulario y campos */
+
 .form-group {
     margin-bottom: 30px;
-    text-align: left; /* Etiquetas a la izquierda para orden mental */
+    text-align: left; 
 }
 
 .form-group label {
     display: block;
     font-weight: bold;
-    font-size: 1.4rem; /* Etiquetas grandes */
+    font-size: 1.4rem; 
     margin-bottom: 10px;
 }
 
 .form-group input {
     width: 100%;
-    padding: 20px; /* Inputs más altos para facilitar el clic */
+    padding: 20px; 
     border: 2px solid #ccc;
     border-radius: 8px;
     font-size: 1.2rem;
-    box-sizing: border-box; /* Evita que el input se salga del cuadro */
+    box-sizing: border-box; 
 }
 
 .form-group input:focus {
     border-color: #005691;
-    outline: 3px solid rgba(0, 86, 145, 0.2); /* Resalte visual extra al enfocar */
+    outline: 3px solid rgba(0, 86, 145, 0.2); 
 }
 
 /* 5. Botón adaptable */
 .newsletter-form button {
     width: 100%;
-    max-width: 400px; /* Botón grande pero no exagerado */
+    max-width: 400px; 
     padding: 20px;
     background-color: #005691;
     color: white;
@@ -82,7 +82,7 @@
     transform: scale(1.03);
 }
 
-/* 6. Diseño Responsivo (Celulares) */
+/* 6. Diseño Celulares */
 @media (max-width: 768px) {
     .contenedor-formulario {
         padding: 25px;

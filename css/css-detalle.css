@@ -83,8 +83,8 @@
     margin-bottom: 5px;
 }
 
-/* En pantallas de 768px o menos (tablet/mobile) */
-@media (max-width: 375px) {
+/* En pantallas de 767px o menos (mobile) */
+@media (max-width: 767px) {
     .contenedor-detalle {
         grid-template-columns: 1fr; /* una sola columna */
         grid-template-areas: /*cómo se organizan los bloques*/

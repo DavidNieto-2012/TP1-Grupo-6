@@ -1,95 +1,99 @@
 .newsletter {
     display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
-    padding: 80px 20px;
-    min-height: 70vh; 
-    background-color: #f9fbfc; 
+    align-items: center;
+    min-height: 85vh; /* Ocupa casi toda la pantalla */
+    padding: 60px 20px;
+    background-color: #f4f7f9; /* Color suave para que no canse la vista */
 }
 
+/* 2. El contenedor blanco (el cuadro del formulario) */
+.contenedor-formulario {
+    width: 100%;
+    max-width: 900px; 
+    background: #ffffff;
+    padding: 50px;
+    border-radius: 15px;
+    border: 3px solid #005691; 
+    justify-content: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    text-align: center;
+}
+
+/* 3. Textos adaptados para visión reducida */
 .newsletter h1 {
     color: #005691; 
-    font-size: 2rem;
-    margin-bottom: 15px;
-    text-align: center;
+    font-size: 2.8rem; /* Tamaño grande y claro */
+    margin-bottom: 20px;
 }
 
 .newsletter p {
-    max-width: 600px;
-    text-align: center;
-    color: #555;
-    margin-bottom: 40px;
+    font-size: 1.3rem; /* Más legible */
+    color: #222; /* Negro más intenso para mayor contraste */
+    margin-bottom: 45px;
     line-height: 1.6;
 }
 
-
-.newsletter-form {
-    background-color: #ffffff;
-    padding: 40px;
-    border-radius: 8px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-    width: 100%;
-    max-width: 450px; 
-}
-
-
+/* 4. Formulario y campos */
 .form-group {
-    margin-bottom: 25px;
-    display: flex;
-    flex-direction: column;
+    margin-bottom: 30px;
+    text-align: left; /* Etiquetas a la izquierda para orden mental */
 }
 
 .form-group label {
-    font-weight: 600;
-    margin-bottom: 8px;
-    color: #333;
-    font-size: 0.9rem;
+    display: block;
+    font-weight: bold;
+    font-size: 1.4rem; /* Etiquetas grandes */
+    margin-bottom: 10px;
 }
 
 .form-group input {
-    padding: 12px 15px;
-    border: 1.5px solid #d1d9e0;
-    border-radius: 5px;
-    font-size: 1rem;
-    transition: border-color 0.3s ease;
+    width: 100%;
+    padding: 20px; /* Inputs más altos para facilitar el clic */
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    box-sizing: border-box; /* Evita que el input se salga del cuadro */
 }
 
 .form-group input:focus {
-    outline: none;
-    border-color: #005691; 
+    border-color: #005691;
+    outline: 3px solid rgba(0, 86, 145, 0.2); /* Resalte visual extra al enfocar */
 }
 
-
+/* 5. Botón adaptable */
 .newsletter-form button {
     width: 100%;
-    padding: 15px;
+    max-width: 400px; /* Botón grande pero no exagerado */
+    padding: 20px;
     background-color: #005691;
     color: white;
     border: none;
-    border-radius: 5px;
-    font-size: 1.1rem;
+    border-radius: 10px;
+    font-size: 1.5rem;
     font-weight: bold;
     cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    transition: transform 0.2s, background 0.3s;
+    margin-top: 20px;
 }
 
 .newsletter-form button:hover {
     background-color: #003d66;
-    transform: translateY(-2px); 
+    transform: scale(1.03);
 }
 
-.newsletter-form button:active {
-    transform: translateY(0);
-}
-
-
-@media (max-width: 480px) {
-    .newsletter-form {
+/* 6. Diseño Responsivo (Celulares) */
+@media (max-width: 768px) {
+    .contenedor-formulario {
         padding: 25px;
+        max-width: 95%;
+    }
+
+    .newsletter h1 {
+        font-size: 2rem;
     }
     
-    .newsletter h1 {
-        font-size: 1.6rem;
+    .newsletter p {
+        font-size: 1.1rem;
     }
 }

@@ -47,12 +47,31 @@
                     <label for="email">Correo electrónico:</label>
                     <input type="email" id="email" name="email" required placeholder="ejemplo@correo.com">
                 </div>
+                <div class="form-group">
+                    <label for="Tipo de piel">¿Cual es tu tipo de piel?:</label>
+                    <select id="tipo-piel" name="tipo-piel" required>
+                        <option value="">Selecciona tu tipo de piel</option>
+                        <option value="seca">Piel seca</option>
+                        <option value="mixta">Piel mixta</option>
+                        <option value="sensible">Piel sensible</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="intereses">¿Qué tipo de contenido te gustaría recibir?</label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="intereses" value="novedades"> Novedades de productos</label>
+                        <label><input type="radio" name="intereses" value="ofertas"> Ofertas exclusivas</label>
+                        <label><input type="radio" name="intereses" value="consejos"> Consejos de cuidado de la piel</label>
+                    </div>
+
+                </div>
                 <div>
                     <label for="checkbox"></label>
                     <input type="checkbox" id="checkbox" name="checkbox" required>
                     <span>Acepto recibir comunicaciones de CeraVe y confirmo que he leído la <a href="#">Política de Privacidad</a>.</span>
                 </div>
                 <button type="submit">Suscribirse</button>
+                <button type="reset" class="btn-reset">Limpiar</button>
             </form>
         </div>
     </section>

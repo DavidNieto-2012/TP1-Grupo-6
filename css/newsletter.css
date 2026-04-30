@@ -7,7 +7,6 @@
     background-color: #f4f7f9; 
 }
 
-
 .contenedor-formulario {
     width: 100%;
     max-width: 900px; 
@@ -15,15 +14,13 @@
     padding: 50px;
     border-radius: 15px;
     border: 3px solid #005691; 
-    justify-content: center;
     box-shadow: 0 10px 30px rgba(0,0,0,0.15);
     text-align: center;
 }
 
-
 .newsletter h1 {
     color: #005691; 
-    font-size: 2.8rem; /* Tamaño grande y claro */
+    font-size: 2.8rem;
     margin-bottom: 20px;
 }
 
@@ -47,42 +44,118 @@
     margin-bottom: 10px;
 }
 
-.form-group input {
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group select {
     width: 100%;
-    padding: 20px; 
+    padding: 15px; 
     border: 2px solid #ccc;
     border-radius: 8px;
     font-size: 1.2rem;
+    background-color: #fff;
     box-sizing: border-box; 
+    cursor: text;
 }
 
-.form-group input:focus {
+.form-group select {
+    cursor: pointer;
+}
+
+.form-group input:focus,
+.form-group select:focus {
     border-color: #005691;
     outline: 3px solid rgba(0, 86, 145, 0.2); 
 }
 
-/* 5. Botón adaptable */
-.newsletter-form button {
-    width: 100%;
-    max-width: 400px; 
-    padding: 20px;
+
+.radio-group {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    margin-top: 10px;
+}
+
+.radio-group label {
+    display: flex;
+    align-items: center;
+    font-weight: normal !important; 
+    font-size: 1.1rem;
+    color: #444;
+    cursor: pointer;
+    margin-bottom: 0; 
+}
+
+.radio-group input[type="radio"] {
+    width: 20px; 
+    height: 20px;
+    margin-right: 12px;
+    cursor: pointer;
+    accent-color: #005691; 
+}
+
+
+.newsletter-form div:nth-last-of-type(2) { 
+    text-align: left;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: flex-start;
+}
+
+.newsletter-form div:nth-last-of-type(2) input {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    margin-top: 5px;
+}
+
+
+.botones-contenedor {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: flex-start; 
+    margin-top: 30px;
+}
+
+.boton-sub {
     background-color: #005691;
     color: white;
     border: none;
+    padding: 15px 40px;
     border-radius: 10px;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     font-weight: bold;
     cursor: pointer;
     transition: transform 0.2s, background 0.3s;
-    margin-top: 20px;
+    width: auto;
 }
 
-.newsletter-form button:hover {
+.boton-sub:hover {
     background-color: #003d66;
     transform: scale(1.03);
 }
 
-/* 6. Diseño Celulares */
+.boton-borrar {
+    background-color: transparent;
+    color: #888;
+    border: 1px solid #ccc;
+    padding: 8px 15px;
+    font-size: 0.9rem;
+    font-weight: normal;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s;
+    width: auto;
+}
+
+.boton-borrar:hover {
+    background-color: #f0f0f0;
+    color: #333;
+    border-color: #999;
+}
+
+
 @media (max-width: 768px) {
     .contenedor-formulario {
         padding: 25px;
@@ -95,5 +168,14 @@
     
     .newsletter p {
         font-size: 1.1rem;
+    }
+
+    .botones-contenedor {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .boton-sub, .boton-borrar {
+        width: 100%;
     }
 }

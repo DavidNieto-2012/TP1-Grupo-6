@@ -1,3 +1,8 @@
+GRUPO:
+    -Garcia Schmidt Barbara
+    -Nieto David
+    -Santillan Rodrigo
+
 WEB DE INSPIRACIÓN: https://www.cerave.com.ar/
 
 CATEGORIAS por tipo de piel:
@@ -19,3 +24,4 @@ PRODUCTOS:
     -Crema hidratante $50.000
     -Locion hidratante para uso diario $35.000
     -locion hidratante facial de noche $36.550 ...
+

@@ -163,7 +163,7 @@ p{
     
     .nav-links {
         display: none;
-        width: 30%;
+        width: 50%;
         flex-direction: column;
         gap: 0;
         position: absolute;
@@ -225,4 +225,26 @@ button:hover {
     color: white;
     transition: background-color 0.3s ease;
     font-size: 1.1rem;
+}
+
+
+/*ACCESIBILIDAD*/
+a:focus-visible, button:focus-visible, input:focus-visible {
+    outline: 3px solid #0772ba;
+    outline-offset: 2px;
+}
+
+.skip-link {
+    position: absolute;
+    top: -9999px;
+    left: 0;
+    background: #0772ba;
+    border-radius: 5px;
+    color: white;
+    padding: 10px 20px;
+    z-index: 1000;
+    text-decoration: none;
+}
+.skip-link:focus {
+    top: 0;
 }

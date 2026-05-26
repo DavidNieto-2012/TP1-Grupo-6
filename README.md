@@ -25,3 +25,13 @@ PRODUCTOS:
     -Locion hidratante para uso diario $35.000
     -locion hidratante facial de noche $36.550 ...
 
+ENTREGA 2:
+RODRI:
+Editar pagina index, agregar los componentes que falten, footer,  refactoriar tarjeta.
+
+DAVID:
+Editar la navbar, pagina detalle de producto, pagina nosotros, pasar base css a sass
+
+BARBY:
+formulario, pagina categorias, lista de productos, 
+

@@ -1,4 +1,4 @@
-#titulo-form h1 {
+#titulo h1 {
     color: #0772ba;
     font-weight: 900;
     font-size: 2.5rem;
@@ -8,7 +8,7 @@
 .form-label {
     display: block;
     font-weight: bold;
-    font-size: 1.2rem; 
+    font-size: 1.2rem;
     margin-bottom: 10px;
     color: #555151;
 }

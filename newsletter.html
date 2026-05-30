@@ -3,85 +3,144 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulario de Suscripción | CeraVe</title>
-    <link rel="stylesheet" href="css/css-base.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="css/newsletter.css">
+    
+    <title>Formulario de Suscripción | CeraVe</title>
+
 </head>
 <body>
-    <header>
-        <nav class="navbar">
-            <a href="index.html" class="logo">
-                <img src="images/cerave-logo-png_seeklogo-352149.png" alt="CeraVe Logo">
-            </a>
-            <input type="checkbox" id="menu-toggle" class="menu-toggle">
-            <ul class="nav-links">
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="Lista.html">Productos</a></li>
-                <li><a href="#">Categorías</a>
-                    <ul>
-                        <li><a href="categoria_seca.html">Piel seca</a></li>
-                        <li><a href="categoria_mixta.html">Piel mixta</a></li>
-                        <li><a href="categoria_sensible.html">Piel sensible</a></li>
-                    </ul>                                
-                </li>
-                <li><a href="newsletter.html" class="active">Newsletter</a></li>
-                <li><a href="nosotros.html">Nosotros</a></li>
-            </ul>
-            <label for="menu-toggle" class="hamburger">☰</label>
-        </nav>
-    </header>
+    <!--
+        <header>
+            <nav class="navbar">
+                <a href="index.html" class="logo">
+                    <img src="images/cerave-logo-png_seeklogo-352149.png" alt="CeraVe Logo">
+                </a>
+                <input type="checkbox" id="menu-toggle" class="menu-toggle">
+                <ul class="nav-links">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="Lista.html">Productos</a></li>
+                    <li><a href="#">Categorías</a>
+                        <ul>
+                            <li><a href="categoria_seca.html">Piel seca</a></li>
+                            <li><a href="categoria_mixta.html">Piel mixta</a></li>
+                            <li><a href="categoria_sensible.html">Piel sensible</a></li>
+                        </ul>                                
+                    </li>
+                    <li><a href="newsletter.html" class="active">Newsletter</a></li>
+                    <li><a href="nosotros.html">Nosotros</a></li>
+                </ul>
+                <label for="menu-toggle" class="hamburger">☰</label>
+            </nav>
+        </header>
+    -->
 
-    
- <main>
-    <section class="newsletter">
-        <div class="contenedor-formulario">
-            <h1>Suscríbete a nuestro Newsletter</h1>
-            <p>Recibe las últimas noticias, ofertas exclusivas y consejos de cuidado de la piel directamente en tu bandeja de entrada.</p>
-            
-            <form action="#" method="post" class="newsletter-form">
-                <div class="form-group">
-                    <label for="nombre">Nombre completo:</label>
-                    <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre y apellido">
-                </div>
-                <div class="form-group">
-                    <label for="email">Correo electrónico:</label>
-                    <input type="email" id="email" name="email" required placeholder="ejemplo@correo.com">
-                </div>
-                <div class="form-group">
-                    <label for="Tipo de piel">¿Cual es tu tipo de piel?:</label>
-                    <select id="tipo-piel" name="tipo-piel" required>
-                        <option value="">Selecciona tu tipo de piel</option>
-                        <option value="seca">Piel seca</option>
-                        <option value="mixta">Piel mixta</option>
-                        <option value="sensible">Piel sensible</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="intereses">¿Qué tipo de contenido te gustaría recibir?</label>
-                    <div class="radio-group">
-                        <label><input type="radio" name="intereses" value="novedades"> Novedades de productos</label>
-                        <label><input type="radio" name="intereses" value="ofertas"> Ofertas exclusivas</label>
-                        <label><input type="radio" name="intereses" value="consejos"> Consejos de cuidado de la piel</label>
+    <!--Taildwin-->
+    <main  class="flex justify-center items-center py-40 bg-[#f4f7f9]">
+        <section class="basis-4/5 justify-center items-center border-3 border-[#005691] rounded-xl bg-white p-10">
+            <div id="titulo-form" class="flex flex-col justify-self-center item-center pb-5">
+                <h1 class="text-[#0772ba] text-center ">Suscríbete a nuestro Newsletter</h1>
+                <h4 class="text-secondary text-center">Recibe las últimas noticias, ofertas exclusivas y consejos de cuidado de la piel directamente en tu bandeja de entrada.</h4>
+            </div>
+                
+            <!--Bootstrap-->
+            <!--cambiar a metodo post cuando haya envío real-->
+            <form id="contacto" action="agradecimiento.html" class="g-3 needs-validation">
+                <div class="row">
+                    <div class="col-12 col-sm-6">
+                        <div class="mb-3">
+                            <label for="nombre" class="form-label">Nombre completo</label>
+                            <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Tu nombre y apellido" required >
+                        </div>
                     </div>
 
+                    <div class="col-12 col-sm-6">
+                        <div class="mb-3">
+                            <label for="exampleFormControlInput1" class="form-label">Correo Electrónico</label>
+                            <input type="email" class="form-control" id="email" name="main" placeholder="name@example.com" required >
+                        </div>
+                    </div>
                 </div>
-                <div>
-                    <label for="checkbox"></label>
-                    <input type="checkbox" id="checkbox" name="checkbox" required>
-                    <span>Acepto recibir comunicaciones de CeraVe y confirmo que he leído la <a href="#">Política de Privacidad</a>.</span>
-                </div>
-                <button type="submit">Suscribirse</button>
-                <button type="reset" class="btn-reset">Limpiar</button>
-            </form>
-        </div>
-    </section>
-</main>
-    
 
+                <div class="row">
+                    <div class="col-12 col-lg-6">
+                        <div class="mb-3">
+                            <label for="tipoPiel" class="form-label">¿Cuál es tu tipo de piel?</label>
+                            <select class="form-select" id="tipoPiel" required>
+                                <option value="" selected>Selecciona tu tipo de piel</option>
+                                <option value="seca">Piel seca</option>
+                                <option value="mixta">Piel Mixta</option>
+                                <option value="sensible">Piel Sensible</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-lg-6">
+                        <div class="mb-3">
+                            <label for="intereses" class="form-label">¿Qué tipo de contenido te gustaría recibir?</label>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="novedades" id="novedades">
+                                <label class="form-check-label" for="novedades">Novedades de productos</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="ofertas" id="ofertas">
+                                <label class="form-check-label" for="ofertas">Ofertas exclusivas</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="consejos" id="consejos">
+                                <label class="form-check-label" for="consejos">Consejos de cuidado de la piel</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="mb-3">
+                        <label for="Textarea" class="form-label">Envíanos tu consulta o comentarios</label>
+                        <textarea class="form-control" id="consulta" name="consulta" rows="3"></textarea>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="mb-3">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="invalidCheck" name="checkbox" required>
+                            <label class="form-check-label" for="invalidCheck">
+                                Acepto recibir comunicaciones de CeraVe y confirmo que he leído la <a href="#">Política de Privacidad</a>.
+                            </label>
+                        </div>
+                    </div>
+                </div>    
+
+                <div class="row justify-content-end gap-3 pt-5">
+                    <div class="col-auto">
+                        <button type="submit" class="btn btn-primary">Suscribirse</button>
+                    </div>
+
+                    <div class="col-auto">
+                        <button  type="reset" class="btn btn-secondary btn-reset">Limpiar</button>
+                    </div>
+                </div>
+
+            </form>
+        </section>
+    </main>
+
+
+    <!--CAMBIAR FOOTER
     <footer>
         <div class="footer-container">
             <h4>CeraVe Store</h4>
             <p>&copy; 2026 Web I - UNTDF | Ushuaia, Tierra del Fuego</p>
         </div>
-    </footer> </body>
+    </footer>
+    -->
+    
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+</body>
 </html>

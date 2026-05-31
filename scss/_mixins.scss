@@ -1,45 +1,47 @@
-body {
-    font-family: $font-family-base;
-    margin: $body-margin;
+@use "variable" as v;
+
+@mixin body {
+    font-family: v.$font-family-base;
+    margin: v.$body-margin;
 }
 
-h1 {
-    font-size: $h1-font-size;
-    color: $h1-color;
-    font-weight: $h1-font-weight;
-    margin-bottom: $h1-margin-bottom;
+@mixin h1 {
+    font-size: v.$h1-font-size;
+    color: v.$h1-color;
+    font-weight: v.$h1-font-weight;
+    margin-bottom: v.$h1-margin-bottom;
 }
 
-h2 {
-    font-size: $h2-font-size;
-    color: $h2-color;
-    font-weight: $h2-font-weight;
-    margin-bottom: $h2-margin-bottom;
+@mixin h2 {
+    font-size: v.$h2-font-size;
+    color: v.$h2-color;
+    font-weight: v.$h2-font-weight;
+    margin-bottom: v.$h2-margin-bottom;
 }
 
-h3 {
-    font-size: $h3-font-size;
-    color: $h3-color;
-    font-weight: $h3-font-weight;
-    margin-bottom: $h3-margin-bottom;
+@mixin h3 {
+    font-size: v.$h3-font-size;
+    color: v.$h3-color;
+    font-weight: v.$h3-font-weight;
+    margin-bottom: v.$h3-margin-bottom;
 }
 
-h4 {
-    font-size: $h4-font-size;
-    color: $h4-color;
-    font-weight: $h4-font-weight;
-    margin-bottom: $h4-margin-bottom;
+@mixin h4 {
+    font-size: v.$h4-font-size;
+    color: v.$h4-color;
+    font-weight: v.$h4-font-weight;
+    margin-bottom: v.$h4-margin-bottom;
 }
 
-h5 {
-    font-size: $h5-font-size;
-    color: $h5-color;
-    font-weight: $h5-font-weight;
-    margin-bottom: $h5-margin-bottom;
+@mixin h5 {
+    font-size: v.$h5-font-size;
+    color: v.$h5-color;
+    font-weight: v.$h5-font-weight;
+    margin-bottom: v.$h5-margin-bottom;
 }
 
-p {
-    font-size: $p-font-size;
-    color: $p-color;
-    margin-bottom: $p-margin-bottom;
+@mixin p {
+    font-size: v.$p-font-size;
+    color: v.$p-color;
+    margin-bottom: v.$p-margin-bottom;
 }

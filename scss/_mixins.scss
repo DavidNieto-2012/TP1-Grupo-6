@@ -1,0 +1,45 @@
+body {
+    font-family: $font-family-base;
+    margin: $body-margin;
+}
+
+h1 {
+    font-size: $h1-font-size;
+    color: $h1-color;
+    font-weight: $h1-font-weight;
+    margin-bottom: $h1-margin-bottom;
+}
+
+h2 {
+    font-size: $h2-font-size;
+    color: $h2-color;
+    font-weight: $h2-font-weight;
+    margin-bottom: $h2-margin-bottom;
+}
+
+h3 {
+    font-size: $h3-font-size;
+    color: $h3-color;
+    font-weight: $h3-font-weight;
+    margin-bottom: $h3-margin-bottom;
+}
+
+h4 {
+    font-size: $h4-font-size;
+    color: $h4-color;
+    font-weight: $h4-font-weight;
+    margin-bottom: $h4-margin-bottom;
+}
+
+h5 {
+    font-size: $h5-font-size;
+    color: $h5-color;
+    font-weight: $h5-font-weight;
+    margin-bottom: $h5-margin-bottom;
+}
+
+p {
+    font-size: $p-font-size;
+    color: $p-color;
+    margin-bottom: $p-margin-bottom;
+}

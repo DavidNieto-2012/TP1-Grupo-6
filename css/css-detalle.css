@@ -1,144 +1,17 @@
-
-/*SECCION DETALLE*/
-.contenedor-detalle{
-    display: grid;
-    grid-template-columns: 1fr 2fr; /* crea 2 columnas, la primera ocupa 1 parte y la segunda 2 partes del espacio */
-    grid-template-areas:
-        "imagen titulo"
-        "imagen categoria"
-        "imagen descripcion"
-        "imagen boton"
-        "tabla tabla"; /* la imagen ocupa toda la primera columna, y el título, categoría y botón ocupan la segunda columna. La tabla se coloca debajo ancho total */
-    grid-template-rows: auto auto auto 1fr;
-    gap: 10px 60px; /* espacio entre filas y columnas */
-    max-width: 100%;
-    padding: 5%;
-    align-items: start;
-}
-/* Indicamos a cada bloque div en qué área del grid va */
-.bloque-img         { grid-area: imagen; }
-.bloque-titulo      { grid-area: titulo; }
-.bloque-descripcion { grid-area: descripcion; }
-.bloque-boton       { grid-area: boton; }
-.bloque-tabla       { grid-area: tabla; }
-
-/*IMAGEN PRINCIPAL*/
-.bloque-img img{
-    width: 100%;
-    height: 500px;
-    object-fit: contain; /*Ajusta la imagen para que se mantenga su proporción sin recortarla*/
-}
-/*GALERIA DE IMAGENES*/
-.galeria{
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
-    justify-content: center;
-}
-.galeria img{
-    width: 50px;
-    height: 50px;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.bloque-titulo span{
-    font-size: 0.8rem;
-    color: #666666;
-    font-weight: 200;
-    margin-bottom: 20px;
-}
-
-/*SECCION TABLA DE ESPECIFICACIONES*/
-.bloque-tabla{
-    width: 100%;
-    margin-top: 30px;
-    font-size: 0.7rem;
-}
-.bloque-tabla table{
-    width: 100%;
-    border-collapse: collapse; /* Elimina los espacios entre las celdas */
-    text-align: left;
-}
-.bloque-tabla tr{
-    padding: 10px;
-}
-.bloque-tabla td{
-    border-top: 1px solid #ddd; /* Agrega una línea debajo de cada fila */
-    vertical-align: top;
-    color: #666666;
-    padding: 10px 10px;
-}
-/* primer th dentro de un tr */
-.bloque-tabla td:first-child {
-    font-size: 0.9rem;
-    font-weight: 600;
-    color: #0e3353;
-}
-.bloque-tabla ul, ol{
-    margin: 10px;
-    padding-left: 0;
-    margin-bottom: 5px;
-}
-
-/* En pantallas de 767px o menos (mobile) */
-@media (max-width: 767px) {
-    .contenedor-detalle {
-        grid-template-columns: 1fr; /* una sola columna */
-        grid-template-areas: /*cómo se organizan los bloques*/
-            "titulo"
-            "imagen"
-            "categoria"
-            "descripcion"
-            "boton"
-            "tabla";
-        padding: 5%;
-        gap: 10px;
-    }
-    .bloque-img .img-principal{
-        height: 300px;
-    }
-    .bloque-descripcion p {
-        text-align: justify;
-    }
-}
-
-/*SECCION PRODUCTOS RELACIONADOS*/
-.contenedor-relacionados{
-    display: grid;
-    grid-template-rows: auto auto auto 1fr;
-    grid-template-areas:
-        "titulo-relacionados"
-        "productos-relacionados";
-    max-width: 100%;
-    gap: 20px;
-    padding: 2rem 1rem 2rem 1rem;
-    margin: 40px auto;
-    background-color: #f0f8ff;
-}
-/* Indicamos a cada bloque div en qué área del grid va */
-.bloque-titulo-relacionados  { grid-area: titulo-relacionados; }
-.bloque-productos            { grid-area: productos-relacionados; }
-
-.bloque-productos-relacionados{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;        /* si no entran, bajan a la siguiente línea */
-    gap: 20px;
-    justify-content: center;
-}
-.contenedor-relacionados a{
-    text-decoration: none;
-}
-.contenedor-relacionados h2 {
-    text-align: center;
-}
-.tarjeta-info{
+.tarjeta-info {
     display: flex;
     flex-direction: column;
-    flex: 1; /* para que ocupe el espacio restante del card */
+    flex: 1;
+
 }
-.estrellas{
+
+.estrellas {
     color: #0772ba;
     font-size: 1rem;
-}   
+}
+
+section {
+
+    margin-top: 80px;
+
+}

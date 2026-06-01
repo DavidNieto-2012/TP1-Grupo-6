@@ -1,16 +1,21 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/css-base.css">
     <link rel="stylesheet" href="../css/css-tarjeta.css">
     <link rel="stylesheet" href="../css/css-detalle.css">
-    <link rel="stylesheet" href="../css/css-index.css"> 
+    <link rel="stylesheet" href="../css/css-index.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
     <title>Crema reparadora para contorno de ojos</title>
 </head>
+
 <body>
+
+    <!--
     <header>
         <nav class="navbar">
             <a href="../index.html" class="logo">
@@ -33,65 +38,166 @@
             <label for="menu-toggle" class="hamburger">☰</label>
         </nav>
     </header>
-    
-    <section class="contenedor-detalle">
-        <div class="bloque-img">
-            <img class="img-principal" src="../images/crema-reparadora/crema-reparadora.webp" alt="Crema reparadora para contorno de ojos">
-            <div class="galeria">
-                <img src="../images/crema-reparadora/crema-reparadora1.webp" alt="Crema reparadora para contorno de ojos">
-                <img src="../images/crema-reparadora/crema-reparadora2.jpg" alt="Beneficios Crema reparadora para contorno de ojos">
-                <img src="../images/crema-reparadora/crema-reparadora3.jpg" alt="Modo de uso Crema reparadora para contorno de ojos">
+                    -->
+
+    <header class="bg-white border-b border-gray-200 sticky top-0 z-50 shadow-sm">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex justify-between items-center relative">
+
+
+
+
+            <!-- foto logo -->
+            <a href="../index.html" class="flex items-center h-full max-w-[120px] no-underline">
+                <img src="../images/cerave-logo-png_seeklogo-352149.png" alt="CeraVe Logo"
+                    class="h-auto max-h-12 object-contain">
+            </a>
+
+            <!-- Checkbox Oculto para controlar el menú en móviles -->
+            <input type="checkbox" id="menu-toggle" class="peer hidden">
+
+
+            <ul class="nav-links hidden absolute top-full left-0 w-full bg-white border-b border-gray-200 flex-col p-4 space-y-3 m-0 list-none
+                   md:flex md:relative md:top-auto md:left-auto md:w-auto md:bg-transparent md:border-none md:flex-row md:p-0 md:space-y-0 md:space-x-8 md:items-center
+                   peer-checked:flex z-40">
+
+                <li>
+                    <a href="../index.html"
+                        class="text-gray-700 hover:text-[#0772ba] font-medium transition-colors no-underline">Inicio</a>
+                </li>
+                <li>
+                    <a href="../Lista.html"
+                        class="text-gray-700 hover:text-[#0772ba] font-medium transition-colors no-underline">Productos</a>
+                </li>
+
+                <!-- desplegable para categorias -->
+                <li class="relative group">
+                    <a href="#"
+                        class="text-gray-700 group-hover:text-[#0772ba] font-medium transition-colors flex items-center gap-1 no-underline">
+                        Categorías
+                        <svg class="w-4 h-4 transform group-hover:rotate-180 transition-transform" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+                            </path>
+                        </svg>
+                    </a>
+
+                    <ul
+                        class="static w-full bg-gray-50 rounded-md mt-2 p-2 space-y-1 list-none pl-0
+                           md:absolute md:top-full md:left-0 md:w-48 md:bg-white md:shadow-lg md:border md:border-gray-100 md:hidden md:group-hover:block md:mt-0 md:z-50">
+                        <li><a href="../categoria_seca.html"
+                                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-[#0772ba] rounded no-underline">Piel
+                                seca</a></li>
+                        <li><a href="../categoria_mixta.html"
+                                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-[#0772ba] rounded no-underline">Piel
+                                mixta</a></li>
+                        <li><a href="../categoria_sensible.html"
+                                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-[#0772ba] rounded no-underline">Piel
+                                sensible</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="../newsletter.html" class="text-[#0772ba] font-bold no-underline">Newsletter</a>
+                </li>
+                <li>
+                    <a href="../nosotros.html"
+                        class="text-gray-700 hover:text-[#0772ba] font-medium transition-colors no-underline">Nosotros</a>
+                </li>
+            </ul>
+
+            <!--botón de hamburguesa-->
+            <label for="menu-toggle"
+                class="hamburger text-2xl text-gray-700 cursor-pointer p-2 select-none md:hidden hover:text-[#0772ba] transition-colors mb-0">
+                ☰
+            </label>
+
+        </nav>
+    </header>
+
+
+
+
+
+    <section class="grid grid-cols-1 md:grid-cols-3 gap-[10px] md:gap-[10px_60px] p-[5%] items-start w-full pt-20">
+        <div class="order-2 md:order-none md:col-span-1 md:row-span-4">
+            <img class="w-full h-[300px] md:h-[500px] object-contain"
+                src="../images/crema-reparadora/crema-reparadora.webp" alt="Crema reparadora para contorno de ojos">
+
+            <div class="flex flex-row gap-5 justify-center mt-4">
+                <img class="w-[50px] h-[50px] rounded-[5px] cursor-pointer"
+                    src="../images/crema-reparadora/crema-reparadora1.webp"
+                    alt="Crema reparadora para contorno de ojos">
+                <img class="w-[50px] h-[50px] rounded-[5px] cursor-pointer"
+                    src="../images/crema-reparadora/crema-reparadora2.jpg"
+                    alt="Beneficios Crema reparadora para contorno de ojos">
+                <img class="w-[50px] h-[50px] rounded-[5px] cursor-pointer"
+                    src="../images/crema-reparadora/crema-reparadora3.jpg"
+                    alt="Modo de uso Crema reparadora para contorno de ojos">
             </div>
         </div>
 
-        <div class="bloque-titulo">
+        <div class="order-1 md:order-none md:col-span-2">
             <h1>Crema reparadora para contorno de ojos</h1>
             <span>Con ácido hialurónico y ceramidas</span>
         </div>
 
-        <div class="bloque-descripcion">
+        <div class="order-3 md:order-none md:col-span-2 text-justify md:text-left">
             <h3>$17.000</h3>
             <h3>Crema para contorno de ojos, ojeras e hinchazón</h3>
-            <p>Cuando se trata de la piel del contorno de los ojos, la hinchazón y las ojeras son algunas de las preocupaciones más comunes. 
-                <br>Afortunadamente, una crema de contorno de ojos adecuada puede ayudar a suavizar e iluminar esta delicada piel para que luzca lo mejor posible. Busque una crema para el contorno de ojos formulada con ceramidas, ácido hialurónico y niacinamida para aportar hidratación y restaurar la barrera natural de la piel. 
-                <br>También es importante utilizar un producto cuya seguridad haya sido probada por oftalmólogos, como la Crema reparadora para contorno de ojos CeraVe, que es apta para su uso alrededor de los ojos. 
-                <br>La Crema reparadora para contorno de ojos CeraVe cuenta con un Complejo Marino y Botánico que ayuda a iluminar toda la zona de los ojos. 
-                <br>Adecuada para todo tipo de piel, nuestra crema para contorno de ojos no grasa, de rápida absorción y sin perfume, también contiene tres ceramidas esenciales, ácido hialurónico y niacinamida, además de la tecnología patentada MVE Delivery Technology que libera ingredientes de manera prolongada para una hidratación continua de la piel.
+            <p>Cuando se trata de la piel del contorno de los ojos, la hinchazón y las ojeras son algunas de las
+                preocupaciones más comunes.
+                <br>Afortunadamente, una crema de contorno de ojos adecuada puede ayudar a suavizar e iluminar esta
+                delicada piel para que luzca lo mejor posible. Busque una crema para el contorno de ojos formulada con
+                ceramidas, ácido hialurónico y niacinamida para aportar hidratación y restaurar la barrera natural de la
+                piel.
+                <br>También es importante utilizar un producto cuya seguridad haya sido probada por oftalmólogos, como
+                la Crema reparadora para contorno de ojos CeraVe, que es apta para su uso alrededor de los ojos.
+                <br>La Crema reparadora para contorno de ojos CeraVe cuenta con un Complejo Marino y Botánico que ayuda
+                a iluminar toda la zona de los ojos.
+                <br>Adecuada para todo tipo de piel, nuestra crema para contorno de ojos no grasa, de rápida absorción y
+                sin perfume, también contiene tres ceramidas esenciales, ácido hialurónico y niacinamida, además de la
+                tecnología patentada MVE Delivery Technology que libera ingredientes de manera prolongada para una
+                hidratación continua de la piel.
             </p>
         </div>
 
-        <div class="bloque-boton">
+        <div class="order-4 md:order-none md:col-span-2">
             <button>Comprar</button>
         </div>
 
-        <div class="bloque-tabla">
-            <table>
-                <tr>
-                    <td>Ingredientes</td>
-                    <td>Aqua / Agua / Eau, Niacinamida, Alcohol Cetílico, Triglicérido Caprílico/Cáprico, Glicerina, Propanediol, Isononanoato de Isononilo, Ésteres de Jojoba, Sesquistearato de Metil Gluco</td>
+        <div class="order-5 md:order-none col-span-1 md:col-span-3 w-full mt-[30px] text-[0.7rem]">
+            <table class="w-full border-collapse text-left">
+                <tr class="p-2.5">
+                    <td class="border-t border-[#ddd] align-top text-[#666666] p-2.5">Ingredientes</td>
+                    <td class="border-t border-[#ddd] align-top p-2.5 text-[0.9rem] font-semibold text-[#0e3353]">Aqua /
+                        Agua / Eau, Niacinamida, Alcohol Cetílico, Triglicérido Caprílico/Cáprico, Glicerina,
+                        Propanediol, Isononanoato de Isononilo, Ésteres de Jojoba, Sesquistearato de Metil Gluco</td>
                 </tr>
-                <tr>
-                    <td>Contenido</td>
-                    <td>14 ml</td>
+                <tr class="p-2.5">
+                    <td class="border-t border-[#ddd] align-top text-[#666666] p-2.5">Contenido</td>
+                    <td class="border-t border-[#ddd] align-top p-2.5 text-[0.9rem] font-semibold text-[#0e3353]">14 ml
+                    </td>
                 </tr>
-                <tr>
-                    <td>Beneficios</td>
-                    <td>
-                        <ul>
+                <tr class="p-2.5">
+                    <td class="border-t border-[#ddd] align-top text-[#666666] p-2.5">Beneficios</td>
+                    <td class="border-t border-[#ddd] align-top p-2.5 text-[0.9rem] font-semibold text-[#0e3353]">
+                        <ul class="m-2.5 mb-1.25 pl-0">
                             <li>Reduce la apariencia de las ojeras y la hinchazón de los ojos</li>
                             <li>Fórmula no grasa y de rápida absorción</li>
                             <li>Adecuada para todo tipo de pieles</li>
-                            <li>Tecnología MVE: Este sistema patentado de suministro libera continuamente ingredientes humectantes para una hidratación durante todo el día</li>
+                            <li>Tecnología MVE: Este sistema patentado de suministro libera continuamente ingredientes
+                                humectantes para una hidratación durante todo el día</li>
                         </ul>
                     </td>
                 </tr>
-                <tr>
-                    <td>Cómo ultilizarlo</td>
-                    <td>
-                        <ol>
+                <tr class="p-2.5">
+                    <td class="border-t border-[#ddd] align-top text-[#666666] p-2.5">Cómo ultilizarlo</td>
+                    <td class="border-t border-[#ddd] align-top p-2.5 text-[0.9rem] font-semibold text-[#0e3353]">
+                        <ol class="m-2.5 mb-1.25 pl-0">
                             <li>Aplicar en pequeños puntos alrededor del área de los ojos</li>
                             <li>Aplicar suavemente hasta que se absorba por completo</li>
-                            <li>Utilizar solo o bajo el maquillaje una o dos veces al día por la mañana y/o por la tarde</li>
+                            <li>Utilizar solo o bajo el maquillaje una o dos veces al día por la mañana y/o por la tarde
+                            </li>
                         </ol>
                     </td>
                 </tr>
@@ -100,14 +206,14 @@
     </section>
 
     <!--PRODUCTOS RELACIONADOS-->
-    <section class="contenedor-relacionados">
+    <section class="flex flex-col gap-5 py-8 px-4 my-10 mx-auto bg-[#f0f8ff] max-w-full">
         <div class="bloque-titulo-relacionados">
-            <h2>Te puede interesar</h2>
+            <h2 class="text-center">Te puede interesar</h2>
         </div>
-        <div class="bloque-productos-relacionados">
+        <div class="flex flex-row flex-wrap gap-5 justify-center">
             <a href="../productos/detalle-locion-uso-diario.html">
                 <div class="tarjeta">
-                    <img src="../images/locion-uso-diario/locion-uso-diario.webp" alt="foto" >
+                    <img src="../images/locion-uso-diario/locion-uso-diario.webp" alt="foto">
                     <div class="tarjeta-info">
                         <h4>Loción hidratante para uso diario</h4>
                         <p>Loción hidratante sin aceite con ácido hialurónico</p>
@@ -117,7 +223,7 @@
             </a>
             <a href="../productos/detalle-crema-hidratante.html">
                 <div class="tarjeta">
-                    <img src="../images/crema-hidratante/crema-hidratante.webp" alt="foto" >
+                    <img src="../images/crema-hidratante/crema-hidratante.webp" alt="foto">
                     <div class="tarjeta-info">
                         <h4>Crema hidratante</h4>
                         <p>Crema hidratante restauradora de la barrera</p>
@@ -127,7 +233,7 @@
             </a>
             <a href="../productos/detalle-limpiador-aceite.html">
                 <div class="tarjeta">
-                    <img src="../images/limpiador-en-aceite/limpiador-aceite.webp" alt="foto" >
+                    <img src="../images/limpiador-en-aceite/limpiador-aceite.webp" alt="foto">
                     <div class="tarjeta-info">
                         <h4>Limpiador en Aceite Espumoso Hidratante</h4>
                         <p>Limpiador en Aceite para rostro y cuerpo​</p>
@@ -136,7 +242,7 @@
                 </div>
             </a>
         </div>
-        
+
     </section>
 
     <footer>
@@ -146,4 +252,5 @@
         </div>
     </footer>
 </body>
+
 </html>

@@ -3,60 +3,132 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <!--reemplazar el css cuando este hecho con sass-->
+    <link rel="stylesheet" href="css/newsletter.css">
+
     <title>Piel seca | CeraVe</title>
 
-    <link rel="stylesheet" href="css/css-base.css">
-    <link rel="stylesheet" href="css/css-tarjeta.css">
-    <link rel="stylesheet" href="css/css-categoría.css">
-    <link rel="stylesheet" href="css/css-index.css">
+    <!--
+        <link rel="stylesheet" href="css/css-base.css">
+        <link rel="stylesheet" href="css/css-tarjeta.css">
+        <link rel="stylesheet" href="css/css-categoría.css">
+        <link rel="stylesheet" href="css/css-index.css">
+    -->
 </head>
 <body>
-    <header>
-        <nav class="navbar">
-            <a href="index.html" class="logo">
-                <img src="images/cerave-logo-png_seeklogo-352149.png" alt="CeraVe Logo">
+    <!--MENU-->
+    <header class="bg-white border-b border-gray-200 sticky top-0 z-50 shadow-sm">
+        <nav class="w-full px-8 lg:px-20 h-20 flex justify-between items-center relative">
+
+            <!-- foto logo -->
+            <a href="index.html" class="flex items-center h-full max-w-[120px] no-underline">
+                <img src="images/cerave-logo-png_seeklogo-352149.png" alt="CeraVe Logo"
+                    class="h-auto max-h-12 object-contain">
             </a>
-            <input type="checkbox" id="menu-toggle" class="menu-toggle">
-            <ul class="nav-links">
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="Lista.html" class="active">Productos</a></li>
-                <li><a href="#">Categorías</a>
-                    <ul>
-                        <li><a href="categoria_seca.html">Piel seca</a></li>
-                        <li><a href="categoria_mixta.html">Piel mixta</a></li>
-                        <li><a href="categoria_sensible.html">Piel sensible</a></li>
-                    </ul>                                
+
+            <!-- Checkbox Oculto para controlar el menú en móviles -->
+            <input type="checkbox" id="menu-toggle" class="peer hidden">
+
+
+            <ul class="hidden absolute top-full left-0 w-full bg-white border-b border-gray-200 flex-col p-4 gap-3 m-0 list-none
+                   md:flex md:relative md:top-auto md:left-auto md:w-auto md:bg-transparent md:border-none md:flex-row md:p-0 md:gap-8 md:items-center md:ml-auto md:mr-12
+                   peer-checked:flex z-40">
+
+                <li>
+                    <a href="index.html"
+                        class="text-gray-700 hover:text-[#0772ba] font-medium transition-colors no-underline">Inicio</a>
                 </li>
-                <li><a href="newsletter.html">Newsletter</a></li>
-                <li><a href="nosotros.html">Nosotros</a></li>
+                <li>
+                    <a href="productos.html"
+                        class="text-gray-700 hover:text-[#0772ba] font-medium transition-colors no-underline">Productos</a>
+                </li>
+
+                <!-- desplegable para categorias por click -->
+                <li class="relative">
+                    <details class="group/details">
+                        <summary
+                            class="text-gray-700 hover:text-[#0772ba] font-medium transition-colors flex items-center gap-1 cursor-pointer no-underline list-none [&::-webkit-details-marker]:hidden select-none">
+                            Categorías
+                            <svg class="w-4 h-4 transform group-open/details:rotate-180 transition-transform"
+                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7">
+                                </path>
+                            </svg>
+                        </summary>
+
+                        <ul
+                            class="static w-full bg-gray-50 rounded-md mt-2 p-2 space-y-1 list-none pl-0
+                               md:absolute md:top-full md:left-0 md:w-48 md:bg-white md:shadow-lg md:border md:border-gray-100 md:mt-4 md:z-50">
+                            <li><a href="categoria_seca.html"
+                                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-[#0772ba] rounded no-underline">Piel
+                                    seca</a></li>
+                            <li><a href="categoria_mixta.html"
+                                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-[#0772ba] rounded no-underline">Piel
+                                    mixta</a></li>
+                            <li><a href="categoria_sensible.html"
+                                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-[#0772ba] rounded no-underline">Piel
+                                    sensible</a></li>
+                        </ul>
+                    </details>
+                </li>
+
+                <li>
+                    <a href="newsletter.html" class="text-[#0772ba] font-bold no-underline">Newsletter</a>
+                </li>
+                <li>
+                    <a href="nosotros.html"
+                        class="text-gray-700 hover:text-[#0772ba] font-medium transition-colors no-underline">Nosotros</a>
+                </li>
             </ul>
-            <label for="menu-toggle" class="hamburger">☰</label>
+
+            <!--botón de hamburguesa-->
+            <label for="menu-toggle"
+                class="hamburger text-2xl text-gray-700 cursor-pointer p-2 select-none md:hidden hover:text-[#0772ba] transition-colors mb-0">
+                ☰
+            </label>
+
         </nav>
     </header>
     
-<main>
-  
+    <!--CUERPO-->
+    <main>
+        <section id="titulo" class="w-full py-10 bg-[#f6f6f6]">
+            <h1 class="text-center px-2 sm:px-6 md:px-8 lg:px-10">Piel Seca</h1>
+            <figure>
+                <img src="images/banner-piel-seca.webp" alt="Imagen de mujer con piel seca"
+                    class="w-full h-48 md:h-64 lg:h-80 object-cover mb-6 mt-12">
+                <figcaption class=" w-3/4 mx-auto text-center text-lg font-semibold text-[#0772ba] pt-4 px-4 sm:px-6 md:px-8 lg:px-10">
+                        Ayuda a aliviar las molestias causadas por la piel seca con nuestra amplia gama de productos para el rostro y el cuerpo.
+                        <br> Desde limpiadores e hidratantes, hasta bálsamos y más, nuestros productos para la piel seca para adultos, niños y bebés están formulados con ingredientes calmantes e hidratantes suaves pero efectivos, además de ceramidas para ayudar a restaurar y mantener la barrera de la piel.</p>
+
+                </figcaption>
+            </figure>
+        </section>
+
+        <!--Listado de productos de categoria-->
+        <section
+            class="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 px-4 py-6 sm:px-4 sm:py-4 md:px-8 lg:px-10 place-items-center">
+
+            <div class="card text-center" style="width: 18rem;">
+                <img src="images/agua-micelar/Agua micelar.webp" class="card-img-top align-self-center"
+                    alt="Agua micelar para el rostro">
+                <div class="card-body">
+                    <h5 class="card-title">Agua Micelar</h5>
+                    <p class="card-text">Un agua micelar limpiadora es una forma ultra suave de eliminar el exceso de
+                        grasa, suciedad y maquillaje sin tener que enjuagar.</p>
+                    <h4>$35.222</h4>
+                    <a href="productos/detalle-agua-micelar.html" class="btn btn-primary">Ver detalles</a>
+                </div>
+            </div>
+        </section>
 
 
-
-    <h1>Piel Seca</h1>
-    
-    
-    <p>Ayuda a aliviar las molestias causadas por la piel seca con nuestra amplia gama de productos para el rostro y el cuerpo. Desde limpiadores e hidratantes, hasta bálsamos y más, nuestros productos para la piel seca para adultos, niños y bebés están formulados con ingredientes calmantes e hidratantes suaves pero efectivos, además de ceramidas para ayudar a restaurar y mantener la barrera de la piel.</p>
-
-    <section>
-        
-    <a href="productos/detalle-agua-micelar.html">
-        <div class="tarjeta">
-        
-            <img src="images/agua-micelar/Agua micelar.webp" alt="Agua micelar para el rostro" width="80px">
-            <h4>Agua Micelar</h4>
-            <p>Un agua micelar limpiadora es una forma ultra suave de eliminar el exceso de grasa, suciedad y maquillaje sin tener que enjuagar.</p>
-            <h4>$35.222</h4>
-
-        </div>
-        </a>
-
+    <!--reemplazar cuando esten creadas las tarjetas
     <a href="productos/detalle-limpiador-aceite.html">
             <div class="tarjeta">
 
@@ -76,7 +148,7 @@
                 <h4>$53.388</h4>
             </div>
         </a>
-        
+    -->
       
     </section>
     
@@ -84,12 +156,20 @@
     
 </main>
 
- <footer>
-        <div class="footer-container">
-            <h4>CeraVe Store</h4>
-            <p>&copy; 2026 Web I - UNTDF | Ushuaia, Tierra del Fuego</p>
-        </div>
-</footer>
+    <!--FOOTER-->
+    <!--cambiar footer
+    <footer>
+            <div class="footer-container">
+                <h4>CeraVe Store</h4>
+                <p>&copy; 2026 Web I - UNTDF | Ushuaia, Tierra del Fuego</p>
+            </div>
+    </footer>
+-->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous">
+    </script>
 
 </body>
 </html>

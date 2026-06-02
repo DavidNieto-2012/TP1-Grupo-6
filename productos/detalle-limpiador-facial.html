@@ -4,12 +4,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 1. Bootstrap CSS (estilos base que pueden ser sobrescritos por el CSS personalizado) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+
     <link rel="stylesheet" href="../css/css-base.css">
     <link rel="stylesheet" href="../css/css-tarjeta.css">
     <link rel="stylesheet" href="../css/css-detalle.css">
     <link rel="stylesheet" href="../css/css-index.css">
+
+    <!-- 3. Tailwind CSS v4 sin Preflight para evitar conflictos con Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <title>Limpiador facial hidratante</title>
+    <style type="text/tailwindcss">
+        @import "tailwindcss/theme";
+        @import "tailwindcss/utilities";
+    </style>
 </head>
 
 <body>
@@ -114,7 +124,7 @@
 
 
     <section class="grid grid-cols-1 md:grid-cols-3 gap-[10px] md:gap-[10px_60px] p-[5%] items-start w-full pt-20">
-        <div class="order-2 md:order-none md:col-span-1 md:row-span-4">
+        <div class="order-2 md:!order-none md:col-span-1 md:row-span-4">
 
             <img class="w-full h-[300px] md:h-[500px] object-contain"
                 src="../images/limpiador-facial/Limpiador facial.jpg" alt="Limpiador facial hidratante">
@@ -130,13 +140,13 @@
             </div>
         </div>
 
-        <div class="order-1 md:order-none md:col-span-2">
+        <div class="order-1 md:!order-none md:col-span-2">
 
             <h1>Limpiador facial hidratante</h1>
             <span>Para piel normal a seca</span>
         </div>
 
-        <div class="order-3 md:order-none md:col-span-2 text-justify md:text-left">
+        <div class="order-3 md:!order-none md:col-span-2 text-justify md:text-left">
             <h3>$53.338</h3>
             <h3>Limpiador hidratante para pieles normales a secas</h3>
             <p>Un limpiador puede eliminar la suciedad, el maquillaje y otros residuos, pero un limpiador hidratante,
@@ -154,11 +164,11 @@
             </p>
         </div>
 
-        <div class="order-4 md:order-none md:col-span-2">
+        <div class="order-4 md:!order-none md:col-span-2">
             <button>Comprar</button>
         </div>
 
-        <div class="order-5 md:order-none col-span-1 md:col-span-3 w-full mt-[30px] text-[0.7rem]">
+        <div class="order-5 md:!order-none col-span-1 md:col-span-3 w-full mt-[30px] text-[0.7rem]">
             <table class="w-full border-collapse text-left">
                 <tr class="p-2.5">
                     <td class="border-t border-[#ddd] align-top text-[#666666] p-2.5">Ingredientes</td>
@@ -245,6 +255,10 @@
             <p>&copy; 2026 Web I - UNTDF | Ushuaia, Tierra del Fuego</p>
         </div>
     </footer>
+    <!-- Bootstrap Bundle JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>

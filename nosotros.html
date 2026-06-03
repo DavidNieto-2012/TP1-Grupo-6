@@ -1,14 +1,28 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 1. Bootstrap CSS (estilos base que pueden ser sobrescritos por el CSS personalizado) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+
     <link rel="stylesheet" href="css/css-base.css">
     <link rel="stylesheet" href="css/nosotros.css">
+
+    <!-- 3. Tailwind CSS v4 sin Preflight para evitar conflictos con Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+        @import "tailwindcss/theme";
+        @import "tailwindcss/utilities";
+    </style>
     <title>Sobre CeraVe</title>
 </head>
+
 <body>
-    <header>
+    <!--<header>
         <nav class="navbar">
             <a href="index.html" class="logo">
                 <img src="images/cerave-logo-png_seeklogo-352149.png" alt="CeraVe Logo">
@@ -29,57 +43,181 @@
             </ul>
             <label for="menu-toggle" class="hamburger">☰</label>
         </nav>
+    </header> 
+    
+    ------------NAVBAR VIEJA--------------------------------------------------------------------------------------------->
+
+
+    <header class="bg-white border-b border-gray-200 sticky top-0 z-50 shadow-sm">
+        <nav class="w-full px-8 lg:px-20 h-20 flex justify-between items-center relative">
+
+            <!-- foto logo -->
+            <a href="../index.html" class="flex items-center h-full max-w-[120px] no-underline">
+                <img src="../images/cerave-logo-png_seeklogo-352149.png" alt="CeraVe Logo"
+                    class="h-auto max-h-20 object-contain">
+            </a>
+
+            <!-- Checkbox Oculto para controlar el menú en móviles -->
+            <input type="checkbox" id="menu-toggle" class="peer hidden">
+
+
+            <ul class="hidden absolute top-full left-0 w-full bg-white border-b border-gray-200 flex-col p-4 gap-3 m-0 list-none
+                   md:flex md:relative md:top-auto md:left-auto md:w-auto md:bg-transparent md:border-none md:flex-row md:p-0 md:gap-8 md:items-center md:ml-auto md:mr-12
+                   peer-checked:flex z-40">
+
+                <li>
+                    <a href="../index.html"
+                        class="text-gray-700 hover:text-[#0772ba] font-medium transition-colors no-underline">Inicio</a>
+                </li>
+                <li>
+                    <a href="../Lista.html"
+                        class="text-gray-700 hover:text-[#0772ba] font-medium transition-colors no-underline">Productos</a>
+                </li>
+
+                <!-- desplegable para categorias por click -->
+                <li class="relative">
+                    <details class="group/details">
+                        <summary
+                            class="text-gray-700 hover:text-[#0772ba] font-medium transition-colors flex items-center gap-1 cursor-pointer no-underline list-none [&::-webkit-details-marker]:hidden select-none">
+                            Categorías
+                            <svg class="w-4 h-4 transform group-open/details:rotate-180 transition-transform"
+                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7">
+                                </path>
+                            </svg>
+                        </summary>
+
+                        <ul
+                            class="static w-full bg-gray-50 rounded-md mt-2 p-2 space-y-1 list-none pl-0
+                               md:absolute md:top-full md:left-0 md:w-48 md:bg-white md:shadow-lg md:border md:border-gray-100 md:mt-4 md:z-50">
+                            <li><a href="../categoria_seca.html"
+                                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-[#0772ba] rounded no-underline">Piel
+                                    seca</a></li>
+                            <li><a href="../categoria_mixta.html"
+                                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-[#0772ba] rounded no-underline">Piel
+                                    mixta</a></li>
+                            <li><a href="../categoria_sensible.html"
+                                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-[#0772ba] rounded no-underline">Piel
+                                    sensible</a></li>
+                        </ul>
+                    </details>
+                </li>
+
+                <li>
+                    <a href="../newsletter.html" class="text-[#0772ba] font-bold no-underline">Newsletter</a>
+                </li>
+                <li>
+                    <a href="../nosotros.html"
+                        class="text-gray-700 hover:text-[#0772ba] font-medium transition-colors no-underline">Nosotros</a>
+                </li>
+            </ul>
+
+            <!--botón de hamburguesa-->
+            <label for="menu-toggle"
+                class="hamburger text-2xl text-gray-700 cursor-pointer p-2 select-none md:hidden hover:text-[#0772ba] transition-colors mb-0">
+                ☰
+            </label>
+
+        </nav>
     </header>
 
-    <main>
+
+    <main class="flex flex-col justify-center">
         <div>
-            <img src="images/nosotros/header-banner.webp" alt="Desarrollado con dermatólogos desde el principio">
+            <img src="images/nosotros/header-banner.webp" class="w-full h-auto"
+                alt="Desarrollado con dermatólogos desde el principio">
         </div>
 
-        <div class="hero">
+        <div class="flex flex-col gap-5 justify-center bg-[#f6f6f6] p-[5%] text-center">
             <h1>Desarrollado con dermatólogos</h1>
-            <h4>En CeraVe, colaboramos con dermatólogos para desarrollar nuestros productos, y lo hemos hecho desde que la marca fue fundada en 2005. Nuestras formulaciones, ingredientes e incluso ideas de productos son desarrollados con dermatólogos.</h4>
-            <h4>"Desarrollado con dermatólogos" no es solo una frase en nuestro logo, sino que está en el corazón mismo de lo que somos y es una parte fundamental de nuestro ADN de marca.</h4>
+            <h4>En CeraVe, colaboramos con dermatólogos para desarrollar nuestros productos, y lo hemos hecho desde que
+                la marca fue fundada en 2005. Nuestras formulaciones, ingredientes e incluso ideas de productos son
+                desarrollados con dermatólogos.</h4>
+            <h4>"Desarrollado con dermatólogos" no es solo una frase en nuestro logo, sino que está en el corazón mismo
+                de lo que somos y es una parte fundamental de nuestro ADN de marca.</h4>
         </div>
 
-        <div class="sobre-cerave">
-            <div class="imagen">
-                <img src="images/nosotros/productos-cerave.webp" alt="Todos nuestros productos elebaorados con dermatólogos">
+        <div class="m-[5%] flex flex-col gap-[10px] md:flex-row md:gap-5 md:justify-center">
+            <div class="flex-1">
+                <img src="images/nosotros/productos-cerave.webp" class="w-full h-auto"
+                    alt="Todos nuestros productos elebaorados con dermatólogos">
             </div>
-            <div class="lista">
+            <div class="flex-1 text-center md:text-left md:ml-10">
                 <h2>Datos sobre CeraVe</h2>
-                <ul>
-                    <li>Nuestros productos están formulados con una combinación de <span>3 ceramidas esenciales (Ceramidas 1, 3 y 6-II)</span>, ácidos grasos y otros lípidos presentes en la barrera protectora de la piel.</li>
-                    <li>La Tecnología de Emulsión Multivesicular (MVE) permite que muchos de nuestros productos liberen ingredientes hidratantes de manera contínua durante 24 horas.</li>
-                    <li>Disponibles en la mayoría de las principales tiendas, los productos para el cuidado de la piel de CeraVe, desarrollados con dermatólogos, son una opción accesible para aquellos que buscan productos de alta calidad sin necesidad de receta médica</li>
+                <ul class="list-none pl-0">
+                    <li class="text-base text-justify mb-2.5">Nuestros productos están formulados con una combinación de
+                        <span class="font-semibold text-[#0e3353]">3 ceramidas esenciales
+                            (Ceramidas 1, 3 y 6-II)</span>, ácidos grasos y otros lípidos presentes en la barrera
+                        protectora de la piel.
+                    </li>
+                    <li class="text-base text-justify mb-2.5">La Tecnología de Emulsión Multivesicular (MVE) permite que
+                        muchos de nuestros productos liberen
+                        ingredientes hidratantes de manera contínua durante 24 horas.</li>
+                    <li class="text-base text-justify mb-2.5">Disponibles en la mayoría de las principales tiendas, los
+                        productos para el cuidado de la piel
+                        de CeraVe, desarrollados con dermatólogos, son una opción accesible para aquellos que buscan
+                        productos de alta calidad sin necesidad de receta médica</li>
                 </ul>
             </div>
         </div>
 
         <!--El iframe sirve para "incrustar" una ventana de un sitio web dentro del tuyo -->
-        <div class="video">
-            <iframe src="https://www.youtube.com/embed/dfeKe4fITzQ?si=Y41iEah9zqagM6Th" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <div class="ratio ratio-16x9" style="margin: 5%; width: auto;">
+            <iframe src="https://www.youtube.com/embed/dfeKe4fITzQ?si=Y41iEah9zqagM6Th" title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
 
-        <div class="tips">
+        <div class="flex flex-col gap-5 m-[5%]">
             <article>
                 <h3>Desarrollado con Dermatólogos desde el principio</h3>
-                <p>Desde nuestros inicios, los dermatólogos han sido fundamentales en la historia de CeraVe. Nuestro viaje comenzó con la visión de crear un nuevo estándar en el cuidado de la piel, guiados por la recomendación de los expertos de los dermatólogos. La guía de estos sobre la salud de la piel y su entendimiento de las afecciones como la dermatitis atópica, el acné y la piel seca han sido vitales para dar forma a nuestro portafolio. Esta colaboración va más allá de una simple consulta; es una asociación profunda y continua que asegura que cada producto de CeraVe sea elaborado con conocimientos profesionales y un compromiso inquebrantable con la salud de la piel. Nuestra promesa de trabajar con dermatólogos no es solo parte de nuestra historia; es un compromiso que renovamos con cada producto que creamos.</p>
-                <img src="images/nosotros/tip-banner-one-LG.webp" alt="Las ceramidas actuan como el 'pegamento' que mantiene unida y protege la piel">
+                <p class="text-base text-justify">Desde nuestros inicios, los dermatólogos han sido fundamentales en la
+                    historia de CeraVe. Nuestro
+                    viaje comenzó con la visión de crear un nuevo estándar en el cuidado de la piel, guiados por la
+                    recomendación de los expertos de los dermatólogos. La guía de estos sobre la salud de la piel y su
+                    entendimiento de las afecciones como la dermatitis atópica, el acné y la piel seca han sido vitales
+                    para dar forma a nuestro portafolio. Esta colaboración va más allá de una simple consulta; es una
+                    asociación profunda y continua que asegura que cada producto de CeraVe sea elaborado con
+                    conocimientos profesionales y un compromiso inquebrantable con la salud de la piel. Nuestra promesa
+                    de trabajar con dermatólogos no es solo parte de nuestra historia; es un compromiso que renovamos
+                    con cada producto que creamos.</p>
+                <img src="images/nosotros/tip-banner-one-LG.webp" class="w-full h-auto"
+                    alt="Las ceramidas actuan como el 'pegamento' que mantiene unida y protege la piel">
             </article>
             <article>
                 <h3>Desarrollado con 3 ceramidas esenciales desde el inicio</h3>
-                <p>Las ceramidas son la base de CeraVe para el cuidado de la piel. Reconociendo su papel crucial en el mantenimiento de la barrera natural de la piel, hemos estado incorporando en nuestros productos 3 ceramidas esenciales desde los inicios de la marca. Este trío de ceramidas – 1, 3 y 6-II – trabajan de manera sinérgica para hidratar la piel y ayudar a retener la humedad esencial. Desarrolladas con dermatólogos, nuestras formulaciones únicas ayudan a fortalecer la barrera protectora de la piel contra los agresores ambientales y prevenir la pérdida de humedad.</p>
-                <img src="images/nosotros/tip-banner-two-LG.webp" alt="El acné, la rosecea y la dermatitis atópica, pueden empeorar cuando la barrera cutánea esta comprometida">
+                <p class="text-base text-justify">Las ceramidas son la base de CeraVe para el cuidado de la piel.
+                    Reconociendo su papel crucial en el
+                    mantenimiento de la barrera natural de la piel, hemos estado incorporando en nuestros productos 3
+                    ceramidas esenciales desde los inicios de la marca. Este trío de ceramidas – 1, 3 y 6-II – trabajan
+                    de manera sinérgica para hidratar la piel y ayudar a retener la humedad esencial. Desarrolladas con
+                    dermatólogos, nuestras formulaciones únicas ayudan a fortalecer la barrera protectora de la piel
+                    contra los agresores ambientales y prevenir la pérdida de humedad.</p>
+                <img src="images/nosotros/tip-banner-two-LG.webp" class="w-full h-auto"
+                    alt="El acné, la rosecea y la dermatitis atópica, pueden empeorar cuando la barrera cutánea esta comprometida">
             </article>
             <article>
                 <h3>Desarrollado con Tecnología de Emulsión Multivesicular (MVE) desde el inicio</h3>
-                <p>En el corazón de la innovación de CeraVe se encuentra nuestra Tecnología de Emulsión Multivesicular (MVE), un revolucionario sistema de liberación que hemos estado utilizando desde nuestros primeros días. Desarrollada con dermatólogos, la Tecnología MVE está diseñada para liberar de manera prolongada nuestra fórmula enriquecida con ceramidas, asegurando una hidratación duradera y una barrera de la piel más saludable. Este mecanismo de liberación prolongada, incorporada en muchos productos de nuestro portafolio, permite la absorción constante y controlada de ingredientes, proporcionando hidratación y protección continuas a la piel a lo largo del día. Nuestra dedicación a esta tecnología avanzada destaca nuestro compromiso de desarrollar soluciones para el cuidado de la piel que ofrecen más que un alivio momentáneo; sino que proporcionan beneficios duraderos respaldados por la ciencia.</p>
-                <img src="images/nosotros/tip-banner-three-LG.webp" alt="La hidratación de la piel es crucial, tanto para mantenerla sana la piel como para mejorar cuadros dermatologicos">
+                <p class="text-base text-justify">En el corazón de la innovación de CeraVe se encuentra nuestra
+                    Tecnología de Emulsión Multivesicular
+                    (MVE), un revolucionario sistema de liberación que hemos estado utilizando desde nuestros primeros
+                    días. Desarrollada con dermatólogos, la Tecnología MVE está diseñada para liberar de manera
+                    prolongada nuestra fórmula enriquecida con ceramidas, asegurando una hidratación duradera y una
+                    barrera de la piel más saludable. Este mecanismo de liberación prolongada, incorporada en muchos
+                    productos de nuestro portafolio, permite la absorción constante y controlada de ingredientes,
+                    proporcionando hidratación y protección continuas a la piel a lo largo del día. Nuestra dedicación a
+                    esta tecnología avanzada destaca nuestro compromiso de desarrollar soluciones para el cuidado de la
+                    piel que ofrecen más que un alivio momentáneo; sino que proporcionan beneficios duraderos
+                    respaldados por la ciencia.</p>
+                <img src="images/nosotros/tip-banner-three-LG.webp" class="w-full h-auto"
+                    alt="La hidratación de la piel es crucial, tanto para mantenerla sana la piel como para mejorar cuadros dermatologicos">
             </article>
         </div>
         <div class="footer">
-            <img src="images/nosotros/footer-banner-LG.webp" alt="Con el poder de 3 ceramidad y 24hs de hidratación">
+            <img src="images/nosotros/footer-banner-LG.webp" class="w-full h-auto"
+                alt="Con el poder de 3 ceramidad y 24hs de hidratación">
         </div>
     </main>
 
@@ -89,6 +227,10 @@
             <p>&copy; 2026 Web I - UNTDF | Ushuaia, Tierra del Fuego</p>
         </div>
     </footer>
-    
+    <!-- Bootstrap Bundle JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
 </body>
+
 </html>

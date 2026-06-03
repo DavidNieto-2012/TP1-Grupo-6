@@ -1,5 +1,7 @@
+@use "variable" as v;
+
 .navbar {
-    background-color: #ffffff;
+    background-color: v.$color-white;
     padding: 15px 20px;
     position: relative;
 }
@@ -11,7 +13,7 @@
 .hamburger {
     display: none;
     font-size: 28px;
-    color: #0e3353;
+    color: v.$color-navy;
     cursor: pointer;
     padding: 10px;
 }
@@ -20,44 +22,44 @@
     display: flex;
     list-style: none;
     gap: 20px;
+
+    a {
+        text-decoration: none;
+        color: v.$color-navy;
+        font-weight: 600;
+        font-size: 0.9rem;
+
+        &.active {
+            color: v.$color-primary;
+        }
+    }
+
+    li {
+        position: relative;
+
+        &:hover ul {
+            display: block;
+        }
+    }
+
+    ul {
+        list-style: none;
+        display: none;
+        position: absolute;
+        min-width: 150px;
+        box-shadow: 1px 1px 2px v.$shadow-menu;
+        background-color: v.$color-white;
+        border-radius: 4px;
+        padding: 10px 0;
+
+        li {
+            margin: 0;
+            padding: 8px 15px;
+        }
+    }
 }
 
-.nav-links a {
-    text-decoration: none;
-    color: #0e3353;
-    font-weight: 600;
-    font-size: 0.9rem;
-}
-
-.nav-links a.active {
-    color: #0772ba;
-}
-
-.nav-links ul {
-    list-style: none;
-    display: none;
-    position: absolute;
-    min-width: 150px;
-    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
-    background-color: #ffffff;
-    border-radius: 4px;
-    padding: 10px 0;
-}
-
-.nav-links ul li {
-    margin: 0;
-    padding: 8px 15px;
-}
-
-.nav-links li {
-    position: relative;
-}
-
-.nav-links li:hover ul {
-    display: block;
-}
-
-/*NAVBAR RESPONSIVE*/
+/* NAVBAR RESPONSIVE */
 /* Desktop: menú lineal y alineado a la derecha */
 @media (min-width: 768px) {
     .navbar {
@@ -78,11 +80,11 @@
         display: flex;
         flex-direction: row;
         gap: 25px;
-    }
 
-    .nav-links ul {
-        top: 100%;
-        left: 0;
+        ul {
+            top: 100%;
+            left: 0;
+        }
     }
 }
 
@@ -111,32 +113,32 @@
         position: absolute;
         top: 100%;
         right: 0;
-        background-color: #ffffff;
+        background-color: v.$color-white;
         box-shadow: 0 4px 6px #0000001a;
         z-index: 1000;
         text-align: right;
-    }
 
-    .nav-links li {
-        border-bottom: 1px solid #eee;
-    }
+        li {
+            border-bottom: 1px solid v.$color-border-light;
+        }
 
-    .nav-links a {
-        display: block;
-        padding: 15px 20px;
-    }
+        a {
+            display: block;
+            padding: 15px 20px;
+        }
 
-    .nav-links ul {
-        position: static;
-        box-shadow: none;
-        background-color: #f5f5f5;
-    }
+        ul {
+            position: static;
+            box-shadow: none;
+            background-color: v.$color-gray-light-bg;
 
-    .nav-links ul li {
-        border-bottom: none;
-    }
+            li {
+                border-bottom: none;
 
-    .nav-links ul li a {
-        padding-left: 40px;
+                a {
+                    padding-left: 40px;
+                }
+            }
+        }
     }
 }

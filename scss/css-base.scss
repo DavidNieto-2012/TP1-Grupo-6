@@ -1,0 +1,92 @@
+@use "variable" as v;
+@use "mixins" as m;
+@use "navbar";
+
+/* Reset universal */
+* {
+    box-sizing: border-box;
+    margin: 0;        /* ← elimina márgenes por defecto de todos los elementos */
+    padding: 0;       /* ← elimina padding por defecto de todos los elementos */
+}
+
+body {
+    @include m.body;
+}
+
+h1 {
+    @include m.h1;
+}
+
+h2 {
+    @include m.h2;
+}
+
+h3 {
+    @include m.h3;
+}
+
+h4 {
+    @include m.h4;
+}
+
+h5 {
+    @include m.h5;
+}
+
+p {
+    @include m.p;
+}
+
+.logo img {
+    height: 100px;
+}
+
+/* Footer */
+footer {
+    background-color: v.$color-footer-bg;
+    padding: 40px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+/* Botones */
+button {
+    display: inline-block;
+    background-color: v.$color-primary;
+    color: white;
+    padding: 10px 25px;
+    text-decoration: none;
+    border-radius: 4px;
+    border: none;
+    font-weight: bold;
+    font-size: 1rem;
+
+    &:hover {
+        background-color: v.$color-navy;
+        color: white;
+        transition: background-color 0.3s ease;
+        font-size: 1.1rem;
+    }
+}
+
+/* ACCESIBILIDAD */
+a:focus-visible, button:focus-visible, input:focus-visible {
+    outline: 3px solid v.$color-primary;
+    outline-offset: 2px;
+}
+
+.skip-link {
+    position: absolute;
+    top: -9999px;
+    left: 0;
+    background: v.$color-primary;
+    border-radius: 5px;
+    color: white;
+    padding: 10px 20px;
+    z-index: 1000;
+    text-decoration: none;
+
+    &:focus {
+        top: 0;
+    }
+}

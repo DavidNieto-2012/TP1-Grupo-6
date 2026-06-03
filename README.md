@@ -33,7 +33,7 @@ RODRI:
 Editar pagina index, agregar los componentes que falten, footer,  refactoriar tarjeta.
 
 DAVID:
-Editar la navbar, pagina detalle de producto, pagina nosotros, pasar base css a sass
+Editar la navbar (listo), pagina detalle de producto (listo), pagina nosotros, pasar base css a sass (listo-revisar)
 
 BARBY:
 formulario (echo), pagina categorias (listo, faltan tarjetas), lista de productos (hecho, faltan tarjetas), 

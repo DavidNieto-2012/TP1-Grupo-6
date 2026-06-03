@@ -125,8 +125,8 @@
 /* Reset universal */
 * {
   box-sizing: border-box;
-  margin: 0; /* ← elimina márgenes por defecto de todos los elementos */
-  padding: 0; /* ← elimina padding por defecto de todos los elementos */
+  margin: 0;
+  padding: 0;
 }
 
 body {
@@ -207,7 +207,9 @@ button:hover {
 }
 
 /* ACCESIBILIDAD */
-a:focus-visible, button:focus-visible, input:focus-visible {
+a:focus-visible,
+button:focus-visible,
+input:focus-visible {
   outline: 3px solid #0772ba;
   outline-offset: 2px;
 }

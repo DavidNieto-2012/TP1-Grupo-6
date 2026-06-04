@@ -5,8 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="css/newsletter.css">
+
+    <!-- 3. Tailwind CSS v4 sin Preflight para evitar conflictos con Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+        @import "tailwindcss/theme";
+        @import "tailwindcss/utilities";
+    </style>
 
     <title>Agradecimiento Suscripción | CeraVe</title>
 

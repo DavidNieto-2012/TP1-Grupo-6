@@ -6,6 +6,7 @@
 }
 
 @mixin h1 {
+    font-family: v.$font-family-heading;
     font-size: v.$h1-font-size;
     color: v.$h1-color;
     font-weight: v.$h1-font-weight;

@@ -30,11 +30,11 @@ PRODUCTOS:
 
 ENTREGA 2:
 RODRI:
-Editar pagina index, agregar los componentes que falten, footer,  refactoriar tarjeta.
+Editar pagina index, footer,  refactoriar tarjeta de producto y tarjeta de producto relacionados (ver pagina detalle).
 
 DAVID:
 Editar la navbar (listo), pagina detalle de producto (listo), pagina nosotros, pasar base css a sass (listo-revisar)
 
 BARBY:
-formulario (echo), pagina categorias (listo, faltan tarjetas), lista de productos (hecho, faltan tarjetas), 
+formulario (hecho), pagina categorias (listo, faltan tarjetas), lista de productos (hecho, faltan tarjetas), 
 

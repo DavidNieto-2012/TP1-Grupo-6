@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Stack+Sans+Headline:wght@200..700&display=swap");
 .navbar {
   background-color: #ffffff;
   padding: 15px 20px;
@@ -135,6 +136,7 @@ body {
 }
 
 h1 {
+  font-family: "Inter", sans-serif;
   font-size: 2rem;
   color: #0772ba;
   font-weight: 900;

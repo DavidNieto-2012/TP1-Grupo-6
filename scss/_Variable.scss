@@ -25,6 +25,9 @@ $shadow-menu: rgba(0, 0, 0, 0.2); // Sombra del menú desplegable desktop
 // Tipografía 
 $font-family-base: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Stack+Sans+Headline:wght@200..700&display=swap');
+$font-family-heading: 'Inter', sans-serif;
+
 // body
 $body-margin: 0;
 

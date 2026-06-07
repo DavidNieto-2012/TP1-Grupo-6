@@ -44,10 +44,27 @@ p {
 
 /* Footer */
 footer {
-    background-color: v.$color-footer-bg;
+    background-color: v.$color-footer-bg !important;
+    font-family: v.$font-family-heading;
     padding: 40px;
     text-align: center;
     margin-top: 40px;
+    h4 {
+        color: v.$color-navy !important; 
+        font-weight: v.$h4-font-weight;
+        margin-bottom: v.$h4-margin-bottom;
+        letter-spacing: 1px;
+    }
+
+    p {
+        color: v.$color-text-dark; 
+        font-size: v.$p-font-size;
+        margin-bottom: 5px;
+        
+        &.text-secondary {
+            color: lighten(v.$color-text-dark, 25%) !important; // Un gris más suave para jerarquía
+        }
+    }
 }
 
 /* Botones */

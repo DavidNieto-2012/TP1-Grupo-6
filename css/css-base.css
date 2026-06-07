@@ -183,10 +183,25 @@ p {
 
 /* Footer */
 footer {
-  background-color: #f0f0f0;
+  background-color: #f0f0f0 !important;
+  font-family: "Inter", sans-serif;
   padding: 40px;
   text-align: center;
   margin-top: 40px;
+}
+footer h4 {
+  color: #0e3353 !important;
+  font-weight: 600;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+footer p {
+  color: #0f0f0f;
+  font-size: 0.9rem;
+  margin-bottom: 5px;
+}
+footer p.text-secondary {
+  color: rgb(78.75, 78.75, 78.75) !important;
 }
 
 /* Botones */

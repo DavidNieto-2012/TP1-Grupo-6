@@ -8,41 +8,45 @@
 @mixin h1 {
     font-family: v.$font-family-heading;
     font-size: v.$h1-font-size;
-    color: v.$h1-color;
+    color: v.$color-primary;
     font-weight: v.$h1-font-weight;
-    margin-bottom: v.$h1-margin-bottom;
+    margin-bottom: v.$margin-titulo;
 }
 
 @mixin h2 {
     font-size: v.$h2-font-size;
-    color: v.$h2-color;
+    color: v.$color-primary;
     font-weight: v.$h2-font-weight;
-    margin-bottom: v.$h2-margin-bottom;
+    margin-bottom: v.$margin-titulo;
 }
 
 @mixin h3 {
     font-size: v.$h3-font-size;
-    color: v.$h3-color;
+    color: v.$color-secondary;
     font-weight: v.$h3-font-weight;
-    margin-bottom: v.$h3-margin-bottom;
+    margin-bottom: v.$margin-titulo;
 }
 
 @mixin h4 {
     font-size: v.$h4-font-size;
-    color: v.$h4-color;
+    color: v.$color-secondary;
     font-weight: v.$h4-font-weight;
-    margin-bottom: v.$h4-margin-bottom;
+    margin-bottom: v.$margin-titulo;
 }
 
 @mixin h5 {
     font-size: v.$h5-font-size;
-    color: v.$h5-color;
+    color: v.$color-prueba;
     font-weight: v.$h5-font-weight;
-    margin-bottom: v.$h5-margin-bottom;
+    margin-bottom: v.$margin-titulo;
 }
 
 @mixin p {
     font-size: v.$p-font-size;
-    color: v.$p-color;
-    margin-bottom: v.$p-margin-bottom;
+    color: v.$color-text-dark;
+    margin-bottom: v.$margin-parrafo;
+}
+
+@mixin portada {
+    background-color: v.$color-gray-light-bg;
 }

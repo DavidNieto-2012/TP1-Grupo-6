@@ -1,10 +1,8 @@
 @use "variable" as v;
-@use "mixins" as m;
 
 
 a {
     text-decoration: none;
-
 }
 
 .tarjeta {
@@ -19,7 +17,7 @@ a {
     text-align: center;
     padding-bottom: 10px;
     border-radius: 8px;
-    border: 1px solid v.$color-gray-card-border;
+    border: 2px solid v.$color-gray-light-bg;
     padding: 5px;
 
 
@@ -30,9 +28,8 @@ a {
         flex: 1;
 
         h4 {
-            color: v.$color-navy;
+            color: v.$color-secondary;
             margin-top: 20px;
-
         }
 
 

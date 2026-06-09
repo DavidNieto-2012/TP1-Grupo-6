@@ -1,11 +1,5 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Stack+Sans+Headline:wght@200..700&display=swap");
-.navbar {
-  background-color: #ffffff;
-  padding: 15px 20px;
-  position: relative;
-}
-
 .menu-toggle {
   display: none;
 }
@@ -18,109 +12,23 @@
   padding: 10px;
 }
 
-.nav-links {
-  display: flex;
-  list-style: none;
-  gap: 20px;
-}
-.nav-links a {
-  text-decoration: none;
-  color: #0e3353;
-  font-weight: 600;
-  font-size: 0.9rem;
-}
-.nav-links a.active {
-  color: #0772ba;
-}
-.nav-links li {
-  position: relative;
-}
-.nav-links li:hover ul {
-  display: block;
-}
-.nav-links ul {
-  list-style: none;
-  display: none;
-  position: absolute;
-  min-width: 150px;
-  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
-  background-color: #ffffff;
-  border-radius: 4px;
-  padding: 10px 0;
-}
-.nav-links ul li {
-  margin: 0;
-  padding: 8px 15px;
-}
-
 /* NAVBAR RESPONSIVE */
 /* Desktop: menú lineal y alineado a la derecha */
 @media (min-width: 768px) {
-  .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
   .hamburger {
     display: none;
   }
   .menu-toggle {
     display: none;
   }
-  .nav-links {
-    display: flex;
-    flex-direction: row;
-    gap: 25px;
-  }
-  .nav-links ul {
-    top: 100%;
-    left: 0;
-  }
 }
 /* Mobile: menú desplegable */
 @media (max-width: 767px) {
-  .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-  }
   .hamburger {
     display: block;
   }
   .menu-toggle:checked ~ .nav-links {
     display: flex;
-  }
-  .nav-links {
-    display: none;
-    width: 50%;
-    flex-direction: column;
-    gap: 0;
-    position: absolute;
-    top: 100%;
-    right: 0;
-    background-color: #ffffff;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1019607843);
-    z-index: 1000;
-    text-align: right;
-  }
-  .nav-links li {
-    border-bottom: 1px solid #eeeeee;
-  }
-  .nav-links a {
-    display: block;
-    padding: 15px 20px;
-  }
-  .nav-links ul {
-    position: static;
-    box-shadow: none;
-    background-color: #f5f5f5;
-  }
-  .nav-links ul li {
-    border-bottom: none;
-  }
-  .nav-links ul li a {
-    padding-left: 40px;
   }
 }
 a {
@@ -138,7 +46,7 @@ a {
   text-align: center;
   padding-bottom: 10px;
   border-radius: 8px;
-  border: 1px solid #e0e0e0;
+  border: 2px solid #f5f5f5;
   padding: 5px;
 }
 .tarjeta .tarjeta-info {
@@ -205,7 +113,7 @@ h4 {
 
 h5 {
   font-size: 0.9rem;
-  color: #0e3353;
+  color: red;
   font-weight: 300;
   margin-bottom: 10px;
 }
@@ -220,15 +128,19 @@ p {
   height: 100px;
 }
 
+.portada {
+  background-color: #f5f5f5;
+}
+
 /* Footer */
 footer {
-  background-color: #d4d4d4 !important;
+  background-color: #f0f8ff;
   font-family: "Inter", sans-serif;
   padding: 40px;
   text-align: center;
 }
 footer h4 {
-  color: #0e3353 !important;
+  color: #0e3353;
   font-weight: 600;
   margin-bottom: 10px;
   letter-spacing: 1px;
@@ -236,7 +148,7 @@ footer h4 {
 footer p {
   color: #0f0f0f;
   font-size: 0.9rem;
-  margin-bottom: 5px;
+  margin-bottom: 20px;
 }
 footer p.text-secondary {
   color: rgb(78.75, 78.75, 78.75) !important;
@@ -246,7 +158,7 @@ footer p.text-secondary {
 button {
   display: inline-block;
   background-color: #0772ba;
-  color: white;
+  color: #ffffff;
   padding: 10px 25px;
   text-decoration: none;
   border-radius: 4px;
@@ -256,7 +168,7 @@ button {
 }
 button:hover {
   background-color: #0e3353;
-  color: white;
+  color: #ffffff;
   transition: background-color 0.3s ease;
   font-size: 1.1rem;
 }
@@ -275,7 +187,7 @@ input:focus-visible {
   left: 0;
   background: #0772ba;
   border-radius: 5px;
-  color: white;
+  color: #ffffff;
   padding: 10px 20px;
   z-index: 1000;
   text-decoration: none;

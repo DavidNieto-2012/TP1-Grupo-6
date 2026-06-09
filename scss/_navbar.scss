@@ -1,11 +1,5 @@
 @use "variable" as v;
 
-.navbar {
-    background-color: v.$color-white;
-    padding: 15px 20px;
-    position: relative;
-}
-
 .menu-toggle {
     display: none;
 }
@@ -13,60 +7,14 @@
 .hamburger {
     display: none;
     font-size: 28px;
-    color: v.$color-navy;
+    color: v.$color-secondary;
     cursor: pointer;
     padding: 10px;
-}
-
-.nav-links {
-    display: flex;
-    list-style: none;
-    gap: 20px;
-
-    a {
-        text-decoration: none;
-        color: v.$color-navy;
-        font-weight: 600;
-        font-size: 0.9rem;
-
-        &.active {
-            color: v.$color-primary;
-        }
-    }
-
-    li {
-        position: relative;
-
-        &:hover ul {
-            display: block;
-        }
-    }
-
-    ul {
-        list-style: none;
-        display: none;
-        position: absolute;
-        min-width: 150px;
-        box-shadow: 1px 1px 2px v.$shadow-menu;
-        background-color: v.$color-white;
-        border-radius: 4px;
-        padding: 10px 0;
-
-        li {
-            margin: 0;
-            padding: 8px 15px;
-        }
-    }
 }
 
 /* NAVBAR RESPONSIVE */
 /* Desktop: menú lineal y alineado a la derecha */
 @media (min-width: 768px) {
-    .navbar {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
 
     .hamburger {
         display: none;
@@ -75,27 +23,10 @@
     .menu-toggle {
         display: none;
     }
-
-    .nav-links {
-        display: flex;
-        flex-direction: row;
-        gap: 25px;
-
-        ul {
-            top: 100%;
-            left: 0;
-        }
-    }
 }
 
 /* Mobile: menú desplegable */
 @media (max-width: 767px) {
-    .navbar {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-wrap: wrap;
-    }
 
     .hamburger {
         display: block;
@@ -103,42 +34,5 @@
 
     .menu-toggle:checked~.nav-links {
         display: flex;
-    }
-
-    .nav-links {
-        display: none;
-        width: 50%;
-        flex-direction: column;
-        gap: 0;
-        position: absolute;
-        top: 100%;
-        right: 0;
-        background-color: v.$color-white;
-        box-shadow: 0 4px 6px #0000001a;
-        z-index: 1000;
-        text-align: right;
-
-        li {
-            border-bottom: 1px solid v.$color-border-light;
-        }
-
-        a {
-            display: block;
-            padding: 15px 20px;
-        }
-
-        ul {
-            position: static;
-            box-shadow: none;
-            background-color: v.$color-gray-light-bg;
-
-            li {
-                border-bottom: none;
-
-                a {
-                    padding-left: 40px;
-                }
-            }
-        }
     }
 }

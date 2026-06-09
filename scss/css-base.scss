@@ -43,25 +43,29 @@ p {
     height: 100px;
 }
 
+.portada {
+    @include m.portada;
+}
+
 /* Footer */
 footer {
-    background-color: v.$color-footer-bg !important;
+    background-color: v.$color-bg-alice;
     font-family: v.$font-family-heading;
     padding: 40px;
     text-align: center;
 
 
     h4 {
-        color: v.$color-navy !important;
+        color: v.$color-secondary;
         font-weight: v.$h4-font-weight;
-        margin-bottom: v.$h4-margin-bottom;
+        margin-bottom: v.$margin-titulo;
         letter-spacing: 1px;
     }
 
     p {
         color: v.$color-text-dark;
         font-size: v.$p-font-size;
-        margin-bottom: 5px;
+        margin-bottom: v.$margin-parrafo;
 
         &.text-secondary {
             color: lighten(v.$color-text-dark, 25%) !important; // Un gris más suave para jerarquía
@@ -73,7 +77,7 @@ footer {
 button {
     display: inline-block;
     background-color: v.$color-primary;
-    color: white;
+    color: v.$color-white;
     padding: 10px 25px;
     text-decoration: none;
     border-radius: 4px;
@@ -82,8 +86,8 @@ button {
     font-size: 1rem;
 
     &:hover {
-        background-color: v.$color-navy;
-        color: white;
+        background-color: v.$color-secondary;
+        color: v.$color-white;
         transition: background-color 0.3s ease;
         font-size: 1.1rem;
     }
@@ -103,7 +107,7 @@ input:focus-visible {
     left: 0;
     background: v.$color-primary;
     border-radius: 5px;
-    color: white;
+    color: v.$color-white;
     padding: 10px 20px;
     z-index: 1000;
     text-decoration: none;

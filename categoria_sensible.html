@@ -108,55 +108,72 @@
             </figure>
         </section>
     
-        <!--Listado de productos de categoria-->
-        
-        <!--reemplazar cuando esten creadas las tarjetas
-        <section
-            class="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 px-4 py-6 sm:px-4 sm:py-4 md:px-8 lg:px-10 place-items-center">
+     <!-- Listado de productos de categoria: Piel Sensible (Refactorizado por Rodri) -->
+        <section class="container my-5 py-4">
+            <div class="row g-4 justify-content-center">
 
-            <div class="card text-center" style="width: 18rem;">
-                <img src="images/crema-hidratante/crema-hidratante.webp" class="card-img-top align-self-center"
-                    alt="Crema hidratante para el rostro">
-                <div class="card-body">
-                    <h5 class="card-title">Crema Hidratante</h5>
-                    <p class="card-text">La Crema hidratante CeraVe incluye tres ceramidas esenciales y ácido hialurónico para hidratar eficazmente la piel y restaurar su barrera protectora.</p>
-                    <h4>$50.000</h4>
-                    <a href="productos/detalle-crema-hidratante.html" class="btn btn-primary">Ver detalles</a>
-                </div>
+                <!-- 1. Crema Hidratante -->
+                <article class="col-12 col-md-6 col-lg-4 d-flex">
+                    <div class="card w-100 shadow-sm border-0 p-3" style="border-radius: 12px; background-color: #fff;">
+                        <figure class="text-center mb-3">
+                            <img src="images/crema-hidratante/crema-hidratante.webp" class="img-fluid rounded" alt="Crema Hidratante" style="max-height: 250px; object-fit: contain;">
+                        </figure>
+                        <div class="card-body d-flex flex-column justify-content-between p-2">
+                            <div>
+                                <h3 class="h5 text-primary font-bold mb-1">Crema Hidratante</h3>
+                                <h5 class="text-muted small mb-3">Piel sensible</h5>
+                                <p class="card-text text-muted small mb-3">La Crema hidratante CeraVe incluye tres ceramidas esenciales y ácido hialurónico para hidratar eficazmente la piel y restaurar su barrera protectora.</p>
+                            </div>
+                            <div>
+                                <p class="precio h4 text-dark font-bold mb-3">$50.000</p>
+                                <a href="productos/detalle-crema-hidratante.html" class="btn-ver btn btn-outline-primary w-100">Ver Detalle</a>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 2. Loción Uso Diario -->
+                <article class="col-12 col-md-6 col-lg-4 d-flex">
+                    <div class="card w-100 shadow-sm border-0 p-3" style="border-radius: 12px; background-color: #fff;">
+                        <figure class="text-center mb-3">
+                            <img src="images/locion-uso-diario/locion-uso-diario.webp" class="img-fluid rounded" alt="Locion hidratante para uso diario" style="max-height: 250px; object-fit: contain;">
+                        </figure>
+                        <div class="card-body d-flex flex-column justify-content-between p-2">
+                            <div>
+                                <h3 class="h5 text-primary font-bold mb-1">Locion hidratante para uso diario</h3>
+                                <h5 class="text-muted small mb-3">Piel sensible</h5>
+                                <p class="card-text text-muted small mb-3">La Loción hidratante para uso diario CeraVe está formulada con ingredientes suaves que ayudan a mantener la piel hidratada durante el día.</p>
+                            </div>
+                            <div>
+                                <p class="precio h4 text-dark font-bold mb-3">$35.000</p>
+                                <a href="productos/detalle-locion-uso-diario.html" class="btn-ver btn btn-outline-primary w-100">Ver Detalle</a>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 3. Loción Facial de Noche -->
+                <article class="col-12 col-md-6 col-lg-4 d-flex">
+                    <div class="card w-100 shadow-sm border-0 p-3" style="border-radius: 12px; background-color: #fff;">
+                        <figure class="text-center mb-3">
+                            <img src="images/locion-noche/locion-noche.jpg" class="img-fluid rounded" alt="Loción hidratante facial de noche" style="max-height: 250px; object-fit: contain;">
+                        </figure>
+                        <div class="card-body d-flex flex-column justify-content-between p-2">
+                            <div>
+                                <h3 class="h5 text-primary font-bold mb-1">Loción hidratante facial de noche</h3>
+                                <h5 class="text-muted small mb-3">Piel sensible</h5>
+                                <p class="card-text text-muted small mb-3">Una crema de noche que contenga niacinamida, para contribuir a calmar la piel mientras duerme, además de ácido hialurónico y ceramidas, puede ayudar a su piel a retener la humedad.</p>
+                            </div>
+                            <div>
+                                <p class="precio h4 text-dark font-bold mb-3">$36.550</p>
+                                <a href="productos/detalle-locion-noche.html" class="btn-ver btn btn-outline-primary w-100">Ver Detalle</a>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
             </div>
         </section>
-
-    <a href="productos/detalle-locion-uso-diario.html">
-            <div class="tarjeta">
-
-
-            <img src="images/locion-uso-diario/locion-uso-diario.webp" alt="Loción hidratante para uso diario">
-            <h4>Locion hidratante  para uso diario</h4>
-            <p>La Loción hidratante para uso diario CeraVe está formulada con ingredientes suaves que ayudan a mantener la piel hidratada durante el día. </p>
-            <h4>$35.000</h4>
-
-
-
-            </div>
-        </a>
-
-        <a href="productos/detalle-locion-noche.html">
-            <div class="tarjeta">
-
-
-            <img src="images/locion-noche/locion-noche.jpg" alt="Loción hidratante facial de noche" >
-            <h4>Loción hidratante facial de noche</h4>
-            <p>Una crema de noche que contenga niacinamida, para contribuir a calmar la piel mientras duerme, además de ácido hialurónico y ceramidas, puede ayudar a su piel a retener la humedad y restaurar la barrera cutánea mientras descansa.</p>
-            <h4>$36.550</h4>
-
-    
-           
-
-
-        </div>
-        </a>
-    </section>
--->
 
     </main>
 

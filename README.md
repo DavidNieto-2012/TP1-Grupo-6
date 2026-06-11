@@ -7,7 +7,7 @@ WEB DE INSPIRACIÓN: https://www.cerave.com.ar/
 
 ENTREGA 3:
 ARCHIVO productos.json
-1- Definir estructura de datos para cada producto. Incluir campos: id, nombre, precio, descripción, categoría, imagen, beneficios, ingredientes, instrucciones. Organizar 9 productos en 3 categorías (Piel Seca, Piel Mixta/Grasa, Piel Sensible). — BARBY
+1- Definir estructura de datos para cada producto. Incluir campos: id, nombre, precio, descripción, categoría, imagen, beneficios, ingredientes, instrucciones. Organizar productos en 3 categorías (Piel Seca, Piel Mixta/Grasa, Piel Sensible). — BARBY (listo)
 2- Asignar rutas correctas de imágenes en el json. Incluir datos de "productos relacionados" para cada uno. — DAVID
 
 ARCHIVO api.js

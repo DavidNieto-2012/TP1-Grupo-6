@@ -5,36 +5,34 @@ GRUPO:
 
 WEB DE INSPIRACIÓN: https://www.cerave.com.ar/
 
-CATEGORIAS por tipo de piel:
--Piel Seca
--Piel mixta a grasa 
--Piel sensible
+ENTREGA 3:
+ARCHIVO productos.json
+1- Definir estructura de datos para cada producto. Incluir campos: id, nombre, precio, descripción, categoría, imagen, beneficios, ingredientes, instrucciones. Organizar 9 productos en 3 categorías (Piel Seca, Piel Mixta/Grasa, Piel Sensible). — BARBY
+2- Asignar rutas correctas de imágenes en el json. Incluir datos de "productos relacionados" para cada uno. — DAVID
 
+ARCHIVO api.js
+3- Implementar función obtenerTodosLosProductos() - retorna todos los productos. — RODRI
+4- Implementar función obtenerProductoPorId(id) - retorna un producto específico. — DAVID
+5- Implementar función obtenerProductosPorCategoria(categoria) - filtra por categoría. — BARBY
+6- Implementar función obtenerProductosRelacionados(ids) - para mostrar los relacionados de cada producto. — RODRI
+7- Función para formatear precios. — DAVID
+8- Función para generar HTML de tarjetas de producto. — BARBY
+9- Función para generar productos relacionados. — RODRI
 
-PRODUCTOS: 
--Piel Seca
-    -Limpiador en aceite espumoso hidratante $67.122 
-    -Agua micelar hidratante $35.222
-    -Limpiador facial hidratante $53.338
-    -SA Crema Alisadora Anti-rugosidades $62.400  NUEVO PRODUCTO!!! fotos cargadas
--Piel mixta a grasa 
-    -Gel limpiador espumoso para rostro $43.200
-    -Locion hidratante no comodogenica con FPS $32.114
-    -Crema reparadora para contorno de ojos $17.000
-    --locion hidratante facial de noche $36.550     NUEVO PRODUCTO!!!(Es el mismo que en piel sensible)
--Piel sensible
-    -Crema hidratante $50.000
-    -Locion hidratante para uso diario $35.000
-    -locion hidratante facial de noche $36.550
-    -Crema reparadora para contorno de ojos $27.860  NUEVO PRODUCTO!!! fotos cargadas
+ARCHIVOS html
+10- Actualizar productos.html: Añadir contenedor dinámico para las tarjetas. Script que cargue todos los productos usando la API. Renderizar tarjetas de producto dinámicamente. — DAVID
+11- Actualizar categoria_seca.html: Cargue productos filtrados por categoría "Piel Seca". Mismo patrón que productos.html. — BARBY- 
+12- Actualizar categoria_mixta.html: Cargue productos filtrados por categoría "Piel Mixta/Grasa". — RODRI
+13- Actualizar categoria_sensible.html: Cargue productos filtrados por categoría "Piel Sensible". — DAVID
+14- Actualizar páginas de detalle (/productos/detalle-*.html): Extraer ID del producto de URL o parámetro. Cargar datos dinámicamente usando obtenerProductoPorId(). Renderizar detalles completos. — BARBY
+15- Cargar "productos relacionados" dinámicamente en página de detalle. — RODRI
+16- Actualizar index.html: Cargar productos destacados desde la API. Renderizar carrusel o grid de productos populares. — DAVID
+Resumen
 
-ENTREGA 2:
-RODRI:
-Editar pagina index, footer,  refactoriar tarjeta de producto y tarjeta de producto relacionados (ver pagina detalle).
+BARBY (5 tareas) 1, 5, 8, 11, 14
 
-DAVID:
-Editar la navbar (listo), pagina detalle de producto (listo), pagina nosotros, pasar base css a sass (listo-revisar)
+RODRI (5 tareas) 3, 6, 9, 12, 15
 
-BARBY:
-formulario (hecho), pagina categorias (listo, faltan tarjetas), lista de productos (hecho, faltan tarjetas), 
+DAVID (6 tareas) 2, 4, 7, 10, 13, 16
 
+Extra: si queda tiempo se puede implementar filtrado por nombre y por precio

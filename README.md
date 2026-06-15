@@ -11,17 +11,17 @@ ARCHIVO productos.json
 2- Asignar rutas correctas de imágenes en el json. Incluir datos de "productos relacionados" para cada uno. — DAVID
 
 ARCHIVO api.js
-3- Implementar función obtenerTodosLosProductos() - retorna todos los productos. — RODRI
+3- Implementar función obtenerTodosLosProductos() - retorna todos los productos. — RODRI (fijate el metodo que hice, creo que sirve para todos los productos y para el filtrado)
 4- Implementar función obtenerProductoPorId(id) - retorna un producto específico. — DAVID
-5- Implementar función obtenerProductosPorCategoria(categoria) - filtra por categoría. — BARBY
+5- Implementar función obtenerProductosPorCategoria(categoria) - filtra por categoría. — BARBY (listo)
 6- Implementar función obtenerProductosRelacionados(ids) - para mostrar los relacionados de cada producto. — RODRI
 7- Función para formatear precios. — DAVID
-8- Función para generar HTML de tarjetas de producto. — BARBY
+8- Función para generar HTML de tarjetas de producto. — BARBY (listo)
 9- Función para generar productos relacionados. — RODRI
 
 ARCHIVOS html
 10- Actualizar productos.html: Añadir contenedor dinámico para las tarjetas. Script que cargue todos los productos usando la API. Renderizar tarjetas de producto dinámicamente. — DAVID
-11- Actualizar categoria_seca.html: Cargue productos filtrados por categoría "Piel Seca". Mismo patrón que productos.html. — BARBY- 
+11- Actualizar categoria_seca.html: Cargue productos filtrados por categoría "Piel Seca".— BARBY (listo) 
 12- Actualizar categoria_mixta.html: Cargue productos filtrados por categoría "Piel Mixta/Grasa". — RODRI
 13- Actualizar categoria_sensible.html: Cargue productos filtrados por categoría "Piel Sensible". — DAVID
 14- Actualizar páginas de detalle (/productos/detalle-*.html): Extraer ID del producto de URL o parámetro. Cargar datos dinámicamente usando obtenerProductoPorId(). Renderizar detalles completos. — BARBY

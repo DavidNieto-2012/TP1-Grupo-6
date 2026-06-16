@@ -8,7 +8,12 @@
       "fotos": [
         "/images/limpiador-en-aceite/limpiador-aceite.webp"
       ],
-      "categoria": "piel-seca",
+      "categoria": {
+        "id": 195,
+        "title": "piel-seca",
+        "description": "Nuestros productos ayudan a aliviar las molestias causadas por la piel seca con nuestra amplia gama de productos para el rostro y el cuerpo. Desde limpiadores e hidratantes, hasta bálsamos y más, nuestros productos para la piel seca para adultos, niños y bebés están formulados con ingredientes calmantes e hidratantes suaves pero efectivos, además de ceramidas para ayudar a restaurar y mantener la barrera de la piel.",
+        "imagen": "images/banner-piel-seca.webp"
+      },
       "precio": 67122.50,
       "descripcionLarga": "Este limpiador en aceite espumoso hidratante está formulado para limpiar profundamente la piel mientras ayuda a preservar su hidratación natural. Su innovadora textura comienza como un aceite que disuelve maquillaje, protector solar y residuos acumulados durante el día, transformándose luego en una espuma suave al contacto con el agua. Gracias a su fórmula enriquecida con ingredientes humectantes, contribuye a mantener la barrera protectora de la piel y evita la sensación de tirantez posterior a la limpieza. Es ideal para personas con piel-seca que buscan una limpieza efectiva pero delicada, incorporándose fácilmente a la rutina diaria tanto por la mañana como por la noche.",
       "ingredientes": [

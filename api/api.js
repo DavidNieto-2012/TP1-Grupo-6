@@ -4,7 +4,7 @@ const endpoint = `${domain}/api/productos.json`;
 //contiene todos los productos del json
 let productos = [];
 
-//funcion para cargar todos los productos aquí
+//1° funcion para cargar todos los productos aquí
 async function cargarProductos(categoria = null) {
 
     const respuesta = await fetch(endpoint);
@@ -28,7 +28,29 @@ async function cargarProductos(categoria = null) {
     }
 }
 
-//crear tarjeta html con estilo de bootstrap
+//2° toma todos los productos y devuelve la lista filtrada por categoria
+function obtenerProductosPorCategoria(productos, categoria) {
+
+    return productos.filter(producto =>
+        producto.categoria === categoria
+    );
+
+}
+
+//3° recibe una lista de productos y genera las tarjetas
+function mostrarProductos(listaProductos) {
+
+    const contenedor =
+        document.querySelector("#contenedor-productos");
+
+    contenedor.innerHTML = "";
+
+    listaProductos.forEach(producto => {
+        contenedor.innerHTML += crearTarjeta(producto);
+    });
+}
+
+//4° crear tarjeta html con estilo de bootstrap
 function crearTarjeta(producto) {
     const foto = producto.fotos.length
     ? domain + producto.fotos[0]
@@ -59,25 +81,5 @@ function crearTarjeta(producto) {
 
     return articleProducto;
 }
-//funcion mostrar productos aqui
-//recibe una lista de productos y genera las tarjetas
-function mostrarProductos(listaProductos) {
 
-    const contenedor =
-        document.querySelector("#contenedor-productos");
 
-    contenedor.innerHTML = "";
-
-    listaProductos.forEach(producto => {
-        contenedor.innerHTML += crearTarjeta(producto);
-    });
-}
-
-//toma todos los productos y devuelve la lista filtrada por categoria
-function obtenerProductosPorCategoria(productos, categoria) {
-console.log("Categoria buscada:", categoria);
-    return productos.filter(producto =>
-        producto.categoria === categoria
-    );
-
-}

@@ -49,7 +49,7 @@ function crearTarjeta(producto) {
 
                     <p class="precio h4 text-dark font-bold mb-3">$${producto.precio}</p>
                     
-                    <a href="productos/detalle.html?id=${producto.id}"
+                    <a href="detalle.html?id=${producto.id}"
                         class="btn-ver btn btn-outline-primary w-100">Ver Detalle
                     </a>
                 </div>

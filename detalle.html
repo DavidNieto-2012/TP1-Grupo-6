@@ -9,7 +9,7 @@
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 
 
-    <link rel="stylesheet" href="../css/css-base.css">
+    <link rel="stylesheet" href="css/css-base.css">
 
     <!-- 3. Tailwind CSS v4 sin Preflight para evitar conflictos con Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
@@ -30,8 +30,8 @@
         <nav class="w-full px-8 lg:px-20 h-20 flex justify-between items-center relative">
 
             <!-- foto logo -->
-            <a href="../index.html" class="flex items-center h-full max-w-[120px] no-underline">
-                <img src="../images/cerave-logo-png_seeklogo-352149.png" alt="CeraVe Logo"
+            <a href="index.html" class="flex items-center h-full max-w-[120px] no-underline">
+                <img src="images/cerave-logo-png_seeklogo-352149.png" alt="CeraVe Logo"
                     class="h-auto max-h-12 object-contain">
             </a>
 
@@ -44,11 +44,11 @@
                    peer-checked:flex z-40">
 
                 <li>
-                    <a href="../index.html"
+                    <a href="index.html"
                         class="text-gray-700 hover:text-[#0772ba] font-medium transition-colors no-underline">Inicio</a>
                 </li>
                 <li>
-                    <a href="../productos.html"
+                    <a href="productos.html"
                         class="text-gray-700 hover:text-[#0772ba] font-medium transition-colors no-underline">Productos</a>
                 </li>
 
@@ -69,13 +69,13 @@
                         <ul
                             class="static w-full bg-gray-50 rounded-md mt-2 p-2 space-y-1 list-none pl-0
                                md:absolute md:top-full md:left-0 md:w-48 md:bg-white md:shadow-lg md:border md:border-gray-100 md:mt-4 md:z-50">
-                            <li><a href="../categoria_seca.html"
+                            <li><a href="categoria_seca.html"
                                     class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-[#0772ba] rounded no-underline">Piel
                                     seca</a></li>
-                            <li><a href="../categoria_mixta.html"
+                            <li><a href="categoria_mixta.html"
                                     class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-[#0772ba] rounded no-underline">Piel
                                     mixta</a></li>
-                            <li><a href="../categoria_sensible.html"
+                            <li><a href="categoria_sensible.html"
                                     class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-[#0772ba] rounded no-underline">Piel
                                     sensible</a></li>
                         </ul>
@@ -83,11 +83,11 @@
                 </li>
 
                 <li>
-                    <a href="../newsletter.html"
+                    <a href="newsletter.html"
                         class="text-gray-700 hover:text-[#0772ba] font-medium transition-colors no-underline">Newsletter</a>
                 </li>
                 <li>
-                    <a href="../nosotros.html"
+                    <a href="nosotros.html"
                         class="text-gray-700 hover:text-[#0772ba] font-medium transition-colors no-underline">Nosotros</a>
                 </li>
             </ul>
@@ -104,7 +104,7 @@
     <section class="grid grid-cols-1 md:grid-cols-3 gap-[10px] md:gap-[10px_60px] p-[5%] items-start w-full pt-20">
 
 
-        <!--Carrucel de imagenes de producto Bootstrap-->
+        <!--Carrucel de imagenes de producto Bootstrap CAMBIAR A IMAGENES JSON-->
         <div id="carouselExampleRide"
             class="carousel slide order-2 md:!order-none md:col-span-1 md:row-span-4 rounded-4 overflow-hidden max-w-[400px] mx-auto"
             data-bs-ride="true">
@@ -177,7 +177,7 @@
         </div>
     </section>
 
-    <!--PRODUCTOS RELACIONADOS-->
+    <!--PRODUCTOS RELACIONADOS  CAMBIAR PARA RENDERIZAR CON JS-->
     <section class="flex flex-col gap-5 py-8 px-4 my-10 mx-auto bg-[#f0f8ff] max-w-full">
 
         <div class="bloque-titulo-relacionados">
@@ -233,8 +233,9 @@
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
 
-    <script src="../api/api.js"></script>
-    <script src="../api/detalle.js"></script>
+    <script src="api/api.js"></script>
+    <script src="api/detalle.js"></script>
+    
 </body>
 
 </html>

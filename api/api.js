@@ -24,8 +24,8 @@ function obtenerCategorias() {
 }
 
 // Obtener producto por id
-function obtenerProductoPorId(productos, id) {
-    return productos.find(producto => producto.id === Number(id));
+function obtenerProductoPorId(id) {
+    return obtenerProductos().find(producto => producto.id === id);
 }
 
 

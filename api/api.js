@@ -2,30 +2,44 @@ const domain = "http://127.0.0.1:8080";
 const endpoint = `${domain}/api/productos.json`;
 
 //contiene todos los productos del json
-let datos = {};
+let productos = [];
 
-//1° funcion para obtener todos los datos del json (productos y categorias)
-async function cargarDatos() {
+//1° funcion para cargar todos los productos aquí
+async function cargarProductos(categoria = null) {
 
     const respuesta = await fetch(endpoint);
-    datos = await respuesta.json();
+    const data = await respuesta.json();
+
+    productos = data.productos;
+
+    if (categoria) {
+
+        const productosFiltrados =
+            obtenerProductosPorCategoria(
+                productos,
+                categoria
+            );
+
+        mostrarProductos(productosFiltrados);
+
+    } else {
+
+        mostrarProductos(productos);
+    }
 }
 
-// Función para obtener la lista de productos
-function obtenerProductos(){
-    return datos.productos;
-}
+//2° toma todos los productos y devuelve la lista filtrada por categoria
+function obtenerProductosPorCategoria(productos, categoria) {
 
-// función para obtener la lista de categorias
-function obtenerCategorias() {
-
-    return datos.categorias;
+    return productos.filter(producto =>
+        producto.categoria === categoria
+    );
 
 }
 
 // Obtener producto por id
-function obtenerProductoPorId(productos, id) {
-    return productos.find(producto => producto.id === Number(id));
+function obtenerProductoPorId(id) {
+    return obtenerProductos().find(producto => producto.id === id);
 }
 
 
@@ -45,12 +59,8 @@ function mostrarProductos(listaProductos) {
 //4° crear tarjeta html con estilo de bootstrap
 function crearTarjeta(producto) {
     const foto = producto.fotos.length
-    ? domain + producto.fotos[0]
-    : "images/noPhoto.jpg";
-
-    const categoria = obtenerCategorias().find(
-        cat => cat.id === producto.categoria
-    );
+        ? domain + producto.fotos[0]
+        : "images/noPhoto.jpg";
 
     let articleProducto = `
         <article class="col-12 col-md-6 col-lg-4 d-flex">
@@ -61,7 +71,7 @@ function crearTarjeta(producto) {
                 <div class="card-body d-flex flex-column justify-content-between p-2">
                     <h3 class="h5 text-primary font-bold mb-1">${producto.titulo}</h3>
 
-                    <h5 class="text-muted small mb-3">${categoria.nombre}</h5>
+                    <h5 class="text-muted small mb-3">${producto.categoria}</h5>
 
                     <p class="card-text text-muted small mb-3">${producto.descripcionCorta}</p>
 

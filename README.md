@@ -21,7 +21,7 @@ ARCHIVO api.js
 9- Función para generar productos relacionados. — RODRI
 
 ARCHIVOS html
-10- Actualizar productos.html: Añadir contenedor dinámico para las tarjetas. Script que cargue todos los productos usando la API. Renderizar tarjetas de producto dinámicamente. — DAVID
+10- Actualizar productos.html: Añadir contenedor dinámico para las tarjetas. Script que cargue todos los productos usando la API. Renderizar tarjetas de producto dinámicamente. — DAVID(Listo)
 11- Unir htmls de categoria en uno solo categoria.html: Cargue productos filtrados por categoría.— BARBY arreglar
 14- Actualizar páginas de detalle (/productos/detalle-*.html): Extraer ID del producto de URL o parámetro. Cargar datos dinámicamente usando obtenerProductoPorId(). Renderizar detalles completos. — BARBY (listo) terminar con carrousel
 15- Cargar "productos relacionados" dinámicamente en página de detalle. — RODRI

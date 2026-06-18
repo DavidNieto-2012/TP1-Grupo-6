@@ -6,7 +6,7 @@ const id = Number(params.get("id"));
 fetch(`${domain}/api/productos.json`)
   .then(res => res.json())
   .then(data => {
-    const producto = data.productos.find(p => p.id === id);
+    const producto = obtenerProductoPorId(data.productos, id);
 
     if (!producto) {
       document.body.innerHTML = "<p class='text-center mt-10'>Producto no encontrado.</p>";

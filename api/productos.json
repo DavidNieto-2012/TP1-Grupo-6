@@ -221,10 +221,10 @@
       "tipoProducto": "Loción facial nocturna",
       "descripcionCorta": "Loción ligera para la noche que ayuda a restaurar la hidratación mientras la piel descansa.",
       "fotos": [
-        "/images/locion-hidratante/locion-noche.jpg",
-        "/images/locion-hidratante/locion-noche1.webp",
-        "/images/locion-hidratante/locion-noche2.webp",
-        "/images/locion-hidratante/locion-noche3.jpg"
+        "/images/locion-noche/locion-noche.jpg",
+        "/images/locion-noche/locion-noche1.webp",
+        "/images/locion-noche/locion-noche2.webp",
+        "/images/locion-noche/locion-noche3.jpg"
       ],
       "categoria": "piel-mixta",
       "precio": 36550.00,
@@ -311,7 +311,10 @@
       "tipoProducto": "Loción facial nocturna",
       "descripcionCorta": "Tratamiento nocturno que ayuda a restaurar la hidratación y el confort de la piel-sensible.",
       "fotos": [
-        "/images/locion-noche/locion-noche.jpg"
+        "/images/locion-noche/locion-noche.jpg",
+        "/images/locion-noche/locion-noche1.webp",
+        "/images/locion-noche/locion-noche2.webp",
+        "/images/locion-noche/locion-noche3.jpg"
       ],
       "categoria": "piel-sensible",
       "precio": 36550.50,

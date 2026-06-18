@@ -13,7 +13,7 @@ ARCHIVO productos.json
 
 ARCHIVO api.js
 3- Implementar función obtenerTodosLosProductos() - retorna todos los productos. — RODRI (fijate el metodo que hice, creo que sirve para todos los productos y para el filtrado)
-4- Implementar función obtenerProductoPorId(id) - retorna un producto específico. — DAVID
+4- Implementar función obtenerProductoPorId(id) - retorna un producto específico. — DAVID (Listo)
 5- Implementar función obtenerProductosPorCategoria(categoria) - filtra por categoría. — BARBY arreglar
 6- Implementar función obtenerProductosRelacionados(ids) - para mostrar los relacionados de cada producto. — RODRI
 7- Función para formatear precios. — DAVID

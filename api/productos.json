@@ -30,7 +30,10 @@
       "tipoProducto": "Limpiador facial",
       "descripcionCorta": "Limpiador que combina aceite y espuma para remover impurezas, maquillaje y exceso de suciedad sin resecar la piel.",
       "fotos": [
-        "/images/limpiador-en-aceite/limpiador-aceite.webp"
+        "/images/limpiador-en-aceite/limpiador-aceite.webp",
+        "/images/limpiador-en-aceite/limpiador-aceite-1.webp",
+        "/images/limpiador-en-aceite/limpiador-aceite-2.webp",
+        "/images/limpiador-en-aceite/limpiador-aceite-3.webp"
       ],
       "categoria": 195,
       "precio": 67122.50,
@@ -57,7 +60,10 @@
       "tipoProducto": "Agua micelar",
       "descripcionCorta": "Limpia, desmaquilla e hidrata en un solo paso, dejando una sensación fresca y confortable en la piel.",
       "fotos": [
-        "/images/agua-micelar/Agua micelar.webp"
+        "/images/agua-micelar/Agua micelar.webp",
+        "/images/agua-micelar/Agua micelar1.webp",
+        "/images/agua-micelar/Agua micelar2.webp",
+        "/images/agua-micelar/Agua micelar3.webp"
       ],
       "categoria": 195,
       "precio": 35222.00,
@@ -84,7 +90,10 @@
       "tipoProducto": "Limpiador facial",
       "descripcionCorta": "Limpia suavemente mientras ayuda a restaurar la barrera protectora de la piel y mantener su hidratación.",
       "fotos": [
-        "/images/limpiador-facial/Limpiador facial.jpg"
+        "/images/limpiador-facial/Limpiador facial.jpg",
+        "/images/limpiador-facial/Limpiador facial1.jpg",
+        "/images/limpiador-facial/Limpiador facial2.jpg",
+        "/images/limpiador-facial/Limpiador facial3.jpg"
       ],
       "categoria": 195,
       "precio": 53338.35,
@@ -111,7 +120,10 @@
       "tipoProducto": "Crema corporal alisadora",
       "descripcionCorta": "Crema exfoliante e hidratante que ayuda a mejorar la textura de la piel áspera y con irregularidades.",
       "fotos": [
-        "/images/anti-rugosidades/anti-rugosidades.jpg"
+        "/images/anti-rugosidades/anti-rugosidades.jpg",
+        "/images/anti-rugosidades/anti-rugosidades-1.jpg",
+        "/images/anti-rugosidades/anti-rugosidades-2.jpg",
+        "/images/anti-rugosidades/anti-rugosidades-3.jpg"
       ],
       "categoria": 195,
       "precio": 62400.00,
@@ -138,7 +150,10 @@
       "tipoProducto": "Gel limpiador facial",
       "descripcionCorta": "Limpia profundamente removiendo exceso de grasa e impurezas sin alterar el equilibrio natural de la piel.",
       "fotos": [
-        "/images/gel-limpiador/gel-limpiador.webp"
+        "/images/gel-limpiador/gel-limpiador.webp",
+        "/images/gel-limpiador/gel-limpiador1.webp",
+        "/images/gel-limpiador/gel-limpiador2.webp",
+        "/images/gel-limpiador/gel-limpiador3.webp"
       ],
       "categoria": 196,
       "precio": 43200.75,
@@ -165,7 +180,10 @@
       "tipoProducto": "Loción facial con protección solar",
       "descripcionCorta": "Hidrata y protege la piel diariamente con una fórmula ligera que no obstruye los poros.",
       "fotos": [
-        "/images/locion-hidratante/locion-hidratante.jpg"
+        "/images/locion-hidratante/locion-hidratante.jpg",
+        "/images/locion-hidratante/locion-hidratante1.webp",
+        "/images/locion-hidratante/locion-hidratante2.webp",
+        "/images/locion-hidratante/locion-hidratante3.webp"
       ],
       "categoria": 196,
       "precio": 32114.30,
@@ -192,7 +210,10 @@
       "tipoProducto": "Contorno de ojos",
       "descripcionCorta": "Tratamiento específico para hidratar y cuidar la delicada zona del contorno de ojos.",
       "fotos": [
-        "/images/contorno-ojo/contorno-ojos.jpg"
+        "/images/contorno-ojo/contorno-ojos.jpg",
+        "/images/contorno-ojo/contorno-ojo-1.jpg",
+        "/images/contorno-ojo/contorno-ojo-2.jpg",
+        "/images/contorno-ojo/contorno-ojo-3.jpg"
       ],
       "categoria": 196,
       "precio": 17000.51,
@@ -219,7 +240,10 @@
       "tipoProducto": "Loción facial nocturna",
       "descripcionCorta": "Loción ligera para la noche que ayuda a restaurar la hidratación mientras la piel descansa.",
       "fotos": [
-        "/images/locion-hidratante/locion-hidratante.jpg"
+        "/images/locion-noche/locion-noche.jpg",
+        "/images/locion-noche/locion-noche1.webp",
+        "/images/locion-noche/locion-noche2.webp",
+        "/images/locion-noche/locion-noche3.jpg"
       ],
       "categoria": 196,
       "precio": 36550.00,
@@ -246,7 +270,10 @@
       "tipoProducto": "Crema hidratante",
       "descripcionCorta": "Crema de uso diario que proporciona hidratación duradera y ayuda a proteger la barrera cutánea.",
       "fotos": [
-        "/images/crema-hidratante/crema-hidratante.webp"
+        "/images/crema-hidratante/crema-hidratante.webp",
+        "/images/crema-hidratante/crema-hidratante1.webp",
+        "/images/crema-hidratante/crema-hidratante2.webp",
+        "/images/crema-hidratante/crema-hidratante3.webp"
       ],
       "categoria": 197,
       "precio": 50015.00,
@@ -273,7 +300,10 @@
       "tipoProducto": "Loción hidratante",
       "descripcionCorta": "Loción ligera que aporta hidratación prolongada sin sensación pesada, ideal para el uso cotidiano.",
       "fotos": [
-        "/images/locion-uso-diario/locion-uso-diario.webp"
+        "/images/locion-uso-diario/locion-uso-diario.webp",
+        "/images/locion-uso-diario/locion-uso-diario1.jpg",
+        "/images/locion-uso-diario/locion-uso-diario2.jpg",
+        "/images/locion-uso-diario/locion-uso-diario3.webp"
       ],
       "categoria": 197,
       "precio": 35030.50,
@@ -300,7 +330,10 @@
       "tipoProducto": "Loción facial nocturna",
       "descripcionCorta": "Tratamiento nocturno que ayuda a restaurar la hidratación y el confort de la piel-sensible.",
       "fotos": [
-        "/images/locion-noche/locion-noche.jpg"
+        "/images/locion-noche/locion-noche.jpg",
+        "/images/locion-noche/locion-noche1.webp",
+        "/images/locion-noche/locion-noche2.webp",
+        "/images/locion-noche/locion-noche3.jpg"
       ],
       "categoria": 197,
       "precio": 36550.50,
@@ -327,7 +360,10 @@
       "tipoProducto": "Contorno de ojos",
       "descripcionCorta": "Crema específica para hidratar y cuidar la delicada zona del contorno de ojos en pieles sensibles.",
       "fotos": [
-        "/images/crema-reparadora/crema-reparadora.webp"
+        "/images/crema-reparadora/crema-reparadora.webp",
+        "/images/crema-reparadora/crema-reparadora1.webp",
+        "/images/crema-reparadora/crema-reparadora2.jpg",
+        "/images/crema-reparadora/crema-reparadora3.jpg"
       ],
       "categoria": 197,
       "precio": 27860.20,

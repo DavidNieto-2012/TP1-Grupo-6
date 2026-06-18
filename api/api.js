@@ -23,6 +23,12 @@ function obtenerCategorias() {
 
 }
 
+// Obtener producto por id
+function obtenerProductoPorId(productos, id) {
+    return productos.find(producto => producto.id === Number(id));
+}
+
+
 //3° recibe una lista de productos y genera las tarjetas
 function mostrarProductos(listaProductos) {
 

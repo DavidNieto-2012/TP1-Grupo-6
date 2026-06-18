@@ -17,7 +17,7 @@
         @import "tailwindcss/utilities";
     </style>
 
-    <title>Piel seca | CeraVe</title>
+    <title></title>
 
 </head>
 
@@ -66,13 +66,13 @@
                         <ul
                             class="static w-full bg-gray-50 rounded-md mt-2 p-2 space-y-1 list-none pl-0
                                md:absolute md:top-full md:left-0 md:w-48 md:bg-white md:shadow-lg md:border md:border-gray-100 md:mt-4 md:z-50">
-                            <li><a href="categoria_seca.html" 
-                                    class="block px-4 py-2 text-sm text-[#0772ba] hover:bg-gray-100 hover:text-[#0772ba] rounded no-underline">Piel
+                            <li><a href="categoria.html?categoria=piel-seca" data-categoria="piel-seca"
+                                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-[#0772ba] rounded no-underline">Piel
                                     seca</a></li>
-                            <li><a href="categoria_mixta.html"
+                            <li><a href="categoria.html?categoria=piel-mixta" data-categoria="piel-mixta"
                                     class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-[#0772ba] rounded no-underline">Piel
                                     mixta</a></li>
-                            <li><a href="categoria_sensible.html"
+                            <li><a href="categoria.html?categoria=piel-sensible" data-categoria="piel-sensible"
                                     class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-[#0772ba] rounded no-underline">Piel
                                     sensible</a></li>
                         </ul>
@@ -101,18 +101,12 @@
     <!--CUERPO-->
     <main>
         <section class="portada w-full py-10">
-            <h1 class="text-center px-2 sm:px-6 md:px-8 lg:px-10">Piel Seca</h1>
+            <h1 id="tituloCategoria" src="" class="text-center px-2 sm:px-6 md:px-8 lg:px-10"></h1>
             <figure>
-                <img src="images/banner-piel-seca.webp" alt="Imagen de mujer con piel seca"
+                <img id="bannerCategoria" alt="Imagen de mujer con piel seca"
                     class="w-full h-48 md:h-64 lg:h-80 object-cover mb-6 mt-12">
-                <figcaption
-                    class=" w-3/4 mx-auto text-center text-lg font-semibold pt-4 px-4 sm:px-6 md:px-8 lg:px-10">
-                    Ayuda a aliviar las molestias causadas por la piel seca con nuestra amplia gama de productos para el
-                    rostro y el cuerpo.
-                    <br> Desde limpiadores e hidratantes, hasta bálsamos y más, nuestros productos para la piel seca
-                    para adultos, niños y bebés están formulados con ingredientes calmantes e hidratantes suaves pero
-                    efectivos, además de ceramidas para ayudar a restaurar y mantener la barrera de la piel.</p>
-
+                <figcaption class=" w-3/4 mx-auto text-center text-lg font-semibold pt-4 px-4 sm:px-6 md:px-8 lg:px-10">
+                    <p id="descripcionCategoria"></p>
                 </figcaption>
             </figure>
         </section>
@@ -141,9 +135,7 @@
     </script>
 
     <script src="api/api.js"></script>
-    <script>
-        cargarProductos("piel-seca");
-    </script>
+    <script type="module" src="api/categoria.js"></script>
 
 </body>
 

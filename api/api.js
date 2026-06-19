@@ -19,7 +19,7 @@ async function cargarDatos() {
 }
 
 // Función para obtener la lista de productos
-function obtenerProductos(){
+function obtenerProductos() {
     return datos.productos ?? [];
 }
 
@@ -36,7 +36,7 @@ function obtenerProductoPorId(id) {
 }
 
 
-async function cargarProductos(){
+async function cargarProductos() {
     await cargarDatos();
     let productos = obtenerProductos();
     mostrarProductos(productos);
@@ -82,7 +82,7 @@ function crearTarjeta(producto) {
 
                     <p class="card-text text-muted small mb-3">${producto.descripcionCorta}</p>
 
-                    <p class="precio h4 text-dark font-bold mb-3">$${producto.precio}</p>
+                    <p class="precio h4 text-dark font-bold mb-3">${producto.precio.toLocaleString("es-AR")}</p>
                     
                     <a href="detalle.html?id=${producto.id}"
                         class="btn-ver btn btn-outline-primary w-100">Ver Detalle

@@ -2,38 +2,31 @@ const domain = "http://127.0.0.1:8080";
 const endpoint = `${domain}/api/productos.json`;
 
 //contiene todos los productos del json
-let productos = [];
+let datos = {
+    categorias: [],
+    productos: []
+};
 
 //1° funcion para cargar todos los productos aquí
-async function cargarProductos(categoria = null) {
+async function cargarDatos() {
 
     const respuesta = await fetch(endpoint);
-    const data = await respuesta.json();
-
-    productos = data.productos;
-
-    if (categoria) {
-
-        const productosFiltrados =
-            obtenerProductosPorCategoria(
-                productos,
-                categoria
-            );
-
-        mostrarProductos(productosFiltrados);
-
-    } else {
-
-        mostrarProductos(productos);
+    if (!respuesta.ok) {
+        throw new Error(`No se pudo cargar ${endpoint}: ${respuesta.status}`);
     }
+    datos = await respuesta.json();
+
 }
 
-//2° toma todos los productos y devuelve la lista filtrada por categoria
-function obtenerProductosPorCategoria(productos, categoria) {
+// Función para obtener la lista de productos
+function obtenerProductos(){
+    return datos.productos ?? [];
+}
 
-    return productos.filter(producto =>
-        producto.categoria === categoria
-    );
+// función para obtener la lista de categorias
+function obtenerCategorias() {
+
+    return datos.categorias ?? [];
 
 }
 
@@ -43,11 +36,21 @@ function obtenerProductoPorId(id) {
 }
 
 
+async function cargarProductos(){
+    await cargarDatos();
+    let productos = obtenerProductos();
+    mostrarProductos(productos);
+}
+
 //3° recibe una lista de productos y genera las tarjetas
 function mostrarProductos(listaProductos) {
 
     const contenedor =
         document.querySelector("#contenedor-productos");
+
+    if (!contenedor) {
+        return;
+    }
 
     contenedor.innerHTML = "";
 
@@ -62,6 +65,10 @@ function crearTarjeta(producto) {
         ? domain + producto.fotos[0]
         : "images/noPhoto.jpg";
 
+    const categoria = obtenerCategorias().find(
+        cat => cat.id === producto.categoria
+    ) ?? { nombre: "Sin categoría" };
+
     let articleProducto = `
         <article class="col-12 col-md-6 col-lg-4 d-flex">
             <div class="card w-100 shadow-sm border-0 p-3" style="border-radius: 12px; background-color: #fff;">
@@ -71,7 +78,7 @@ function crearTarjeta(producto) {
                 <div class="card-body d-flex flex-column justify-content-between p-2">
                     <h3 class="h5 text-primary font-bold mb-1">${producto.titulo}</h3>
 
-                    <h5 class="text-muted small mb-3">${producto.categoria}</h5>
+                    <h5 class="text-muted small mb-3">${categoria.nombre}</h5>
 
                     <p class="card-text text-muted small mb-3">${producto.descripcionCorta}</p>
 

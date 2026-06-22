@@ -22,7 +22,6 @@
       "imagen": "../images/banner-piel-sensible.webp"
     }
   ],
-
   "productos": [
     {
       "id": 1,
@@ -52,7 +51,11 @@
       ],
       "modoUso": "Aplicar sobre la piel húmeda, masajear suavemente y enjuagar con abundante agua.",
       "valoracion": 4.8,
-      "relacionados": [2,10,7]
+      "relacionados": [
+        2,
+        10,
+        7
+      ]
     },
     {
       "id": 2,
@@ -82,7 +85,11 @@
       ],
       "modoUso": "Aplicar con un algodón sobre rostro y ojos hasta retirar completamente las impurezas.",
       "valoracion": 4.6,
-      "relacionados": []
+      "relacionados": [
+        4,
+        12,
+        7
+      ]
     },
     {
       "id": 3,
@@ -112,7 +119,11 @@
       ],
       "modoUso": "Aplicar sobre la piel húmeda, masajear y enjuagar completamente.",
       "valoracion": 4.8,
-      "relacionados": []
+      "relacionados": [
+        15,
+        2,
+        9
+      ]
     },
     {
       "id": 4,
@@ -142,7 +153,11 @@
       ],
       "modoUso": "Aplicar diariamente sobre la piel limpia mediante suaves masajes hasta su absorción.",
       "valoracion": 4.9,
-      "relacionados": []
+      "relacionados": [
+        11,
+        3,
+        17
+      ]
     },
     {
       "id": 5,
@@ -172,7 +187,11 @@
       ],
       "modoUso": "Aplicar sobre la piel húmeda, masajear suavemente y enjuagar.",
       "valoracion": 4.7,
-      "relacionados": []
+      "relacionados": [
+        1,
+        14,
+        6
+      ]
     },
     {
       "id": 6,
@@ -202,7 +221,11 @@
       ],
       "modoUso": "Aplicar por la mañana sobre rostro y cuello antes de la exposición solar.",
       "valoracion": 4.7,
-      "relacionados": []
+      "relacionados": [
+        8,
+        13,
+        5
+      ]
     },
     {
       "id": 7,
@@ -232,7 +255,11 @@
       ],
       "modoUso": "Aplicar pequeñas cantidades mediante suaves toques alrededor de los ojos.",
       "valoracion": 4.5,
-      "relacionados": []
+      "relacionados": [
+        10,
+        16,
+        2
+      ]
     },
     {
       "id": 8,
@@ -262,7 +289,11 @@
       ],
       "modoUso": "Aplicar por la noche sobre rostro y cuello limpios.",
       "valoracion": 4.8,
-      "relacionados": []
+      "relacionados": [
+        12,
+        15,
+        4
+      ]
     },
     {
       "id": 9,
@@ -292,7 +323,11 @@
       ],
       "modoUso": "Aplicar sobre la piel limpia tantas veces como sea necesario.",
       "valoracion": 4.9,
-      "relacionados": []
+      "relacionados": [
+        5,
+        9,
+        14
+      ]
     },
     {
       "id": 10,
@@ -322,7 +357,11 @@
       ],
       "modoUso": "Aplicar sobre la piel limpia y seca mediante suaves masajes.",
       "valoracion": 4.7,
-      "relacionados": []
+      "relacionados": [
+        3,
+        8,
+        12
+      ]
     },
     {
       "id": 11,
@@ -352,7 +391,11 @@
       ],
       "modoUso": "Aplicar por la noche sobre rostro y cuello limpios.",
       "valoracion": 4.8,
-      "relacionados": []
+      "relacionados": [
+        7,
+        1,
+        11
+      ]
     },
     {
       "id": 12,
@@ -382,7 +425,11 @@
       ],
       "modoUso": "Aplicar pequeñas cantidades mediante suaves toques alrededor de los ojos.",
       "valoracion": 4.8,
-      "relacionados": []
+      "relacionados": [
+        13,
+        6,
+        15
+      ]
     },
     {
       "id": 13,
@@ -404,7 +451,11 @@
       ],
       "modoUso": "Modo de uso del producto de relleno 1.",
       "valoracion": 4.0,
-      "relacionados": []
+      "relacionados": [
+        2,
+        17,
+        1
+      ]
     },
     {
       "id": 14,
@@ -426,7 +477,11 @@
       ],
       "modoUso": "Modo de uso del producto de relleno 2.",
       "valoracion": 4.5,
-      "relacionados": []
+      "relacionados": [
+        2,
+        17,
+        1
+      ]
     },
     {
       "id": 15,
@@ -448,7 +503,11 @@
       ],
       "modoUso": "Modo de uso del producto de relleno 2.",
       "valoracion": 4.5,
-      "relacionados": []
+      "relacionados": [
+        9,
+        11,
+        8
+      ]
     },
     {
       "id": 16,
@@ -470,7 +529,11 @@
       ],
       "modoUso": "Modo de uso del producto de relleno 3.",
       "valoracion": 4.2,
-      "relacionados": []
+      "relacionados": [
+        14,
+        5,
+        16
+      ]
     },
     {
       "id": 17,
@@ -492,7 +555,11 @@
       ],
       "modoUso": "Modo de uso del producto de relleno 4.",
       "valoracion": 4.3,
-      "relacionados": []
+      "relacionados": [
+        6,
+        10,
+        3
+      ]
     }
   ]
 }

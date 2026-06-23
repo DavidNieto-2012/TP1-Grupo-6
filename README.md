@@ -15,10 +15,10 @@ ARCHIVO api.js
 3- Implementar función obtenerTodosLosProductos() - retorna todos los productos. — RODRI hecho
 4- Implementar función obtenerProductoPorId(id) - retorna un producto específico. — DAVID hecho
 5- Implementar función obtenerProductosPorCategoria(categoria) - filtra por categoría. — BARBY hecho
-6- Implementar función obtenerProductosRelacionados(ids) - para mostrar los relacionados de cada producto. — RODRI hecho
+6- Implementar función obtenerProductosRelacionados(ids) - para mostrar los relacionados de cada producto. — RODRI 
 7- Función para formatear precios. — DAVID hecho
 8- Función para generar HTML de tarjetas de producto. — BARBY hecho
-9- Función para generar productos relacionados. — RODRI
+9- Función para generar productos relacionados. — RODri
 
 ARCHIVOS html
 10- Actualizar productos.html: Añadir contenedor dinámico para las tarjetas. Script que cargue todos los productos usando la API. Renderizar tarjetas de producto dinámicamente. — DAVID hecho

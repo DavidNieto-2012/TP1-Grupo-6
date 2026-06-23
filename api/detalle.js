@@ -35,6 +35,28 @@ async function cargarDetalle() {
   if(!producto){ return;}
 
   mostrarDetalle(producto);
+
+  //  Se ejecuta automáticamente al cargar el producto principal
+  renderizarRelacionadosDeProducto(producto);
 }
 
+
 cargarDetalle();
+
+
+// TAREA 15, RENDERIZAR RELACIONADOS DINÁMICOS
+
+function renderizarRelacionadosDeProducto(productoActual) {
+    const contenedor = document.querySelector("#contenedor-relacionados");
+    if (!contenedor) return;
+
+    // Buscamos los objetos de los productos relacionados usando funciones de api.js
+    const relacionados = obtenerProductosRelacionados(productoActual.relacionados);
+
+    // HTML dinámico o mostramos un aviso
+    if (relacionados.length > 0) {
+        contenedor.innerHTML = generarHtmlProductosRelacionados(relacionados);
+    } else {
+        contenedor.innerHTML = `<p class="text-muted small text-center w-full">No hay productos relacionados disponibles.</p>`;
+    }
+}

@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (formulario) {
         formulario.addEventListener("submit", (e) => {
-            e.preventDefault(); /
+            e.preventDefault();
 
             // Bootstrap custom 
             if (!formulario.checkValidity()) {

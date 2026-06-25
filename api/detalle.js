@@ -1,7 +1,10 @@
-function mostrarDetalle(producto){
+let producto = null;
+
+function mostrarDetalle(producto) {
   document.title = producto.titulo;
   document.getElementById("titulo").textContent = producto.titulo;
   document.getElementById("tipoProducto").textContent = producto.tipoProducto;
+  document.getElementById("id").textContent = producto.id;
   document.getElementById("precio").textContent = `$${producto.precio.toLocaleString("es-AR")}`;
   document.getElementById("descripcionCorta").textContent = producto.descripcionCorta;
   document.getElementById("descrpcionLarga").textContent = producto.descripcionLarga;
@@ -26,13 +29,13 @@ function mostrarDetalle(producto){
 
 async function cargarDetalle() {
   await cargarDatos();
-  
+
   const params = new URLSearchParams(window.location.search);
   const id = Number(params.get("id"));
 
-  const producto = obtenerProductoPorId(id);
+  producto = obtenerProductoPorId(id);
 
-  if(!producto){ return;}
+  if (!producto) { return; }
 
   mostrarDetalle(producto);
 
@@ -44,14 +47,14 @@ cargarDetalle();
 
 // RELACIONADOS DINÁMICOS
 function renderizarRelacionadosDeProducto(productoActual) {
-    const contenedor = document.querySelector("#contenedor-relacionados");
-    if (!contenedor) return;
+  const contenedor = document.querySelector("#contenedor-relacionados");
+  if (!contenedor) return;
 
-    const relacionados = obtenerProductosRelacionados(productoActual.relacionados);
+  const relacionados = obtenerProductosRelacionados(productoActual.relacionados);
 
-    if (relacionados.length > 0) {
-        contenedor.innerHTML = generarHtmlProductosRelacionados(relacionados);
-    } else {
-        contenedor.innerHTML = `<p class="text-muted small text-center w-full">No hay productos relacionados disponibles.</p>`;
-    }
+  if (relacionados.length > 0) {
+    contenedor.innerHTML = generarHtmlProductosRelacionados(relacionados);
+  } else {
+    contenedor.innerHTML = `<p class="text-muted small text-center w-full">No hay productos relacionados disponibles.</p>`;
+  }
 }

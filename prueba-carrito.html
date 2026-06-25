@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Prueba Carrito</title>
+</head>
+<body>
+
+    <h1>Prueba de Carrito</h1>
+
+    <button id="agregar1">Agregar Shampoo</button>
+    <button id="agregar2">Agregar Acondicionador</button>
+    <button id="vaciar">Vaciar Carrito</button>
+
+    <hr>
+
+    <div id="carrito"></div>
+
+    <script src="api/carro.js"></script>
+
+    <script>
+
+        document.getElementById("agregar1").addEventListener("click", () => {
+
+            agregarAlCarro({
+                id: 1,
+                titulo: "Shampoo",
+                precio: 1500
+            });
+
+            mostrarCarro();
+        });
+
+        document.getElementById("agregar2").addEventListener("click", () => {
+
+            agregarAlCarro({
+                id: 2,
+                titulo: "Acondicionador",
+                precio: 2000
+            });
+
+            mostrarCarro();
+        });
+
+        document.getElementById("vaciar").addEventListener("click", () => {
+
+            vaciarCarro();
+            mostrarCarro();
+        });
+
+        mostrarCarro();
+
+    </script>
+
+</body>
+</html>

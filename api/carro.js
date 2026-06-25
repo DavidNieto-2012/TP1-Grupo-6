@@ -28,19 +28,25 @@ function mostrarCarro() {
     contenedor.innerHTML += `
       <h1>No hay productos</h1>
     `;
+  } else {
+
+    carrito.forEach(producto => {
+      const foto = producto.fotos.length
+          ? producto.fotos[0]
+          : "images/noPhoto.jpg";
+
+      contenedor.innerHTML += `
+        <div class="producto" style="border:1px solid #ccc; padding:10px; margin:10px;">
+          <img src="${foto}" class="img-fluid rounded" style="max-height: 100px; object-fit: contain;" alt="${producto.titulo}">
+          <h3>${producto.titulo}</h3>
+          <p>Código: ${producto.id}</p>
+          <p>Precio: $${producto.precio.toLocaleString("es-AR")}</p>
+
+          <button onclick="borrarItem(${producto.id})">Borrar</button>
+        </div>
+      `;
+    });
   }
-
-  carrito.forEach(producto => {
-    contenedor.innerHTML += `
-      <div class="producto" style="border:1px solid #ccc; padding:10px; margin:10px;">
-        <h3>${producto.titulo}</h3>
-        <p>Código: ${producto.id}</p>
-        <p>Precio: $${producto.precio.toLocaleString("es-AR")}</p>
-
-        <button onclick="borrarItem(${producto.id})">Borrar</button>
-      </div>
-    `;
-  });
 }
 
 function borrarItem(id) {

@@ -63,13 +63,13 @@ function crearTarjeta(producto) {
     ) ?? { nombre: "Sin categoría" };
 
     let articleProducto = `
-        <article class="col-12 col-md-6 col-lg-4 d-flex">
-            <div class="card w-100 shadow-sm border-0 p-3" style="border-radius: 12px; background-color: #fff;">
+        <article class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex">
+            <div class="card w-90 shadow-sm border-0 p-3" style="border-radius: 12px; background-color: #fff;">
                 <figure class="text-center mb-3">
                     <img src="${foto}" class="img-fluid rounded" style="max-height: 250px; object-fit: contain;" alt="${producto.titulo}">
                 </figure>
                 <div class="card-body d-flex flex-column justify-content-between p-2">
-                    <h3 class="h5 text-primary font-bold mb-1">${producto.titulo}</h3>
+                    <h2 class="font-bold mb-1">${producto.titulo}</h3>
 
                     <h5 class="text-muted small mb-3">${categoria.nombre}</h5>
 

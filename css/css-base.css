@@ -173,6 +173,16 @@ button:hover {
   font-size: 1.1rem;
 }
 
+#contenedor-productos {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+#contenedor-productos .card .card-body {
+  text-align: center;
+}
+
 /* ACCESIBILIDAD */
 a:focus-visible,
 button:focus-visible,

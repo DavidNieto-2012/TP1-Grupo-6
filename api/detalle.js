@@ -36,25 +36,22 @@ async function cargarDetalle() {
 
   mostrarDetalle(producto);
 
-  //  Se ejecuta automáticamente al cargar el producto principal
+  // Se ejecuta automáticamente al cargar el producto principal
   renderizarRelacionadosDeProducto(producto);
 }
 
-
 cargarDetalle();
 
-
-//  RELACIONADOS DINÁMICOS
-
+// RELACIONADOS DINÁMICOS
 function renderizarRelacionadosDeProducto(productoActual) {
     const contenedor = document.querySelector("#contenedor-relacionados");
     if (!contenedor) return;
 
     const relacionados = obtenerProductosRelacionados(productoActual.relacionados);
 
-    
     if (relacionados.length > 0) {
         contenedor.innerHTML = generarHtmlProductosRelacionados(relacionados);
     } else {
         contenedor.innerHTML = `<p class="text-muted small text-center w-full">No hay productos relacionados disponibles.</p>`;
     }
+}

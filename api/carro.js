@@ -13,29 +13,44 @@ function mostrarCarro() {
 
   if (listaContenedor) {
     if (carrito.length === 0) {
-      listaContenedor.innerHTML = `<li class="py-4 text-center text-muted list-group-item">El carrito está vacío</li>`;
+      listaContenedor.innerHTML = `
+        <li class="flex py-6 justify-center text-gray-500 font-medium">
+          El carrito está vacío
+        </li>
+      `;
     } else {
       listaContenedor.innerHTML = carrito.map((producto, index) => {
         const foto = producto.fotos && producto.fotos.length ? producto.fotos[0] : "images/noPhoto.jpg";
         return `
-          <li class="list-group-item d-flex justify-content-between align-items-center py-3 bg-white" style="border: 1px solid #dee2e6 !important;">
-            <div class="d-flex align-items-center gap-3">
-              <div style="width: 70px !important; height: 70px !important; min-width: 70px !important; min-height: 70px !important; overflow: hidden !important; border-radius: 6px; border: 1px solid #dee2e6; display: flex; align-items: center; justify-content: center; background-color: #fff;">
-                <img src="${foto}" alt="${producto.titulo}" style="width: 100% !important; height: 100% !important; object-fit: contain !important; max-width: 70px !important; max-height: 70px !important;" />
-              </div>
+          <li class="flex py-6 border-b border-gray-200">
+            <div class="size-20 shrink-0 overflow-hidden rounded-md border border-gray-200 bg-white flex items-center justify-center p-1">
+              <img src="${foto}" alt="${producto.titulo}" class="size-full object-contain max-h-full max-w-full" />
+            </div>
+
+            <div class="ml-4 flex flex-1 flex-col">
               <div>
-                <h6 class="my-0" style="font-size: 0.95rem; font-weight: 600; color: #333;">${producto.titulo}</h6>
-                <small class="text-muted d-block mt-1">Código: ${producto.id}</small>
-                <button type="button" onclick="borrarItem(${index})" class="btn btn-link p-0 text-danger text-decoration-none" style="font-size: 0.8rem; margin-top: 4px;">Quitar</button>
+                <div class="flex justify-between text-base font-medium text-gray-900">
+                  <h3>
+                    <a href="detalle.html?id=${producto.id}" class="hover:text-[#0772ba] transition-colors no-underline line-clamp-2 text-sm">${producto.titulo}</a>
+                  </h3>
+                  <p class="ml-4 font-semibold text-gray-900 shrink-0">$${producto.precio.toLocaleString("es-AR")}</p>
+                </div>
+                <p class="mt-1 text-xs text-gray-500">Código: ${producto.id}</p>
+              </div>
+              <div class="flex flex-1 items-end justify-between text-sm">
+                <p class="text-gray-500">Cant: 1</p>
+                <div class="flex">
+                  <button type="button" onclick="borrarItem(${index})" class="font-medium text-[#0772ba] hover:text-[#0e3353] bg-transparent p-0 border-none cursor-pointer transition-colors">
+                    Quitar
+                  </button>
+                </div>
               </div>
             </div>
-            <span class="text-dark fw-bold ms-2" style="font-size: 0.95rem;">$${producto.precio.toLocaleString("es-AR")}</span>
           </li>
         `;
       }).join("");
     }
   }
-
 
   if (subtotalContenedor) {
     const total = carrito.reduce((sum, prod) => sum + prod.precio, 0);

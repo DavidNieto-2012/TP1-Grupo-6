@@ -5,9 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="css/css-base.css">
+    
+
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <style type="text/tailwindcss">
         @import "tailwindcss/theme";
@@ -15,12 +18,11 @@
     </style>
 
     <title>Formulario de Suscripción | CeraVe</title>
-
 </head>
 
 <body>
     <header class="bg-white border-b border-gray-200 sticky top-0 z-50 shadow-sm">
-        <nav class="w-full px-8 lg:px-20 h-20 flex justify-between items-center relative">
+        <nav class="w-full px-4 sm:px-8 lg:px-20 h-20 flex justify-between items-center relative">
 
             <a href="index.html" class="flex items-center h-full max-w-[120px] no-underline">
                 <img src="images/cerave-logo-png_seeklogo-352149.png" alt="CeraVe Logo"
@@ -29,11 +31,9 @@
 
             <input type="checkbox" id="menu-toggle" class="peer hidden">
 
-
             <ul class="hidden absolute top-full left-0 w-full bg-white border-b border-gray-200 flex-col p-4 gap-3 m-0 list-none
-                   md:flex md:relative md:top-auto md:left-auto md:w-auto md:bg-transparent md:border-none md:flex-row md:p-0 md:gap-8 md:items-center md:ml-auto md:mr-12
+                   md:flex md:relative md:top-auto md:left-auto md:w-auto md:bg-transparent md:border-none md:flex-row md:p-0 md:gap-8 md:items-center md:ml-auto md:mr-6
                    peer-checked:flex z-40">
-
                 <li>
                     <a href="index.html"
                         class="text-gray-700 hover:text-[#0772ba] font-medium transition-colors no-underline">Inicio</a>
@@ -56,8 +56,7 @@
                             </svg>
                         </summary>
 
-                        <ul
-                            class="static w-full bg-gray-50 rounded-md mt-2 p-2 space-y-1 list-none pl-0
+                        <ul class="static w-full bg-gray-50 rounded-md mt-2 p-2 space-y-1 list-none pl-0
                                md:absolute md:top-full md:left-0 md:w-48 md:bg-white md:shadow-lg md:border md:border-gray-100 md:mt-4 md:z-50">
                             <li><a href="categoria.html?categoria=piel-seca" data-categoria="piel-seca"
                                     class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-[#0772ba] rounded no-underline">Piel
@@ -80,21 +79,38 @@
                     <a href="nosotros.html"
                         class="text-gray-700 hover:text-[#0772ba] font-medium transition-colors no-underline">Nosotros</a>
                 </li>
+                
+                
+                <li class="hidden md:block">
+                    <a href="checkout.html" class="flex items-center text-gray-700 hover:text-[#0772ba] transition-colors relative no-underline p-2">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 0a2 2 0 100 4 2 2 0 000-4z"></path>
+                        </svg>
+                    </a>
+                </li>
             </ul>
 
-            <label for="menu-toggle"
-                class="hamburger text-2xl text-gray-700 cursor-pointer p-2 select-none md:hidden hover:text-[#0772ba] transition-colors mb-0">
-                ☰
-            </label>
-
+            
+            <div class="flex items-center gap-2 md:hidden">
+                <!-- Carrito Móvil -->
+                <a href="checkout.html" class="text-gray-700 hover:text-[#0772ba] p-2 relative">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 0a2 2 0 100 4 2 2 0 000-4z"></path>
+                    </svg>
+                </a>
+                <!-- Hamburguesa -->
+                <label for="menu-toggle" class="hamburger text-2xl text-gray-700 cursor-pointer p-2 select-none hover:text-[#0772ba] transition-colors mb-0">
+                    ☰
+                </label>
+            </div>
         </nav>
     </header>
 
     <main class="flex justify-center items-center py-40 bg-[#f4f7f9]">
         <section
-            class=" basis-[95%] md:basis-4/5 justify-center items-center border-3 border-[#005691] rounded-xl bg-white p-4 sm:p-6 md:p-8 lg:p-10">
-            <div class="flex flex-col justify-self-center item-center pb-5">
-                <h1 class="text-center ">Suscríbete a nuestro Newsletter</h1>
+            class="w-full basis-[95%] md:basis-4/5 justify-center items-center border-3 border-[#005691] rounded-xl bg-white p-4 sm:p-6 md:p-8 lg:p-10">
+            <div class="flex flex-col justify-center items-center pb-5">
+                <h1 class="text-center">Suscríbete a nuestro Newsletter</h1>
                 <h4 class="text-secondary text-center">Recibe las últimas noticias, ofertas exclusivas y consejos de
                     cuidado de la piel directamente en tu bandeja de entrada.</h4>
             </div>
@@ -179,28 +195,23 @@
                         <button type="reset" class="btn btn-secondary btn-reset">Limpiar</button>
                     </div>
                 </div>
-
             </form>
         </section>
     </main>
 
-
-    <footer class="text-dark text-center py-4 mt-5">
+    <footer class="text-dark text-center py-4 mt-5 bg-white border-t border-gray-100">
         <div class="container">
             <h4 class="font-bold">CeraVe Store</h4>
-            <p class="text-secondary">Desarrollado para la cátedra de Web I - Universidad Nacional de Tierra del Fuego
-            </p>
-            <p class="small text-muted">&copy; 2026 Web I - UNTDF | Ushuaia, Tierra del Fuego. Todos los derechos
-                reservados.</p>
+            <p class="text-secondary">Desarrollado para la cátedra de Web I - Universidad Nacional de Tierra del Fuego</p>
+            <p class="small text-muted">&copy; 2026 Web I - UNTDF | Ushuaia, Tierra del Fuego. Todos los derechos reservados.</p>
         </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
-
     <script src="api/newsletter.js"></script>
-
 </body>
 
 </html>

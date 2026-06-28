@@ -4,15 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- 1. Bootstrap CSS (estilos base que pueden ser sobrescritos por el CSS personalizado) -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    
 
-
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="css/css-base.css">
     <link rel="stylesheet" href="css/nosotros.css">
 
-    <!-- 3. Tailwind CSS v4 sin Preflight para evitar conflictos con Bootstrap -->
+  
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <style type="text/tailwindcss">
         @import "tailwindcss/theme";
@@ -22,24 +21,19 @@
 </head>
 
 <body>
-
     <header class="bg-white border-b border-gray-200 sticky top-0 z-50 shadow-sm">
-        <nav class="w-full px-8 lg:px-20 h-20 flex justify-between items-center relative">
+        <nav class="w-full px-4 sm:px-8 lg:px-20 h-20 flex justify-between items-center relative">
 
-            <!-- foto logo -->
-            <a href="../index.html" class="flex items-center h-full max-w-[120px] no-underline">
-                <img src="../images/cerave-logo-png_seeklogo-352149.png" alt="CeraVe Logo"
+            <a href="index.html" class="flex items-center h-full max-w-[120px] no-underline">
+                <img src="images/cerave-logo-png_seeklogo-352149.png" alt="CeraVe Logo"
                     class="h-auto max-h-12 object-contain">
             </a>
 
-            <!-- Checkbox Oculto para controlar el menú en móviles -->
             <input type="checkbox" id="menu-toggle" class="peer hidden">
 
-
             <ul class="hidden absolute top-full left-0 w-full bg-white border-b border-gray-200 flex-col p-4 gap-3 m-0 list-none
-                   md:flex md:relative md:top-auto md:left-auto md:w-auto md:bg-transparent md:border-none md:flex-row md:p-0 md:gap-8 md:items-center md:ml-auto md:mr-12
+                   md:flex md:relative md:top-auto md:left-auto md:w-auto md:bg-transparent md:border-none md:flex-row md:p-0 md:gap-8 md:items-center md:ml-auto md:mr-6
                    peer-checked:flex z-40">
-
                 <li>
                     <a href="index.html"
                         class="text-gray-700 hover:text-[#0772ba] font-medium transition-colors no-underline">Inicio</a>
@@ -49,7 +43,6 @@
                         class="text-gray-700 hover:text-[#0772ba] font-medium transition-colors no-underline">Productos</a>
                 </li>
 
-                <!-- desplegable para categorias por click -->
                 <li class="relative">
                     <details class="group/details">
                         <summary
@@ -63,8 +56,7 @@
                             </svg>
                         </summary>
 
-                        <ul
-                            class="static w-full bg-gray-50 rounded-md mt-2 p-2 space-y-1 list-none pl-0
+                        <ul class="static w-full bg-gray-50 rounded-md mt-2 p-2 space-y-1 list-none pl-0
                                md:absolute md:top-full md:left-0 md:w-48 md:bg-white md:shadow-lg md:border md:border-gray-100 md:mt-4 md:z-50">
                             <li><a href="categoria.html?categoria=piel-seca" data-categoria="piel-seca"
                                     class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-[#0772ba] rounded no-underline">Piel
@@ -87,17 +79,32 @@
                     <a href="nosotros.html"
                         class="text-[#0772ba] hover:text-[#0772ba] font-medium transition-colors no-underline">Nosotros</a>
                 </li>
+
+                <!-- Carrito para pantallas grandes (Escritorio) -->
+                <li class="hidden md:block">
+                    <a href="checkout.html" class="flex items-center text-gray-700 hover:text-[#0772ba] transition-colors relative no-underline p-2">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 0a2 2 0 100 4 2 2 0 000-4z"></path>
+                        </svg>
+                    </a>
+                </li>
             </ul>
 
-            <!--botón de hamburguesa-->
-            <label for="menu-toggle"
-                class="hamburger text-2xl text-gray-700 cursor-pointer p-2 select-none md:hidden hover:text-[#0772ba] transition-colors mb-0">
-                ☰
-            </label>
-
+            <!-- Contenedores de botones para móviles (Hamburguesa + Carrito) -->
+            <div class="flex items-center gap-2 md:hidden">
+                <!-- Carrito Móvil -->
+                <a href="checkout.html" class="text-gray-700 hover:text-[#0772ba] p-2 relative">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 0a2 2 0 100 4 2 2 0 000-4z"></path>
+                    </svg>
+                </a>
+                <!-- Hamburguesa -->
+                <label for="menu-toggle" class="hamburger text-2xl text-gray-700 cursor-pointer p-2 select-none hover:text-[#0772ba] transition-colors mb-0">
+                    ☰
+                </label>
+            </div>
         </nav>
     </header>
-
 
     <main class="flex flex-col justify-center">
         <div>
@@ -133,13 +140,12 @@
                     <li class="text-base text-justify mb-2.5">Disponibles en la mayoría de las principales tiendas, los
                         productos para el cuidado de la piel
                         de CeraVe, desarrollados con dermatólogos, son una opción accesible para aquellos que buscan
-                        productos de alta calidad sin necesidad de receta médica</li>
+                        productos de alta calidad sin necesidad de receta médica.</li>
                 </ul>
             </div>
         </div>
 
-        <!--El iframe sirve para "incrustar" una ventana de un sitio web dentro del tuyo -->
-        <div class="ratio ratio-16x9 rounded-4 overflow-hidden" style="margin: 5%; width: auto; ">
+        <div class="ratio ratio-16x9 rounded-4 overflow-hidden" style="margin: 5%; width: auto;">
             <iframe src="https://www.youtube.com/embed/dfeKe4fITzQ?si=Y41iEah9zqagM6Th" title="YouTube video player"
                 frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -191,25 +197,24 @@
                     alt="La hidratación de la piel es crucial, tanto para mantenerla sana la piel como para mejorar cuadros dermatologicos">
             </article>
         </div>
-        <div class="footer">
+
+        <div>
             <img src="images/nosotros/footer-banner-LG.webp" class="w-full h-auto"
                 alt="Con el poder de 3 ceramidad y 24hs de hidratación">
         </div>
     </main>
 
-    <footer class="text-dark text-center py-4 mt-5">
+    <footer class="text-dark text-center py-4 mt-5 bg-white border-t border-gray-100">
         <div class="container">
             <h4 class="font-bold">CeraVe Store</h4>
-            <p class="text-secondary">Desarrollado para la cátedra de Web I - Universidad Nacional de Tierra del Fuego
-            </p>
-            <p class="small text-muted">&copy; 2026 Web I - UNTDF | Ushuaia, Tierra del Fuego. Todos los derechos
-                reservados.</p>
+            <p class="text-secondary">Desarrollado para la cátedra de Web I - Universidad Nacional de Tierra del Fuego</p>
+            <p class="small text-muted">&copy; 2026 Web I - UNTDF | Ushuaia, Tierra del Fuego. Todos los derechos reservados.</p>
         </div>
     </footer>
 
-    <!-- Bootstrap Bundle JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+  
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
 </body>
 

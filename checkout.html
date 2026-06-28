@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - CeraVe Store</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- FontAwesome para los iconos de tarjetas -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/css-base.css">
+    <style>
+     
+      .img-carrito-fija {
+        width: 70px !important;
+        height: 70px !important;
+        object-fit: contain !important;
+        max-width: 70px !important;
+        max-height: 70px !important;
+      }
+    </style>
+</head>
+<body class="bg-light">
+
+  <div class="container py-5">
+    <div class="row g-5">
+      
+   
+      <div class="col-md-5 col-lg-4 order-md-last">
+        <h4 class="d-flex justify-content-between align-items-center mb-3">
+          <span class="text-primary" style="color: #005691 !important;">Tu Carrito</span>
+        </h4>
+        
+        <!-- Tu JS va a rellenar esta lista dinámicamente -->
+        <ul class="list-group mb-3" id="lista-carrito"></ul>
+
+        <div class="card p-3 shadow-sm bg-white border">
+          <div class="d-flex justify-content-between align-items-center">
+            <span class="text-muted fs-5">Total</span>
+            <span id="subtotal-carrito" class="fw-bold fs-4 text-dark">$0</span>
+          </div>
+        </div>
+        
+        <button class="btn btn-outline-danger btn-sm w-100 mt-3" onclick="vaciarCarro()">
+          Vaciar Carrito
+        </button>
+      </div>
+
+      <!-- COLUMNA FORMULARIO DE PAGO -->
+      <div class="col-md-7 col-lg-8">
+        <h4 class="mb-3">Datos de Envío y Pago</h4>
+        <form id="formulario-checkout" onsubmit="procesarPago(event)">
+          
+          <div class="row g-3">
+            <div class="col-sm-6">
+              <label for="nombre" class="form-label">Nombre</label>
+              <input type="text" class="form-control" id="nombre" required>
+            </div>
+
+            <div class="col-sm-6">
+              <label for="apellido" class="form-label">Apellido</label>
+              <input type="text" class="form-control" id="apellido" required>
+            </div>
+
+            <div class="col-12">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" class="form-control" id="email" placeholder="tu@ejemplo.com" required>
+            </div>
+
+            <div class="col-12">
+              <label for="direccion" class="form-label">Dirección de entrega</label>
+              <input type="text" class="form-control" id="direccion" placeholder="Calle 1234" required>
+            </div>
+          </div>
+
+          <hr class="my-4">
+
+          <h5 class="mb-3">Tarjeta de Crédito o Débito</h5>
+
+          <div class="d-flex my-3 gap-3 text-muted" style="font-size: 2rem;">
+            <i class="fab fa-cc-visa text-primary"></i>
+            <i class="fab fa-cc-mastercard text-danger"></i>
+            <i class="fab fa-cc-amex text-warning"></i>
+          </div>
+
+          <div class="row gy-3">
+            <div class="col-md-6">
+              <label for="tarjeta-nombre" class="form-label">Nombre en la tarjeta</label>
+              <input type="text" class="form-control" id="tarjeta-nombre" required>
+              <small class="text-muted">Como figura en la tarjeta</small>
+            </div>
+
+            <div class="col-md-6">
+              <label for="tarjeta-numero" class="form-label">Número de tarjeta</label>
+              <input type="text" class="form-control" id="tarjeta-numero" placeholder="•••• •••• •••• ••••" required>
+            </div>
+
+            <div class="col-md-3">
+              <label for="tarjeta-expiracion" class="form-label">Vencimiento</label>
+              <input type="text" class="form-control" id="tarjeta-expiracion" placeholder="MM/AA" required>
+            </div>
+
+            <div class="col-md-3">
+              <label for="tarjeta-cvv" class="form-label">CVV</label>
+              <input type="text" class="form-control" id="tarjeta-cvv" placeholder="123" required>
+            </div>
+          </div>
+
+          <hr class="my-4">
+
+          <button class="w-100 btn btn-primary btn-lg" type="submit" style="background-color: #005691; border-color: #005691;">
+            Finalizar Compra
+          </button>
+        </form>
+      </div>
+
+    </div>
+  </div>
+
+  
+  <script src="api/carro.js"></script>
+  <script src="api/checkout.js"></script>
+</body>
+</html>

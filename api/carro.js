@@ -1,31 +1,20 @@
-
-//AGREGAR AL CARRO
 function agregarAlCarro(producto) {
-
-  //crea o recupera el carrito del localStorage
   let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
-
   carrito.push(producto);
-
-  //convierte a json para guardar
   localStorage.setItem("carrito", JSON.stringify(carrito));
 }
 
 function mostrarCarro() {
   const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
-
-  // Contenedores del drawer de Tailwind
   const listaContenedor = document.getElementById("lista-carrito");
   const subtotalContenedor = document.getElementById("subtotal-carrito");
-
-  // Contenedor antiguo de prueba
   const contenedorViejo = document.getElementById("carrito");
 
-  // 1. Renderizar en el nuevo drawer de Tailwind (si existe en la página actual)
+
   if (listaContenedor) {
     if (carrito.length === 0) {
       listaContenedor.innerHTML = `
-        <li class="py-6 text-center text-gray-500">
+        <li class="py-4 text-center text-muted list-group-item">
           El carrito está vacío
         </li>
       `;
@@ -33,42 +22,35 @@ function mostrarCarro() {
       listaContenedor.innerHTML = carrito.map((producto, index) => {
         const foto = producto.fotos && producto.fotos.length ? producto.fotos[0] : "images/noPhoto.jpg";
         return `
-          <li class="flex py-6">
-            <div class="size-24 shrink-0 overflow-hidden rounded-md border border-gray-200">
-              <img src="${foto}" alt="${producto.titulo}" class="size-full object-cover" />
-            </div>
-            <div class="ml-4 flex flex-1 flex-col">
+          <li class="list-group-item d-flex justify-content-between align-items-center py-3 bg-white">
+            <div class="d-flex align-items-center gap-3">
+              <div style="width: 70px !important; height: 70px !important; min-width: 70px !important; min-height: 70px !important; overflow: hidden !important; border-radius: 6px; border: 1px solid #dee2e6; display: flex; align-items: center; justify-content: center; background-color: #fff;">
+                <img src="${foto}" alt="${producto.titulo}" class="img-carrito-fija" />
+              </div>
               <div>
-                <div class="flex justify-between text-base font-medium text-gray-900">
-                  <h3>
-                    <a href="detalle.html?id=${producto.id}">${producto.titulo}</a>
-                  </h3>
-                  <p class="ml-4">$${producto.precio.toLocaleString("es-AR")}</p>
-                </div>
-                <p class="mt-1 text-sm text-gray-500">Código: ${producto.id}</p>
-              </div>
-              <div class="flex flex-1 items-end justify-between text-sm">
-                <p class="text-gray-500">Cantidad: 1</p>
-                <div class="flex">
-                  <button type="button" onclick="borrarItem(${index})" class="font-medium text-white hover:text-white cursor-pointer">
-                    Quitar
-                  </button>
-                </div>
+                <h6 class="my-0" style="font-size: 0.95rem; font-weight: 600; color: #333;">
+                  <a href="detalle.html?id=${producto.id}" class="text-decoration-none text-dark">${producto.titulo}</a>
+                </h6>
+                <small class="text-muted d-block mt-1">Código: ${producto.id}</small>
+                <button type="button" onclick="borrarItem(${index})" class="btn btn-link p-0 text-danger text-decoration-none" style="font-size: 0.8rem; margin-top: 4px;">
+                  Quitar
+                </button>
               </div>
             </div>
+            <span class="text-dark fw-bold ms-2" style="font-size: 0.95rem;">$${producto.precio.toLocaleString("es-AR")}</span>
           </li>
         `;
       }).join("");
     }
   }
 
-  // 2. Actualizar el subtotal del nuevo drawer
+
   if (subtotalContenedor) {
     const total = carrito.reduce((sum, prod) => sum + prod.precio, 0);
     subtotalContenedor.textContent = `$${total.toLocaleString("es-AR")}`;
   }
 
-  // 3. Compatibilidad con el contenedor de prueba antiguo (opcional)
+
   if (contenedorViejo) {
     contenedorViejo.innerHTML = "";
     if (carrito.length === 0) {
@@ -92,19 +74,28 @@ function mostrarCarro() {
 
 function borrarItem(index) {
   let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
-
-  // Elimina solo el elemento en la posición (index) seleccionada
   carrito.splice(index, 1);
-
-  //guardo el carrito sin el producto marcado
   localStorage.setItem("carrito", JSON.stringify(carrito));
-
   mostrarCarro();
 }
 
 function vaciarCarro() {
-  //borra la clave carrito del localStorage
   localStorage.removeItem("carrito");
-
   mostrarCarro();
 }
+
+
+document.addEventListener("click", function(event) {
+
+  const textoBoton = event.target.textContent ? event.target.textContent.trim().toLowerCase() : "";
+  
+  if (textoBoton === "finalizar compra" || event.target.id === "btn-finalizar-compra" || event.target.closest("[onclick*='checkout']")) {
+    const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+    
+    if (carrito.length > 0) {
+      window.location.href = "checkout.html";
+    } else {
+      alert("El carrito está vacío. Agregá algún producto antes de pagar.");
+    }
+  }
+});

@@ -58,3 +58,25 @@ function renderizarRelacionadosDeProducto(productoActual) {
     contenedor.innerHTML = `<p class="text-muted small text-center w-full">No hay productos relacionados disponibles.</p>`;
   }
 }
+
+
+//BOTONES DE AGREGAR Y COMPRAR
+
+const btnAgregar = document.getElementById("btn-agregar");
+const btnComprar = document.getElementById("btn-comprar");
+if (btnAgregar) {
+  btnAgregar.addEventListener("click", () => {
+    if (producto) {
+      agregarAlCarro(producto);
+      mostrarCarro();
+    }
+  });
+}
+if (btnComprar) {
+  btnComprar.addEventListener("click", () => {
+    if (producto) {
+      agregarAlCarro(producto);
+      mostrarCarro();
+    }
+  });
+}

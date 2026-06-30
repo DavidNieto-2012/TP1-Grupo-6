@@ -89,10 +89,16 @@
                 </li>
             </ul>
 
-            <label for="menu-toggle"
-                class="hamburger text-2xl text-gray-700 cursor-pointer p-2 select-none md:hidden hover:text-[#0772ba] transition-colors mb-0">
-                ☰
-            </label>
+            <div class="flex items-center gap-4">
+                <button type="button" command="show-modal" commandfor="drawer"
+                    class="rounded-md bg-[#005691] px-3 py-2 text-sm font-semibold text-white hover:bg-[#0772ba] transition-colors border-none cursor-pointer hover:text-sm hover:scale-105 transition-transform">
+                    🛒 Carrito
+                </button>
+                <label for="menu-toggle"
+                    class="hamburger text-2xl text-gray-700 cursor-pointer p-2 select-none md:hidden hover:text-[#0772ba] transition-colors mb-0">
+                    ☰
+                </label>
+            </div>
 
         </nav>
     </header>
@@ -271,31 +277,6 @@
     <script src="api/carro.js"></script>
     <script src="api/detalle.js"></script>
 
-
-    <!--script para agregar productos al carrito-->
-
-    <script>
-        const btnAgregar = document.getElementById("btn-agregar");
-        const btnComprar = document.getElementById("btn-comprar");
-        if (btnAgregar) {
-            btnAgregar.addEventListener("click", () => {
-                if (producto) {
-                    agregarAlCarro(producto);
-                    mostrarCarro();
-                }
-            });
-        }
-        if (btnComprar) {
-            btnComprar.addEventListener("click", () => {
-                if (producto) {
-                    agregarAlCarro(producto);
-                    mostrarCarro();
-                }
-            });
-        }
-        // Carga inicial para mostrar los productos que ya estén guardados al abrir la página
-        mostrarCarro();
-    </script>
 </body>
 
 </html>

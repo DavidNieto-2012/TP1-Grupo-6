@@ -1,6 +1,6 @@
 async function cargarDestacados() {
     try {
-   
+
         await cargarDatos();
 
         // Obtener la lista completa de productos
@@ -9,7 +9,7 @@ async function cargarDestacados() {
 
         let productosValidos = productos.filter(p => p.fotos && p.fotos.length > 0);
 
- 
+
         if (productosValidos.length < 2) {
             productosValidos = productos;
         }
@@ -21,11 +21,11 @@ async function cargarDestacados() {
 
         const seleccionados = [];
 
-      
+
         if (productosValidos.length <= 2) {
             seleccionados.push(...productosValidos);
         } else {
-         
+
             while (seleccionados.length < 2) {
                 const randomIndex = Math.floor(Math.random() * productosValidos.length);
                 const producto = productosValidos[randomIndex];
@@ -35,7 +35,7 @@ async function cargarDestacados() {
             }
         }
 
-       
+
         const contenedor = document.getElementById("contenedor-destacados");
         if (contenedor) {
             contenedor.innerHTML = "";
@@ -44,7 +44,7 @@ async function cargarDestacados() {
             });
         }
 
-        // NUEVO: Ejecutamos el actualizador del carro para enlazar los botones dinámicos creados
+        // Se ejecuta el actualizador del carro para enlazar los botones dinámicos creados
         if (typeof mostrarCarro === "function") {
             mostrarCarro();
         }

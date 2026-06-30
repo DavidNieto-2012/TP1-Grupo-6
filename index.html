@@ -54,14 +54,18 @@
                             </svg>
                         </summary>
 
-                        <ul class="static w-full bg-gray-50 rounded-md mt-2 p-2 space-y-1 list-none pl-0
+                        <ul
+                            class="static w-full bg-gray-50 rounded-md mt-2 p-2 space-y-1 list-none pl-0
                                md:absolute md:top-full md:left-0 md:w-48 md:bg-white md:shadow-lg md:border md:border-gray-100 md:mt-4 md:z-50">
                             <li><a href="categoria.html?categoria=piel-seca" data-categoria="piel-seca"
-                                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-[#0772ba] rounded no-underline">Piel seca</a></li>
+                                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-[#0772ba] rounded no-underline">Piel
+                                    seca</a></li>
                             <li><a href="categoria.html?categoria=piel-mixta" data-categoria="piel-mixta"
-                                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-[#0772ba] rounded no-underline">Piel mixta</a></li>
+                                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-[#0772ba] rounded no-underline">Piel
+                                    mixta</a></li>
                             <li><a href="categoria.html?categoria=piel-sensible" data-categoria="piel-sensible"
-                                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-[#0772ba] rounded no-underline">Piel sensible</a></li>
+                                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-[#0772ba] rounded no-underline">Piel
+                                    sensible</a></li>
                         </ul>
                     </details>
                 </li>
@@ -78,7 +82,7 @@
 
             <div class="flex items-center gap-4">
                 <button type="button" command="show-modal" commandfor="drawer"
-                    class="rounded-md bg-[#005691] px-3 py-2 text-sm font-semibold text-white hover:bg-[#0772ba] transition-colors border-none cursor-pointer">
+                    class="rounded-md bg-[#005691] px-3 py-2 text-sm font-semibold text-white hover:bg-[#0772ba] transition-colors border-none cursor-pointer hover:text-sm hover:scale-105 transition-transform">
                     🛒 Carrito
                 </button>
                 <label for="menu-toggle"
@@ -94,7 +98,8 @@
         <section class="hero">
             <div class="hero-text">
                 <h1>Cuidado de la piel desarrollado con dermatólogos</h1>
-                <p>Fórmulas con 3 ceramidas esenciales para restaurar la barrera de tu piel y mantener la hidratación.</p>
+                <p>Fórmulas con 3 ceramidas esenciales para restaurar la barrera de tu piel y mantener la hidratación.
+                </p>
                 <a href="productos.html" class="btn-principal">Ver Catálogo</a>
             </div>
         </section>
@@ -102,32 +107,39 @@
         <section class="destacados container my-5">
             <h2 class="text-center mb-5">Productos Destacados</h2>
             <div id="contenedor-destacados" class="row g-4 justify-content-center">
-                </div>
+            </div>
         </section>
     </main>
 
     <footer class="text-dark text-center py-4 mt-5">
         <div class="container">
             <h4 class="font-bold">CeraVe Store</h4>
-            <p class="text-secondary">Desarrollado para la cátedra de Web I - Universidad Nacional de Tierra del Fuego</p>
-            <p class="small text-muted">&copy; 2026 Web I - UNTDF | Ushuaia, Tierra del Fuego. Todos los derechos reservados.</p>
+            <p class="text-secondary">Desarrollado para la cátedra de Web I - Universidad Nacional de Tierra del Fuego
+            </p>
+            <p class="small text-muted">&copy; 2026 Web I - UNTDF | Ushuaia, Tierra del Fuego. Todos los derechos
+                reservados.</p>
         </div>
     </footer>
 
     <el-dialog>
         <dialog id="drawer" aria-labelledby="drawer-title"
             class="fixed inset-0 size-auto max-h-none max-w-none overflow-hidden bg-transparent not-open:hidden backdrop:bg-transparent">
-            <el-dialog-backdrop class="absolute inset-0 bg-gray-500/75 transition-opacity duration-500 ease-in-out data-closed:opacity-0"></el-dialog-backdrop>
+            <el-dialog-backdrop
+                class="absolute inset-0 bg-gray-500/75 transition-opacity duration-500 ease-in-out data-closed:opacity-0"></el-dialog-backdrop>
             <div tabindex="0" class="absolute inset-0 pl-10 focus:outline-none sm:pl-16">
-                <el-dialog-panel class="ml-auto block size-full max-w-md transform transition duration-500 ease-in-out data-closed:translate-x-full sm:duration-700">
+                <el-dialog-panel
+                    class="ml-auto block size-full max-w-md transform transition duration-500 ease-in-out data-closed:translate-x-full sm:duration-700">
                     <div class="flex h-full flex-col overflow-y-auto bg-white shadow-xl">
                         <div class="flex-1 overflow-y-auto px-4 py-6 sm:px-6">
                             <div class="flex items-start justify-between">
                                 <h2 id="drawer-title" class="text-lg font-medium text-gray-900">Carrito de compras</h2>
                                 <div class="ml-3 flex h-7 items-center">
-                                    <button type="button" command="close" commandfor="drawer" class="relative -m-2 p-1.5 bg-[#0772ba] text-white hover:bg-[#0e3353] rounded-full transition-colors flex items-center justify-center">
-                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="size-6">
-                                            <path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" />
+                                    <button type="button" command="close" commandfor="drawer"
+                                        class="relative -m-2 p-1.5 bg-[#0772ba] text-white hover:bg-[#0e3353] rounded-full transition-colors flex items-center justify-center">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                                            class="size-6">
+                                            <path d="M6 18 18 6M6 6l12 12" stroke-linecap="round"
+                                                stroke-linejoin="round" />
                                         </svg>
                                     </button>
                                 </div>
@@ -135,7 +147,7 @@
                             <div class="mt-8">
                                 <div class="flow-root">
                                     <ul role="list" id="lista-carrito" class="-my-6 divide-y divide-gray-200">
-                                        </ul>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
@@ -145,7 +157,8 @@
                                 <p id="subtotal-carrito">$0.00</p>
                             </div>
                             <div class="mt-6">
-                                <a href="checkout.html" class="flex items-center justify-center rounded-md border border-transparent bg-[#0772ba] px-6 py-3 text-base font-medium text-white shadow-xs hover:bg-[#0e3353] text-decoration-none">
+                                <a href="checkout.html"
+                                    class="flex items-center justify-center rounded-md border border-transparent bg-[#0772ba] px-6 py-3 text-base font-medium text-white shadow-xs hover:bg-[#0e3353] text-decoration-none">
                                     Finalizar compra
                                 </a>
                             </div>

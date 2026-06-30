@@ -1,160 +1,180 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Checkout - CeraVe Store</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    
-    <link rel="stylesheet" href="css/css-index.css">
-    <link rel="stylesheet" href="css/css-base.css">
 
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <style type="text/tailwindcss">
-        @import "tailwindcss/theme";
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout - CeraVe Store</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/css-index.css">
+  <link rel="stylesheet" href="css/css-base.css">
+
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <style type="text/tailwindcss">
+    @import "tailwindcss/theme";
         @import "tailwindcss/utilities";
     </style>
 </head>
+
 <body class="bg-light">
 
-    <header class="bg-white border-b border-gray-200 sticky top-0 z-50 shadow-sm">
-        <nav class="w-full px-8 lg:px-20 h-20 flex justify-between items-center relative">
-            <a href="index.html" class="flex items-center h-full max-w-[120px] no-underline">
-                <img src="images/cerave-logo-png_seeklogo-352149.png" alt="CeraVe Logo" class="h-auto max-h-12 object-contain">
-            </a>
+  <header class="bg-white border-b border-gray-200 sticky top-0 z-50 shadow-sm">
+    <nav class="w-full px-8 lg:px-20 h-20 flex justify-between items-center relative">
+      <a href="index.html" class="flex items-center h-full max-w-[120px] no-underline">
+        <img src="images/cerave-logo-png_seeklogo-352149.png" alt="CeraVe Logo" class="h-auto max-h-12 object-contain">
+      </a>
 
-            <input type="checkbox" id="menu-toggle" class="peer hidden">
+      <input type="checkbox" id="menu-toggle" class="peer hidden">
 
-            <ul class="hidden absolute top-full left-0 w-full bg-white border-b border-gray-200 flex-col p-4 gap-3 m-0 list-none
+      <ul class="hidden absolute top-full left-0 w-full bg-white border-b border-gray-200 flex-col p-4 gap-3 m-0 list-none
                    md:flex md:relative md:top-auto md:left-auto md:w-auto md:bg-transparent md:border-none md:flex-row md:p-0 md:gap-8 md:items-center md:ml-auto md:mr-12
                    peer-checked:flex z-40">
-                <li><a href="index.html" class="text-gray-700 hover:text-[#0772ba] font-medium transition-colors no-underline">Inicio</a></li>
-                <li><a href="productos.html" class="text-gray-700 hover:text-[#0772ba] font-medium transition-colors no-underline">Productos</a></li>
-                <li class="relative">
-                    <details class="group/details">
-                        <summary class="text-gray-700 hover:text-[#0772ba] font-medium transition-colors flex items-center gap-1 cursor-pointer no-underline list-none [&::-webkit-details-marker]:hidden select-none">
-                            Categorías
-                            <svg class="w-4 h-4 transform group-open/details:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                            </svg>
-                        </summary>
-                        <ul class="static w-full bg-gray-50 rounded-md mt-2 p-2 space-y-1 list-none pl-0 md:absolute md:top-full md:left-0 md:w-48 md:bg-white md:shadow-lg md:border md:border-gray-100 md:mt-4 md:z-50">
-                            <li><a href="categoria.html?categoria=piel-seca" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-[#0772ba] rounded no-underline">Piel seca</a></li>
-                            <li><a href="categoria.html?categoria=piel-mixta" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-[#0772ba] rounded no-underline">Piel mixta</a></li>
-                            <li><a href="categoria.html?categoria=piel-sensible" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-[#0772ba] rounded no-underline">Piel sensible</a></li>
-                        </ul>
-                    </details>
-                </li>
-                <li><a href="newsletter.html" class="text-gray-700 hover:text-[#0772ba] font-medium transition-colors no-underline">Newsletter</a></li>
-                <li><a href="nosotros.html" class="text-gray-700 hover:text-[#0772ba] font-medium transition-colors no-underline">Nosotros</a></li>
+        <li><a href="index.html"
+            class="text-gray-700 hover:text-[#0772ba] font-medium transition-colors no-underline">Inicio</a></li>
+        <li><a href="productos.html"
+            class="text-gray-700 hover:text-[#0772ba] font-medium transition-colors no-underline">Productos</a></li>
+        <li class="relative">
+          <details class="group/details">
+            <summary
+              class="text-gray-700 hover:text-[#0772ba] font-medium transition-colors flex items-center gap-1 cursor-pointer no-underline list-none [&::-webkit-details-marker]:hidden select-none">
+              Categorías
+              <svg class="w-4 h-4 transform group-open/details:rotate-180 transition-transform" fill="none"
+                stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </summary>
+            <ul
+              class="static w-full bg-gray-50 rounded-md mt-2 p-2 space-y-1 list-none pl-0 md:absolute md:top-full md:left-0 md:w-48 md:bg-white md:shadow-lg md:border md:border-gray-100 md:mt-4 md:z-50">
+              <li><a href="categoria.html?categoria=piel-seca"
+                  class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-[#0772ba] rounded no-underline">Piel
+                  seca</a></li>
+              <li><a href="categoria.html?categoria=piel-mixta"
+                  class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-[#0772ba] rounded no-underline">Piel
+                  mixta</a></li>
+              <li><a href="categoria.html?categoria=piel-sensible"
+                  class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-[#0772ba] rounded no-underline">Piel
+                  sensible</a></li>
             </ul>
+          </details>
+        </li>
+        <li><a href="newsletter.html"
+            class="text-gray-700 hover:text-[#0772ba] font-medium transition-colors no-underline">Newsletter</a></li>
+        <li><a href="nosotros.html"
+            class="text-gray-700 hover:text-[#0772ba] font-medium transition-colors no-underline">Nosotros</a></li>
+      </ul>
 
-            <div class="flex items-center gap-4">
-                <a href="index.html" class="relative p-2 text-gray-700 hover:text-[#0772ba] transition-colors text-xl no-underline" title="Volver al inicio">
-                    🛒
-                </a>
-                <label for="menu-toggle" class="hamburger text-2xl text-gray-700 cursor-pointer p-2 select-none md:hidden hover:text-[#0772ba] transition-colors mb-0">
-                    ☰
-                </label>
-            </div>
-        </nav>
-    </header>
+      <div class="flex items-center gap-4">
+        <button type="button" command="show-modal" commandfor="drawer"
+          class="rounded-md bg-[#005691] px-3 py-2 text-sm font-semibold text-white hover:bg-[#0772ba] transition-colors border-none cursor-pointer hover:text-sm hover:scale-105 transition-transform">
+          🛒 Carrito
+        </button>
+        <label for="menu-toggle"
+          class="hamburger text-2xl text-gray-700 cursor-pointer p-2 select-none md:hidden hover:text-[#0772ba] transition-colors mb-0">
+          ☰
+        </label>
+      </div>
+    </nav>
+  </header>
 
-    <div class="container py-5">
-        <div class="row g-5">
-          
-          <div class="col-md-5 col-lg-4 order-md-last">
-            <h4 class="d-flex justify-content-between align-items-center mb-3">
-              <span class="text-primary" style="color: #005691 !important; font-weight: 600;">Tu Carrito</span>
-            </h4>
-            
-            <ul class="list-group mb-3" id="lista-carrito">
-                </ul>
+  <div class="container py-5">
+    <div class="row g-5">
 
-            <div class="card p-3 shadow-sm bg-white border">
-              <div class="d-flex justify-content-between align-items-center">
-                <span class="text-muted fs-5">Total</span>
-                <span id="subtotal-carrito" class="fw-bold fs-4 text-dark">$0</span>
-              </div>
-            </div>
-            
-            <button class="btn btn-outline-danger btn-sm w-100 mt-3" onclick="vaciarCarro()">
-              Vaciar Carrito
-            </button>
-          </div>
+      <div class="col-md-5 col-lg-4 order-md-last">
+        <h4 class="d-flex justify-content-between align-items-center mb-3">
+          <span class="text-primary" style="color: #005691 !important; font-weight: 600;">Tu Carrito</span>
+        </h4>
 
-          <div class="col-md-7 col-lg-8">
-            <h4 class="mb-3" style="font-weight: 600; color: #333;">Datos de Envío y Pago</h4>
-            <form id="formulario-checkout" onsubmit="procesarPago(event)">
-              
-              <div class="row g-3">
-                <div class="col-sm-6">
-                  <label for="nombre" class="form-label">Nombre</label>
-                  <input type="text" class="form-control" id="nombre" required>
-                </div>
-                <div class="col-sm-6">
-                  <label for="apellido" class="form-label">Apellido</label>
-                  <input type="text" class="form-control" id="apellido" required>
-                </div>
-                <div class="col-12">
-                  <label for="email" class="form-label">Email</label>
-                  <input type="email" class="form-control" id="email" placeholder="tu@ejemplo.com" required>
-                </div>
-                <div class="col-12">
-                  <label for="direccion" class="form-label">Dirección de entrega</label>
-                  <input type="text" class="form-control" id="direccion" placeholder="Calle y número" required>
-                </div>
-              </div>
+        <ul class="list-group mb-3" id="lista-carrito">
+        </ul>
 
-              <hr class="my-4">
-              <h5 class="mb-3" style="font-weight: 600;">Tarjeta de Crédito o Débito</h5>
-
-              <div class="d-flex my-3 gap-3 text-muted" style="font-size: 2rem;">
-                <i class="fab fa-cc-visa text-primary"></i>
-                <i class="fab fa-cc-mastercard text-danger"></i>
-                <i class="fab fa-cc-amex text-warning"></i>
-              </div>
-
-              <div class="row gy-3">
-                <div class="col-md-6">
-                  <label for="tarjeta-nombre" class="form-label">Nombre en la tarjeta</label>
-                  <input type="text" class="form-control" id="tarjeta-nombre" required>
-                  <small class="text-muted">Como figura impreso</small>
-                </div>
-                <div class="col-md-6">
-                  <label for="tarjeta-numero" class="form-label">Número de tarjeta</label>
-                  <input type="text" class="form-control" id="tarjeta-numero" placeholder="•••• •••• •••• ••••" required>
-                </div>
-                <div class="col-md-3">
-                  <label for="tarjeta-expiracion" class="form-label">Vencimiento</label>
-                  <input type="text" class="form-control" id="tarjeta-expiracion" placeholder="MM/AA" required>
-                </div>
-                <div class="col-md-3">
-                  <label for="tarjeta-cvv" class="form-label">CVV</label>
-                  <input type="text" class="form-control" id="tarjeta-cvv" placeholder="123" required>
-                </div>
-              </div>
-
-              <hr class="my-4">
-              <button class="w-100 btn btn-primary btn-lg fw-bold" type="submit" style="background-color: #005691; border-color: #005691;">
-                Finalizar Compra
-              </button>
-            </form>
+        <div class="card p-3 shadow-sm bg-white border">
+          <div class="d-flex justify-content-between align-items-center">
+            <span class="text-muted fs-5">Total</span>
+            <span id="subtotal-carrito" class="fw-bold fs-4 text-dark">$0</span>
           </div>
         </div>
+
+        <button class="btn btn-outline-danger btn-sm w-100 mt-3" onclick="vaciarCarro()">
+          Vaciar Carrito
+        </button>
+      </div>
+
+      <div class="col-md-7 col-lg-8">
+        <h4 class="mb-3" style="font-weight: 600; color: #333;">Datos de Envío y Pago</h4>
+        <form id="formulario-checkout" onsubmit="procesarPago(event)">
+
+          <div class="row g-3">
+            <div class="col-sm-6">
+              <label for="nombre" class="form-label">Nombre</label>
+              <input type="text" class="form-control" id="nombre" required>
+            </div>
+            <div class="col-sm-6">
+              <label for="apellido" class="form-label">Apellido</label>
+              <input type="text" class="form-control" id="apellido" required>
+            </div>
+            <div class="col-12">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" class="form-control" id="email" placeholder="tu@ejemplo.com" required>
+            </div>
+            <div class="col-12">
+              <label for="direccion" class="form-label">Dirección de entrega</label>
+              <input type="text" class="form-control" id="direccion" placeholder="Calle y número" required>
+            </div>
+          </div>
+
+          <hr class="my-4">
+          <h5 class="mb-3" style="font-weight: 600;">Tarjeta de Crédito o Débito</h5>
+
+          <div class="d-flex my-3 gap-3 text-muted" style="font-size: 2rem;">
+            <i class="fab fa-cc-visa text-primary"></i>
+            <i class="fab fa-cc-mastercard text-danger"></i>
+            <i class="fab fa-cc-amex text-warning"></i>
+          </div>
+
+          <div class="row gy-3">
+            <div class="col-md-6">
+              <label for="tarjeta-nombre" class="form-label">Nombre en la tarjeta</label>
+              <input type="text" class="form-control" id="tarjeta-nombre" required>
+              <small class="text-muted">Como figura impreso</small>
+            </div>
+            <div class="col-md-6">
+              <label for="tarjeta-numero" class="form-label">Número de tarjeta</label>
+              <input type="text" class="form-control" id="tarjeta-numero" placeholder="•••• •••• •••• ••••" required>
+            </div>
+            <div class="col-md-3">
+              <label for="tarjeta-expiracion" class="form-label">Vencimiento</label>
+              <input type="text" class="form-control" id="tarjeta-expiracion" placeholder="MM/AA" required>
+            </div>
+            <div class="col-md-3">
+              <label for="tarjeta-cvv" class="form-label">CVV</label>
+              <input type="text" class="form-control" id="tarjeta-cvv" placeholder="123" required>
+            </div>
+          </div>
+
+          <hr class="my-4">
+          <button class="w-100 btn btn-primary btn-lg fw-bold" type="submit"
+            style="background-color: #005691; border-color: #005691;">
+            Finalizar Compra
+          </button>
+        </form>
+      </div>
     </div>
+  </div>
 
-    <footer class="text-dark text-center py-4 mt-5 bg-white border-t">
-        <div class="container">
-            <h4 class="font-bold">CeraVe Store</h4>
-            <p class="text-secondary">Desarrollado para la cátedra de Web I - Universidad Nacional de Tierra del Fuego</p>
-            <p class="small text-muted">&copy; 2026 Web I - UNTDF | Ushuaia, Tierra del Fuego. Todos los derechos reservados.</p>
-        </div>
-    </footer>
+  <footer class="text-dark text-center py-4 mt-5 bg-white border-t">
+    <div class="container">
+      <h4 class="font-bold">CeraVe Store</h4>
+      <p class="text-secondary">Desarrollado para la cátedra de Web I - Universidad Nacional de Tierra del Fuego</p>
+      <p class="small text-muted">&copy; 2026 Web I - UNTDF | Ushuaia, Tierra del Fuego. Todos los derechos reservados.
+      </p>
+    </div>
+  </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="api/carro.js"></script>
-    <script src="api/checkout.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="api/carro.js"></script>
+  <script src="api/checkout.js"></script>
 </body>
+
 </html>

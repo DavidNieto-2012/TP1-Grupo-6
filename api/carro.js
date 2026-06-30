@@ -1,6 +1,14 @@
 function agregarAlCarro(producto) {
   let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
-  carrito.push(producto);
+  //si el producto ya existe modifico cantidad
+  const existente = carrito.find(item => item.id === producto.id);
+
+  if (existente) {
+    existente.cantidad += 1;
+  } else {
+    carrito.push({ ...producto, cantidad: 1 });
+  }
+
   localStorage.setItem("carrito", JSON.stringify(carrito));
   mostrarCarro();
 }
@@ -38,7 +46,11 @@ function mostrarCarro() {
                 <p class="mt-1 text-xs text-gray-500">Código: ${producto.id}</p>
               </div>
               <div class="flex flex-1 items-end justify-between text-sm">
-                <p class="text-gray-500">Cant: 1</p>
+                <div class="flex items-center gap-2">
+                  <button type="button" onclick="cambiarCantidad(${index}, -1)" class="size-6 flex items-center justify-center border border-gray-300 rounded text-gray-600 hover:bg-gray-100 bg-transparent cursor-pointer">-</button>
+                  <span class="text-gray-700">${producto.cantidad}</span>
+                  <button type="button" onclick="cambiarCantidad(${index}, 1)" class="size-6 flex items-center justify-center border border-gray-300 rounded text-gray-600 hover:bg-gray-100 bg-transparent cursor-pointer">+</button>
+                </div>
                 <div class="flex">
                   <button type="button" onclick="borrarItem(${index})" class="font-medium text-[#0772ba] hover:text-[#0e3353] bg-transparent p-0 border-none cursor-pointer transition-colors">
                     Quitar
@@ -53,9 +65,23 @@ function mostrarCarro() {
   }
 
   if (subtotalContenedor) {
-    const total = carrito.reduce((sum, prod) => sum + prod.precio, 0);
+    const total = carrito.reduce((sum, prod) => sum + prod.precio * prod.cantidad, 0);
     subtotalContenedor.textContent = `$${total.toLocaleString("es-AR")}`;
   }
+}
+
+function cambiarCantidad(index, delta) {
+  let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+  if (!carrito[index]) return;
+
+  carrito[index].cantidad += delta;
+
+  if (carrito[index].cantidad <= 0) {
+    carrito.splice(index, 1);
+  }
+
+  localStorage.setItem("carrito", JSON.stringify(carrito));
+  mostrarCarro();
 }
 
 function borrarItem(index) {
